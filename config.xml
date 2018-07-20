@@ -73,9 +73,6 @@
     <!-- Define app icon for each platform. -->
 
 
-    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
-    </gap:config-file>
 
     <!--
         Define access to external domains.
