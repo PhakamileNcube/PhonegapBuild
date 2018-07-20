@@ -6,10 +6,10 @@
         id        = "com.yonic.test"
         version   = "1.0.0">
 
-    <name>Parker tes</name>
+    <name>Study</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        This is a school app
     </description>
 
     <author href="http://yonic.com" email="support@yonic.com">
