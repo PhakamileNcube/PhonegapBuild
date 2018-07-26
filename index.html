@@ -2,128 +2,123 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+
+
+  
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDQjzw0nVa1H8OKID54qO3eicyRBTP_hRw",
+    authDomain: "techtravel0774.firebaseapp.com",
+    databaseURL: "https://techtravel0774.firebaseio.com",
+    projectId: "techtravel0774",
+    storageBucket: "",
+    messagingSenderId: "425394525968"
+  };
+  firebase.initializeApp(config);
+  
+  
+</script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
+<script src="https://www.gstatic.com/firebasejs/ui/3.2.0/firebase-ui-auth__en.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.2.0/firebase-ui-auth.css" />
+
+
+
+
+  <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    
-
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
-    <script type="text/javascript" charset="utf-8">
- 
- 
-    // Wait for PhoneGap to load
-    //
 	
-	
-    document.addEventListener("deviceready", onDeviceReady, false);
-      
-	 
-    // PhoneGap is ready
-    //
-	
-/**
- * This class contains information about the current battery status.
- * @constructor
- */
-var cordova = require('cordova');
-var exec = require('cordova/exec');
+<script type="text/javascript" src="js/jquery.js"></script>    
+<script src="js/jqmobile.js"></script>
+<link rel="stylesheet"  href="css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-var STATUS_CRITICAL = 5;
-var STATUS_LOW = 20;
+<script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          //firebase.auth.EmailAuthProvider.PROVIDER_ID,
+         firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+          //firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url.
+        privacyPolicyUrl: '<your-privacy-policy-url>'
+      };
 
-var Battery = function () {
-    this._level = null;
-    this._isPlugged = null;
-    // Create new event handlers on the window (returns a channel instance)
-    this.channels = {
-        batterystatus: cordova.addWindowEventHandler('batterystatus'),
-        batterylow: cordova.addWindowEventHandler('batterylow'),
-        batterycritical: cordova.addWindowEventHandler('batterycritical')
-    };
-    for (var key in this.channels) {
-        this.channels[key].onHasSubscribersChange = Battery.onHasSubscribersChange;
-    }
-};
-
-function handlers () {
-    return battery.channels.batterystatus.numHandlers +
-        battery.channels.batterylow.numHandlers +
-        battery.channels.batterycritical.numHandlers;
-}
-
-/**
- * Event handlers for when callbacks get registered for the battery.
- * Keep track of how many handlers we have so we can start and stop the native battery listener
- * appropriately (and hopefully save on battery life!).
- */
-Battery.onHasSubscribersChange = function () {
-  // If we just registered the first handler, make sure native listener is started.
-    if (this.numHandlers === 1 && handlers() === 1) {
-        exec(battery._status, battery._error, 'Battery', 'start', []);
-    } else if (handlers() === 0) {
-        exec(null, null, 'Battery', 'stop', []);
-    }
-};
-
-/**
- * Callback for battery status
- *
- * @param {Object} info            keys: level, isPlugged
- */
-Battery.prototype._status = function (info) {
-
-    if (info) {
-        if (battery._level !== info.level || battery._isPlugged !== info.isPlugged) {
-
-            if (info.level === null && battery._level !== null) {
-                return; // special case where callback is called because we stopped listening to the native side.
-            }
-
-            // Something changed. Fire batterystatus event
-            cordova.fireWindowEvent('batterystatus', info);
-
-            if (!info.isPlugged) { // do not fire low/critical if we are charging. issue: CB-4520
-                // note the following are NOT exact checks, as we want to catch a transition from
-                // above the threshold to below. issue: CB-4519
-                if (battery._level > STATUS_CRITICAL && info.level <= STATUS_CRITICAL) {
-                    // Fire critical battery event
-                    cordova.fireWindowEvent('batterycritical', info);
-                } else if (battery._level > STATUS_LOW && info.level <= STATUS_LOW) {
-                    // Fire low battery event
-                    cordova.fireWindowEvent('batterylow', info);
-                }
-            }
-            battery._level = info.level;
-            battery._isPlugged = info.isPlugged;
-        }
-    }
-};
-
-/**
- * Error callback for battery start
- */
-Battery.prototype._error = function (e) {
-    console.log('Error initializing Battery: ' + e);
-};
-
-var battery = new Battery(); // jshint ignore:line
-
-module.exports = battery;
-
-window.addEventListener("batterystatus", onBatteryStatus, false);
-
-function onBatteryStatus(status) {
-    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
-}
-	
-
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
     </script>
+
+
+
+
+    <title>Hello World</title>
+   
+
+   <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    
+    document.addEventListener("deviceready", onDeviceReady, false);
+    
+var connectionStatus = false;
+
+$(document).on('pagebeforeshow', '#index', function () {
+    setInterval(function () {
+        connectionStatus = navigator.onLine ? 'online' : 'offline';
+    }, 100);
+    $(document).on('click', '#check-connection', function () {
+        alert(connectionStatus);
+    });
+});
+	// PhoneGap is ready
+    
+    </script>
+	
+	
+	
   </head>
-  <body>
-  hie Artie
-   <div id="accelerometer">Artie</div>
+  <body >
+ <br/>
+  <h1>Welcome to My Awesome App</h1>
+  <div id="firebaseui-auth-container"></div>
+
+ 
+ <script>
+ var sw = $(window).width();
+ var sh = $(window).height();
+ 
+ 
+ 
+ var mn = sh * 0.36;
+ 
+ //alert(sh + "px");
+ 
+ $("#subtn").css("top",mn + "px");
+ 
+ 
+ 
+ $("#heyb").click(function (){
+	alert("yes plx");
+ });
+	
+ 
+ </script>
   </body>
 </html>
 
