@@ -34,7 +34,11 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	
 <script type="text/javascript" src="js/jquery.js"></script>    
-<script src="js/jqmobile.js"></script>
+<script type="text/javascript" src="js/jqmobile.js"></script>
+<script type="text/javascript" src="jquery_ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="touch.js"></script>
+<link rel="stylesheet"  href="jquery_ui/jquery-ui.css"/>
+
 <link rel="stylesheet"  href="css/animate.css"/>
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 
@@ -61,6 +65,11 @@
      font-size:16.2px;
 }
 
+#spa{color:aqua}
+#spa:after{
+content:attr(data-text);
+padding:0 20px;
+}
 
 </style>
 	
@@ -68,15 +77,15 @@
   </head>
   <body>
   
-  
+  <div id="all_things" style="display:true">
   
   <div id="tech_trav" class="class tch animated slideInUp" 
   style="position:relative;height:240px;text-align:center;top:45%;-webkit-animation-duration: 2.16s;-webkit-animation-delay: 1s;">
-<span style="position:relative;top:90%;font-size:36px">Tech Travel</span>
+<span style="position:relative;top:90%;font-size:36px;font-family:verdana;color:aqua">Tech Travel</span>
   </div>
   
   
-  <div id="tech_travel" style="display:none" class="animated slideInUp">
+  <div id="tech_travel" style="display:none" class="animated slideInRight">
  <div style="position:relative;height:45px;width:100%;background-color:
  background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
@@ -86,11 +95,11 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  <br/>
  <!-----------------------------------------------INTERCAPE BEGINS --------------------------------------------------------------------------------->
  <div class="book" id="intercape" >
- <div style="position:relative;height:240px;width:100%;">
- <img src="bus_pics\intercape\bus.jpg" style="position:relative;height:100%;width:auto" />
- <span style="position:absolute;font-size:20.7px;color:red;bottom:91.0335%;font-family:cursive">Intercape</span>
+ <div style="position:relative;height:240px;width:100%;" class="small_div_prob" >
+ <img src="bus_pics\intercape\bus.jpg" style="position:relative;height:100%;width:auto" class="odds"/>
+ <span style="position:absolute;font-size:20.7px;color:red;bottom:91.0335%;font-family:cursive" class='text_label'>Intercape</span>
  </div>
- <div style="position:relative;height:45px;width:100%;;color:purple">
+ <div style="position:relative;height:45px;width:100%;;color:purple" class="book smallDivError" >
 
  <div style="position:relative;height:100%;width:33.3%;display:inline-block;overflow:hidden;text-align:center;border-bottom:1px solid purple">
  <span style="position:relative;font-size:18px;top:5.4px;right:1.26%;color:orange" >book</span>
@@ -119,12 +128,12 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  <hr  style="height: 0.72px;color: aqua;background: aqua;font-size: 0;border: 0;"/>
  <br/>
  
- <!-------------------------------------------------------------------------GREYHOUND STARTS HERE -------------------------------------------------------->
-  <div style="position:relative;height:240px;width:100%;" class="book" id="greyhound">
- <img src="bus_pics\greyhound\greyhound.jpg" style="position:relative;height:100%;width:auto" />
- <span style="position:absolute;font-size:20.7px;color:blue;bottom:90%;font-family:cursive;">Greyhound</span>
+ <!-------------------------------------------------------------------------GREYHOUND STARTS HERE ------------------------------------------------------->
+  <div style="position:relative;height:240px;width:100%;" class="book small_div_prob" id="greyhound">
+ <img src="bus_pics\greyhound\greyhound.jpg" style="position:relative;height:100%;width:auto" class="odds"/>
+ <span style="position:absolute;font-size:20.7px;color:blue;bottom:90%;font-family:cursive;" class='text_label'>Greyhound</span>
  </div>
- <div style="position:relative;height:45px;width:100%;;color:blue">
+ <div style="position:relative;height:45px;width:100%;;color:blue" class="book smallDivError">
 
  <div style="position:relative;height:100%;width:33.3%;display:inline-block;overflow:hidden;text-align:center;border-bottom:1px solid blue">
  <span style="position:relative;font-size:18px;top:5.4px;right:1.26%;color:cornflowerblue">book</span>
@@ -146,15 +155,15 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  </div>
  </div>
  
-<!----------------------------------------------------------------------------GREYHOUND ENDS HERE ---------------------------------------------------------->
+<!--------------------------------------------------------------------------GREYHOUND ENDS HERE --------------------------------------------------------->
 
-<!----------------------------------------------------------------------------BRAVO STARTS HERE ------------------------------------------------------------->
+<!---------------------------------------------------------------------------BRAVO STARTS HERE ------------------------------------------------------------->
 <br/> <hr style="height: 1px;color: aqua;background: aqua;font-size: 0;border: 0;" /><br/>
-  <div style="position:relative;height:240px;width:100%;" class="book" id="bravo">
- <img src="bus_pics\bravo\bravo-bus.jpg" style="position:relative;height:100%;width:auto" />
- <span style="position:absolute;font-size:20.7px;color:red;bottom:90%;font-family:cursive;">Bravo</span>
+  <div style="position:relative;height:240px;width:100%;" class="book small_div_prob" id="bravo">
+ <img src="bus_pics\bravo\bravo-bus.jpg" style="position:relative;height:100%;width:auto" class="odds" />
+ <span style="position:absolute;font-size:20.7px;color:red;bottom:90%;font-family:cursive;" class='text_label'>Bravo</span>
  </div>
- <div style="position:relative;height:45px;width:100%;;color:#f02">
+ <div style="position:relative;height:45px;width:100%;;color:#f02" class="book smallDivError">
 
  <div style="position:relative;height:100%;width:33.3%;display:inline-block;overflow:hidden;text-align:center;border-bottom:1px solid #f02">
  <span style="position:relative;font-size:18px;top:5.4px;right:1.26%;color:black">book</span>
@@ -179,18 +188,18 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  
  
  
- <!------------------------------------------------------------------------ BRAVO ENDS HERE -------------------------------------------------------------------------->
+ <!----------------------------------------------------------------------- BRAVO ENDS HERE ------------------------------------------------------------------------->
  
- <!--------------------------------------------------------------------------CITILINER STARTS HERE --------------------------------------------------------------->
+ <!------------------------------------------------------------------------CITILINER STARTS HERE -------------------------------------------------------------->
  
  <br/> <hr style="height: 1px;color: aqua;background: aqua;font-size: 0;border: 0;" /> <br/>
  
  
- <div style="position:relative;height:240px;width:100%;" class="book" id="citiliner">
- <img src="bus_pics\citiliner\citiliner.jpg" style="position:relative;height:100%;width:auto" />
- <span style="position:absolute;font-size:20.7px;color:blue;bottom:90%;font-family:cursive;">Citiliner</span>
+ <div style="position:relative;height:240px;width:100%;" class="book small_div_prob" id="citiliner">
+ <img src="bus_pics\citiliner\citiliner.jpg" style="position:relative;height:100%;width:auto" class="odds" />
+ <span style="position:absolute;font-size:20.7px;color:blue;bottom:90%;font-family:cursive;" class='text_label'>Citiliner</span>
  </div>
- <div style="position:relative;height:45px;width:100%;;color:blue">
+ <div style="position:relative;height:45px;width:100%;;color:blue" class="book smallDivError">
 
  <div style="position:relative;height:100%;width:33.3%;display:inline-block;overflow:hidden;text-align:center;border-bottom:1px solid blue">
  <span style="position:relative;font-size:18px;top:5.4px;right:1.26%;color:cornflowerblue">book</span>
@@ -212,7 +221,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  </div>
  </div>
  
- 
+ <!---------------------------------------citiliner might end here----------->
  
  
  
@@ -220,7 +229,27 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  
  
  
+ 
+ 
+ 
+ 
+ <!---------------------------------------------------------new page -------------------------------------------------------------------------------------->
+ <!--------------------------------------------------------------new book trip page ------------------------------------------------------------------->
+ 
+ 
+ 
  <div style="position:relative;display:none" id="book_trip">
+ 
+  <div style="position:relative;height:45px;width:100%;background-color:
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+ ;text-align:center;font-size:27px;color:white;font-family:cursive;" >
+ <span style="position:relative;float:left;left:9px;font-size:18px;top:9px" class="back_click">
+ <i class="fa fa-arrow-left"></i>
+ </span>
+ <span style="position:relative;">
+ tech travel</span>
+ </div>
  
  <div id="orderbookpic" style="position:relative;overflow:hidden;width:100%" class="fg animated slideInLeft">
  <img name="citiliner" src="bus_pics\citiliner\citiliner.jpg" style="position:relative;width:100%;display:none" id="big_pic" class="citilinerbus" />
@@ -236,7 +265,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  <span class="from_click" id="dbn" style="position:relative;height:18px;padding:1.63%;background-color:#ff2;border-radius:9px;top:6.3px;left:2.7%;font-size:12.6px;color:white"> Durban </span>&nbsp; <br/>
  <span class="from_click" id="cpt"style="position:relative;height:18px;padding:1.63%;background-color:cornflowerblue;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Capetown </span>&nbsp;
 <span  class="from_click" id="hre"style="position:relative;height:18px;padding:1.63%;background-color:purple;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Harare </span>&nbsp;
-<span  class="from_click" id="mdr"style="position:relative;height:18px;padding:1.63%;background-color:aqua;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Midrand </span>&nbsp;
+<span  class="from_click" id="mdr"style="position:relative;height:18px;padding:1.63%;background-color:aqua;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Midrand </span>
 <span  class="from_click" id="ptr"style="position:relative;height:18px;padding:1.63%;background-color:yellow;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Pretoria </span>&nbsp;
  
  </div>
@@ -245,10 +274,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  <span class="from_click" id="to" style="position:relative;top:14.4px;display:float;float:left;left:2.7px;color:aqua">To&nbsp&nbsp&nbsp&nbsp :&nbsp </span>
  <span class="from_click" id="jhb2" style="position:relative;height:18px;padding:1.63%;background-color:#ff2;border-radius:9px;top:9px;left:2.7%;font-size:12.6px;color:white"> Johannesburg </span>
  <span class="from_click" id="cpt2" style="position:relative;height:18px;padding:1.63%;background-color:#2f2;border-radius:9px;top:9px;left:4.5%;font-size:12.6px;color:white"> Capetown </span>&nbsp;
- <span class="from_click" id="dbn2" style="position:relative;height:18px;padding:1.63%;background-color:#22f;border-radius:9px;top:9px;left:2.7%;font-size:12.6px;color:white"> Durban </span><br/>&nbsp;<br/>
+ <span class="from_click" id="dbn2" style="position:relative;height:18px;padding:1.63%;background-color:#22f;border-radius:9px;top:9px;left:2.7%;font-size:12.6px;color:white"> Durban </span><br/>&nbsp;
  <span class="from_click" id="byo2" style="position:relative;height:18px;padding:1.63%;background-color:aqua;border-radius:9px;top:18px;left:15.3%;font-size:12.6px;color:white"> Bulawayo </span> &nbsp;
- <span class="from_click" id="hre2"style="position:relative;height:18px;padding:1.63%;background-color:green;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Harare </span>&nbsp;
- <span class="from_click" id="ptr2"style="position:relative;height:18px;padding:1.63%;background-color:aqua;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Pretoria </span>&nbsp;
+ <span class="from_click" id="hre2"style="position:relative;height:18px;padding:1.63%;background-color:green;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Harare </span>
+ <span class="from_click" id="ptr2"style="position:relative;height:18px;padding:1.63%;background-color:aqua;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Pretoria </span>
  <span class="from_click" id="mdr2"style="position:relative;height:18px;padding:1.63%;background-color:purple;border-radius:9px;top:16.2px;left:17.1%;font-size:12.6px;color:white"> Midrand </span>&nbsp;
  </div> 
  
@@ -270,33 +299,28 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
  </div>
  </div>
  
-<div style="position:relative;height:81px;width:60%;left:20%;text-align:center;overflow:hidden">
-<div style="position:relative;height:81%;width:36%;font-size:54px;overflow:hidden;display:inline-block;top:19%;color:#f02">
-<span class="clock"><i class="fa fa-clock"></i></span></div>
+ 
+ <!-------------------------date and calender here-------------------------------------------------------------------->
 
+ 
+<div style="position:relative;height:92.7px;width:98%;padding:1%;overflow:hidden;display:block" id="date_and_calendar">
 
-<!---------------------------------clock widgets starts here---------------------------------->
-
-<div style="position:fixed;height:63px;width:36%;z-index:10;right:45%;display:none" id="clock_widget">
-<select id="time_selector" style="position:relative;border:0px solid black;border-radius:0px;width:54%;text-align:center;height:45px;background-color:cornflowerblue;right:56.7%">
+<div style="position:relative;height:98%;width:48.6%;display:inline-block;overflow:hidden;text-align:center;color:aqua">
+<div style="position:relative;top:9%">
+<span style="color:#f02"><i class="fa fa-clock"></i></span><span> Departure Time</span>
+<br/>
+<select id="time_selector" style="position:relative;border:0px solid black;border-radius:0px;width:54%;text-align:center;height:45px;background-color:aqua;">
 <option style="position:relative;border:0px solid black;border-radius:0px;background:none;width:54%;text-align:center">2:00pm</option>
 <option style="position:relative;border:0px solid black;border-radius:0px;background:none;width:54%;text-align:center">4:00pm</option>
 <option style="position:relative;border:0px solid black;border-radius:0px;background:none;width:54%;text-align:center">8:00am</option>
 </select>
 </div>
-
-<!---------------------------------clock widgets end here  ------------------------------------>
-
+</div>
 
 
-<div style="position:relative;height:81%;width:37%;font-size:54px;overflow:hidden;display:inline-block;top:19%;border-left:1px solid black;color:#2f2">
-<span class="calender" ><i class="fa fa-calendar"></i></span></div>
-
-<!-------------------------------------------------calender widget start here ---------------------------------------------------->
-
-<div id="calender_widget" style="position:fixed;height:90px;width:25.2%;display:none;overflow:hidden;text-align:center;left:72%">
+<div style="position:relative;height:98%;width:48.6%;display:inline-block;overflow:hidden;color:white;text-align:center;border-left:1px solid aqua">
 <span style="position:relative;display:inline-block;color:aqua">
-day
+<span style="color:#f02"><i class="fa fa-calendar"></i></span> Day
 </span>
 <br/>
 
@@ -310,27 +334,49 @@ month<br/>
  <input type="number" placeholder="month" style="position:relative;height:18px;width:36%;background:none;color:#22f;font-weight:bold" id="month_input"/> 
  <span style="position:relative;font-weight:bold;font-family:verdana;color:aqua" class="month_class" id="month_plus"> > </span>
 </span>
-<br/>
+
+</div>
 
 
 
 </div>
 
-<!------------------------------------------------ calender widget ends here ----------------------------------------------------->
 
-</div> 
 
-<br/>
+
+
+ 
+<!-------------------------------------------------dae and calenderends ends here ------------------------------------->
+
 <div style="position:relative;height:63px;width:70%;background-color:aqua;left:15.2%;border-radius:12px;text-align:center" id="bookwilder">
 <span style="position:relative;top:12.6px;font-size:33.3px;color:white">book</span>
 </div>
 
  </div>
  
+
+
+
+
+ <!----------------------------------------------------------ne more step --------------------------------------------------------------------->
+ <!---------------------------------------------------------one more step ---------------------------------------------------------------------->
+
  
  
  <div style="position:relative;display:none" id="one_more_step" class="animated slideInLeft">
- <div style="position:relative;height:54px;width:100%;background-color:aqua;text-align:center;color:white;font-size:36px;">
+ 
+  <div style="position:relative;height:45px;width:100%;background-color:
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+ ;text-align:center;font-size:27px;color:white;font-family:cursive;" >
+ <span style="position:relative;float:left;left:9px;font-size:18px;top:9px" class= "back_click">
+ <i class="fa fa-arrow-left"></i>
+ </span>
+ <span style="position:relative;">tech travel</span>
+ </div>
+ 
+ 
+ <div style="position:relative;height:54px;width:100%;color:aqua;text-align:center;font-size:36px;">
  <span style="position:relative;top:5.4px">one step left <i class="fa fa-smile"></i></span>
  </div><br/>
  <div><input id="your_name" type="text" style="position:relative;height:45px;border-radius:12px;width:70%;left:15%" placeholder="name" /></div><br/>
@@ -350,7 +396,23 @@ month<br/>
  
  
  
+ 
+ <!-----------------------------------------------------ticket page --------------------------------------------------------------------------------------------->
+ <!--------------------------------------------------------new page --------------------------------------------------------------------------------------------->
+ 
+ 
+ 
  <div id="ticket_page" style="position:relative;display:none" class="ticket_page_class animated slideInLeft">
+ 
+  <div style="position:relative;height:45px;width:100%;background-color:
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+ ;text-align:center;font-size:27px;color:white;font-family:cursive;" >
+  <span style="position:relative;float:left;left:9px;font-size:18px;top:9px" class="back_click">
+ <i class="fa fa-arrow-left"></i>
+ </span>
+ <span style="position:relative;">tech travel</span>
+ </div><br/>
  
  <div style="position:relative;height:45px;width:45%;display:inline-block;overflow:hidden;font-size:27px;text-align:center">
  <span style="position:relative;top:7.2px">Ticket No:</span>
@@ -417,10 +479,62 @@ month<br/>
  
  </div>
  
+
+ </div>
  
  
+
+
  
  <script>
+ 
+ $(".back_click").click(function(){
+ 
+ var checkclass = $(this).attr("class");
+ 
+ if(checkclass == "back_click 1"){
+ //alert(checkclass);
+ $("#book_trip").hide();
+ $("#tech_travel").css({'display':'true'}).show();
+ 
+ //alert(checkclass);
+ }
+ 
+  if(checkclass == "back_click 2"){
+ $("#one_more_step").hide();
+ $("#book_trip").css({'display':'true'}).show();
+ $(".back_click").removeClass("2");
+ $(".back_click").addClass("1");
+// alert(checkclass);
+ }
+ 
+  if(checkclass == "back_click 3"){
+ $("#ticket_page").hide();
+ $("#one_more_step").css({'display':'true'}).show();
+ $(".back_click").removeClass("3");
+ $(".back_click").addClass("2");
+// alert(checkclass);
+ }
+ 
+ });
+ 
+ 
+/* $( function() {
+    $( "#draggable" ).draggable();
+  } );*/
+  
+ 
+  
+ if (jQuery.ui || jQuery.ui != "undefined") {
+//    alert("loaded")
+}
+
+ 
+ $("document").ready(function(){
+ var setWidth = $(window).width();
+ //$("body").css("width",setWidth +"px");
+ //alert(setWidth +"px");
+ });
  
  $("#co_order").click(function(){
  alert("order completed successfully");
@@ -595,6 +709,8 @@ month<br/>
  
  $(".book").click(function () {
 
+ $(".back_click").addClass("1");
+ 
 var Cape = $(this).attr("id");
 
 if ( Cape == "intercape"){
@@ -735,8 +851,10 @@ $("#book_trip").css("display","true").show();
  
 //alert("yes document ready");
  var measured = $(window).height();
+ var measured_width = $(window).width();
  var msr = measured * 0.7308;
  var mst = measured * 0.7308;
+ var msr_s_d = measured * 0.5;
 
  var calender_msr = measured * 0.702;
  var calender_mst = measured * 0.702;
@@ -754,23 +872,103 @@ $("#book_trip").css("display","true").show();
  
  //alert(month);
  
- if(measured == "568"){
- $("#clock_widget").css("top",msr); 
- $("#calender_widget").css("top",calender_msr);
- $("#big_pic").css("height",picheight);
+ if((measured >= "300") && (measured <= "500")){
+ 
+ //alert("am the smallest");
+ //alert(measured);
+ 
+ var setWidth = $(window).width() - 9;
+
+ $("#clock_widget").css({'position':'absolute','top':'72%','width':'63px'}); 
+ $("#calender_widget").css("top","79.2%");
+ $("#big_pic").css({"height":picheight});
  $("#bookwilder").css("top","1.8px");
- $("#byo2").css({'top':'0px','left':'18%'});
- $("#hre2").css({'top':'0px','left':'18%'});
- $("#mdr2").css({'top':'0px'}); 
- $("#ptr2").css({'top':'0px'});
+ $("#byo2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#hre2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#mdr2").css({'top':'18px','bottom':'0px','left':'54px'}); 
+ $("#ptr2").css({'top':'18px','bottom':'0px','right':'12.6px'});
+ $("#ptr").css({'left':'52.2px'});
+ $("#intercape").css({'overflow':'hidden'});
+ $("#greyhound").css({'overflow':'hidden'});
+ $("#bravo").css({'overflow':'hidden'});
+ $("#citiliner").css({'overflow':'hidden'});
+ $(".odds").css({'height':'188.1px','width':setWidth});
+ $(".small_div_prob").css({'height':'188.1px'});
+ $(".text_label").css({'bottom':'87.3%'});
+ $(".smallDivError").css({'font-size':'12px'});
+ $("#akdiv").css({'font-size':'12px'});
  //alert(msr);
  //alert("hey am 568");
  }
  
  
- if(measured >= "667"){
- $("#clock_widget").css({'top':mst,'right':'1%','left':'23.4%'});
- $("#calender_widget").css("top",calender_mst);
+
+ if((measured >= "505") && (measured <= "600")){
+ 
+ //alert("am the semi smallest");
+ //alert(measured);
+ 
+ var setWidth = $(window).width() - 9;
+
+ $("#clock_widget").css({'top':'72%'}); 
+ $("#calender_widget").css("top","71.1%");
+ $("#big_pic").css({"height":picheight});
+ $("#bookwilder").css("top","1.8px");
+ $("#byo2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#hre2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#mdr2").css({'top':'18px','bottom':'0px','left':'60.3px'});
+ $("#ptr").css({'left':'60.3px'}) 
+ $("#ptr2").css({'top':'18px','bottom':'0px'});
+ $("#intercape").css({'overflow':'hidden'});
+ $("#greyhound").css({'overflow':'hidden'});
+ $("#bravo").css({'overflow':'hidden'});
+ $("#citiliner").css({'overflow':'hidden'});
+ $(".odds").css({'height':'188.1px','width':setWidth});
+ $(".small_div_prob").css({'height':'188.1px'});
+ $(".text_label").css({'bottom':'87.3%'});
+ $(".smallDivError").css({'font-size':'12px'});
+ $("#akdiv").css({'font-size':'12px'});
+ //alert(msr);
+ //alert("hey am 568");
+ }
+
+
+
+
+
+
+
+
+ 
+ 
+ if((measured > "605") && (measured <= "700")){
+ //alert(measured);
+ //alert("am 6 7 going o plus ");
+ //var setWidth = $(window).width() - 9;
+ //$("body").css("width",setWidth +"px");
+ 
+ $("#clock_widget").css("top","67.5%"); 
+ $("#calender_widget").css("top","65.7%");
+ $("#big_pic").css({"height":picheight});
+ $("#bookwilder").css("top","1.8px");
+ $("#byo2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#hre2").css({'top':'18px','left':'14.4%','bottom':'0px'});
+ $("#mdr2").css({'top':'18px','bottom':'0px','left':'66.6px'}); 
+ $("#ptr").css({'left':'66.6px'});
+ $("#ptr2").css({'top':'18px','bottom':'0px'});
+ $("#intercape").css({'overflow':'hidden'});
+ $("#greyhound").css({'overflow':'hidden'});
+ $("#bravo").css({'overflow':'hidden'});
+ $("#citiliner").css({'overflow':'hidden'});
+ //alert(msr);
+ //alert("hey am 568");
+ }
+ 
+ 
+ if((measured >= "701") && (measured <= "800")){
+ //alert("its 8plus");
+ $("#clock_widget").css({'top':"67.5%",'right':'1%','left':'23.4%'});
+ $("#calender_widget").css({"top":"64.8%"});
  $("#big_pic").css("height",picheightsec);
  $("#bookwilder").css("top","27px");
  $("#byo").css("font-size","14.4px");
@@ -781,22 +979,66 @@ $("#book_trip").css("display","true").show();
  $("#cpt2").css("font-size","14.4px");
  $("#jhb2").css("font-size","14.4px");
  $("#dbn2").css("font-size","14.4px");
- $("#byo2").css({'font-size':'14.4px','left':'15.3%','top':'3.6px',});
- $("#hre2").css({'font-size':'14.4px','left':'15.3%','top':'3.6px',});
+ $("#byo2").css({'font-size':'14.4px','left':'15.3%','top':'22.5px'});
+ $("#hre2").css({'font-size':'14.4px','left':'15.3%','top':'22.5px'});
  $("#akdiv").css({'top':'1.08px'});
  $("#togodiv").css({'padding-bottom':'3.6px'});
- $("#mdr2").css({'top':'3.6px'}); 
- $("#ptr2").css({'top':'3.6px'});
+ $("#mdr2").css({'top':'22.5px'}); 
+ $("#ptr2").css({'top':'22.5px'});
+ $(".odds").css({"width":"100%"});
+ 
+ $("#intercape").css({'overflow':'hidden'});
+ $("#greyhound").css({'overflow':'hidden'});
+ $("#bravo").css({'overflow':'hidden'});
+ $("#citiliner").css({'overflow':'hidden'});
+ ///alert("hey am 667");
+ //alert();
+ };
+ 
+ 
+ if((measured >= "801") ){
+ alert("me");
+ $("#clock_widget").css({'top':"57.6%",'right':'1%','left':'23.4%'});
+ $("#calender_widget").css("top","55.8%");
+ $("#big_pic").css("height",picheightsec);
+ $("#bookwilder").css("top","27px");
+ $("#byo").css("font-size","14.4px");
+ $("#jhb").css("font-size","14.4px");
+ $("#dbn").css({'font-size': '14.4px'});
+ $("#hre").css({'font-size':'14.4px','left':'15.3%','top':'19.8px',});
+ $("#cpt").css({'left':'15.3%','top':'18px','font-size':'14.4px'});
+ $("#cpt2").css("font-size","14.4px");
+ $("#jhb2").css("font-size","14.4px");
+ $("#dbn2").css("font-size","14.4px");
+ $("#byo2").css({'font-size':'14.4px','left':'15.3%','top':'22.5px',});
+ $("#hre2").css({'font-size':'14.4px','left':'15.3%','top':'22.5px',});
+ $("#ptr").css({'left':'66.6px'});
+ $("#akdiv").css({'top':'1.08px'});
+ $("#togodiv").css({'padding-bottom':'3.6px'});
+ $("#mdr2").css({'top':'22.5px','left':'66.6px'}); 
+ $("#ptr2").css({'top':'22.5px'});
+ 
+var setWidth = $(window).width() - 9;
+ $(".odds").css({'width':setWidth});
+ $(".od")
+ //$("#greyhound").css({'overflow':'hidden'});
+ //$("#bravo").css({'overflow':'hidden'});
+ //$("#citiliner").css({'overflow':'hidden'});
  ///alert("hey am 667");
  //alert();
  };
  
  
  
+  
+ 
  });
  
  
  $("#bookwilder").click(function(){
+ 
+ $(".back_click").removeClass("1");
+ $(".back_click").addClass("2");
  
  window.origins = $(".fromclass").html();
  window.originsunknown = $(".toClass").html();
@@ -813,17 +1055,20 @@ $("#book_trip").css("display","true").show();
  });
  
  $("#finish_order").click(function(){
+ $(".back_click").removeClass("2");
+ $(".back_click").addClass("3");
+ 
  //alert(window.origins);
  window.your_name = $("#your_name").val();
  window.your_DOB = $("#your_DOB").val();
  window.your_surname = $("#your_surname").val();
  window.your_phonenumber = $("#your_phonenumber").val();
- //var random = rand();
+ var random =  Math.floor(100000 + Math.random() * 900000011);
  
  $("#one_more_step").hide();
  $("#ticket_page").css("display","true").show();
- //$("#Ticket_span").html(random);
- $("#name_span").html(window.your_name + window.surname);
+ $("#Ticket_span").html(random);
+ $("#name_span").html(window.your_name + window.your_surname);
  $("#Departure_Time_span").html(window.time_selector);
  $("#Arrival_Time_span").html("auto");
  $("#Departure_Place_span").html(origins);
