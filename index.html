@@ -739,14 +739,68 @@ var getShit = $(".the_togglers").attr("id");
  
  
  
- var hq = window.matchMedia( "(min-height: 600px)" );
+ 
+ var small_devMin = window.matchMedia( "(min-height:236px)" );
+ var small_devMax= window.matchMedia( "(max-height: 500px)" );
+ 
+  $("body").css({"overflow":"hidden"});
+if (small_devMin.matches && small_devMax.matches) {
+   alert("yes small_dev");   
+   // window width is at less than 570px
+}
+ 
+ var se_devMin = window.matchMedia( "(min-height: 505px)" );
+ var se_devMax= window.matchMedia( "(max-height: 590px)" );
+ 
+  $("body").css({"overflow":"hidden"});
+if (se_devMin.matches && se_devMax.matches) {
+   alert("se");   
+   // window width is at less than 570px
+} 
+ 
+ 
+ var hq = window.matchMedia( "(min-height: 595px)" );
  var mq = window.matchMedia( "(max-height: 667px)" );
  
  $("body").css({"overflow":"hidden"});
 if (hq.matches && mq.matches) {
-//alert("yes iphone 6 6");   
+   alert("yes iphone 6 6");   
    // window width is at less than 570px
 }
+
+
+
+
+ var hq_plus_min = window.matchMedia( "(min-height: 720px)" );
+ var mq_plus_max = window.matchMedia( "(max-height: 800px)" );
+ 
+ $("body").css({"overflow":"hidden"});
+if (hq_plus_min.matches && mq_plus_max.matches) {
+   alert("6 plus");   
+   // window width is at less than 570px
+}
+
+
+
+ var eight_min = window.matchMedia( "(min-height: 801px)" );
+ var eight_max = window.matchMedia( "(max-height: 1200px)" );
+ 
+ $("body").css({"overflow":"hidden"});
+if (eight_min.matches && eight_max.matches) {
+   alert("801");   
+   // window width is at less than 570px
+}
+
+
+
+
+
+
+
+
+
+
+
  
  $(".go_back").click(function(){
  
