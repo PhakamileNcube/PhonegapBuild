@@ -745,155 +745,7 @@ var getShit = $(".the_togglers").attr("id");
  
   $("body").css({"overflow":"hidden"});
 if (small_devMin.matches && small_devMax.matches) {
-   alert("yes small_dev");   
-   // window width is at less than 570px
-}
- 
- var se_devMin = window.matchMedia( "(min-height: 505px)" );
- var se_devMax= window.matchMedia( "(max-height: 590px)" );
- 
-  $("body").css({"overflow":"hidden"});
-if (se_devMin.matches && se_devMax.matches) {
-   alert("se");   
-   // window width is at less than 570px
-} 
- 
- 
- var hq = window.matchMedia( "(min-height: 595px)" );
- var mq = window.matchMedia( "(max-height: 667px)" );
- 
- $("body").css({"overflow":"hidden"});
-if (hq.matches && mq.matches) {
-   alert("yes iphone 6 6");   
-   // window width is at less than 570px
-}
 
-
-
-
- var hq_plus_min = window.matchMedia( "(min-height: 720px)" );
- var mq_plus_max = window.matchMedia( "(max-height: 800px)" );
- 
- $("body").css({"overflow":"hidden"});
-if (hq_plus_min.matches && mq_plus_max.matches) {
-   alert("6 plus");   
-   // window width is at less than 570px
-}
-
-
-
- var eight_min = window.matchMedia( "(min-height: 801px)" );
- var eight_max = window.matchMedia( "(max-height: 1200px)" );
- 
- $("body").css({"overflow":"hidden"});
-if (eight_min.matches && eight_max.matches) {
-   alert("801");   
-   // window width is at less than 570px
-}
-
-
-
-
-
-
-
-
-
-
-
- 
- $(".go_back").click(function(){
- 
- var set = $("#go_back_id").attr("class");
- 
- if(set == "go_back 1"){
- $("#fourthDiv").hide();
- $("#thirdDiv").css({"display":"true"}).show();
- $("#go_back_id").removeClass("1");
- $("#theDraw").removeClass("1");
-  $("body").css({"overflow":"auto"});
-    var the_problem = $(window).width()-45;
- $(".angfuni").css({"position":"relative","width":the_problem});
- }
-
- if(set == "go_back 2"){
- $("#fiftDiv").hide();
- $("#fourthDiv").css({"display":"true"}).show();
- $("#go_back_id").removeClass("2").addClass("1");
- $("#theDraw").removeClass("2").addClass("1");
- }
-
- if(set == "go_back 3"){
- $("#ticket_page").hide();
- $("#fiftDiv").css({"display":"true"}).show();
- $("#go_back_id").removeClass("3").addClass("2");
- $("#theDraw").removeClass("3").addClass("2");
- }
- 
- });
- 
- $("#netx_to_ticket").click(function(){
-$("#fiftDiv").hide();
- $("#ticket_page").css({"display":"true"}).show();
- $("#go_back_id").removeClass("2").addClass("3");
- $("#theDraw").removeClass("2").addClass("3");
-
- 
-
- });
- 
- $("#NextHold").click(function(){
- //alert("in my head");
- $("#fourthDiv").hide();
- $("#fiftDiv").css({"display":"true"}).show();
- $("#go_back_id").removeClass("1").addClass("2");
- $("#theDraw").removeClass("1").addClass("2");
-
-  
- });
- 
-window.mywidth = $(window).width();
- 
- $("#famous_next").click(function(){
- $("#secondDiv").hide();
- $("#headerDiv").css({"display":"true"}).show();
- $("#thirdDiv").css({"display":"true"}).show();
-  $("body").css({"overflow":"auto"});
-  var the_problem = $(window).width()-45;
- $(".angfuni").css({"position":"relative","width":the_problem});
- 
-
- });
-
- $(".picture_holder").click(function(){
- $("#thirdDiv").hide();
- $("#fourthDiv").css({"position":"relative","display":"true","bottom":"18px"}).show();
- $("#headerDiv").css({"border-bottom":"0px solid black"});
- $("#go_back_id").addClass("1");
- $("#theDraw").addClass("1");
-  $("body").css({"overflow":"hidden"});
- var getBusName = $(this).attr("name");
-//alert(getBusName);
-//var the_problem = $(window).width()-45;
- $(".angfuni").css({"position":"relative","width":"100"});
-
-  
- });
- 
-$(".more_bar").click(function(){
-//$(".draw").css({"display":"true"}).show();
-///alert("this is now getting shitty");
-$("#firstDraw").toggle();
-// var set = $("#theDraw").attr("class");
-// if(set == "more_bar"){$(".firstDraw").css({"display":"true"}).show();} 
-});
-
-$("#fantasy").click(function(){
-$(".draw").hide();
-}); 
-
-var measured = $(window).height();
-if((measured >= "300") && (measured <= "500")){
 var measured = $(window).height();
 
 $("body").css({"height":measured});
@@ -1023,12 +875,20 @@ $("#about_us_btn").css({"background-color":"white"}).show();
 $("#famous_next").css({"bottom":"0px"});
 
 });
+
+
+
 }
 
-/////////////////////////////////////////////////////////////end of smallest div //////////////////////////////////////////////////////////////
-
-if((measured >= "505") && (measured <= "600")){
-var measured = $(window).height();
+////////////////////////////////////////////////////////end of smalldevice ///////////////////////////////////////////////////////
+ 
+ var se_devMin = window.matchMedia( "(min-height: 505px)" );
+ var se_devMax= window.matchMedia( "(max-height: 590px)" );
+ 
+  $("body").css({"overflow":"hidden"});
+if (se_devMin.matches && se_devMax.matches) {
+   
+   var measured = $(window).height();
 
 $("body").css({"height":measured});
 
@@ -1168,13 +1028,17 @@ $("#about_us_btn").css({"background-color":"white"}).show();
 $("#famous_next").css({"bottom":"0px"});
 
 });
+   
+} 
  
- }
+ 
+ var hq = window.matchMedia( "(min-height: 595px)" );
+ var mq = window.matchMedia( "(max-height: 667px)" );
+ 
+ $("body").css({"overflow":"hidden"});
+if (hq.matches && mq.matches) {
 
-//////////-----------------------------------------------------------end of se iphone /////////////////////////////////////////////
 
-if((measured > "605") && (measured <= "700")){
-//alert("6");
 var measured = $(window).height();
 
 $("body").css({"height":measured});
@@ -1305,13 +1169,18 @@ $("#famous_next").css({"bottom":"0px"});
 
 });
 
-
 }
 
-////////////////////////////////////////////////-------------------end of iphone 6 -----------------------//////////////////////////////
 
-if((measured >= "701") && (measured <= "800")){
-var measured = $(window).height();
+
+
+ var hq_plus_min = window.matchMedia( "(min-height: 720px)" );
+ var mq_plus_max = window.matchMedia( "(max-height: 800px)" );
+ 
+ $("body").css({"overflow":"hidden"});
+if (hq_plus_min.matches && mq_plus_max.matches) {
+   
+   var measured = $(window).height();
 
 $("body").css({"height":measured});
 
@@ -1433,13 +1302,18 @@ $("#famous_next").css({"top":"9px"});
 
 });
 
+     
 }
 
-////////////////////////////////////////////////////////////---------------end of iphone 8plus ------------------------------///////
 
-if((measured >= "801") ){
 
-var measured = $(window).height();
+ var eight_min = window.matchMedia( "(min-height: 801px)" );
+ var eight_max = window.matchMedia( "(max-height: 1200px)" );
+ 
+ $("body").css({"overflow":"hidden"});
+if (eight_min.matches && eight_max.matches) {
+   
+   var measured = $(window).height();
 
 $("body").css({"height":measured});
 
@@ -1558,7 +1432,114 @@ $("#famous_next").css({"top":"9px"});
 
 });
 
+   
+   
 }
+
+
+
+
+
+
+
+
+
+
+
+ 
+ $(".go_back").click(function(){
+ 
+ var set = $("#go_back_id").attr("class");
+ 
+ if(set == "go_back 1"){
+ $("#fourthDiv").hide();
+ $("#thirdDiv").css({"display":"true"}).show();
+ $("#go_back_id").removeClass("1");
+ $("#theDraw").removeClass("1");
+  $("body").css({"overflow":"auto"});
+    var the_problem = $(window).width()-45;
+ $(".angfuni").css({"position":"relative","width":the_problem});
+ }
+
+ if(set == "go_back 2"){
+ $("#fiftDiv").hide();
+ $("#fourthDiv").css({"display":"true"}).show();
+ $("#go_back_id").removeClass("2").addClass("1");
+ $("#theDraw").removeClass("2").addClass("1");
+ }
+
+ if(set == "go_back 3"){
+ $("#ticket_page").hide();
+ $("#fiftDiv").css({"display":"true"}).show();
+ $("#go_back_id").removeClass("3").addClass("2");
+ $("#theDraw").removeClass("3").addClass("2");
+ }
+ 
+ });
+ 
+ $("#netx_to_ticket").click(function(){
+$("#fiftDiv").hide();
+ $("#ticket_page").css({"display":"true"}).show();
+ $("#go_back_id").removeClass("2").addClass("3");
+ $("#theDraw").removeClass("2").addClass("3");
+
+ 
+
+ });
+ 
+ $("#NextHold").click(function(){
+ //alert("in my head");
+ $("#fourthDiv").hide();
+ $("#fiftDiv").css({"display":"true"}).show();
+ $("#go_back_id").removeClass("1").addClass("2");
+ $("#theDraw").removeClass("1").addClass("2");
+
+  
+ });
+ 
+window.mywidth = $(window).width();
+ 
+ $("#famous_next").click(function(){
+ $("#secondDiv").hide();
+ $("#headerDiv").css({"display":"true"}).show();
+ $("#thirdDiv").css({"display":"true"}).show();
+  $("body").css({"overflow":"auto"});
+  var the_problem = $(window).width()-45;
+ $(".angfuni").css({"position":"relative","width":the_problem});
+ 
+
+ });
+
+ $(".picture_holder").click(function(){
+ $("#thirdDiv").hide();
+ $("#fourthDiv").css({"position":"relative","display":"true","bottom":"18px"}).show();
+ $("#headerDiv").css({"border-bottom":"0px solid black"});
+ $("#go_back_id").addClass("1");
+ $("#theDraw").addClass("1");
+  $("body").css({"overflow":"hidden"});
+ var getBusName = $(this).attr("name");
+//alert(getBusName);
+//var the_problem = $(window).width()-45;
+ $(".angfuni").css({"position":"relative","width":"100"});
+
+  
+ });
+ 
+$(".more_bar").click(function(){
+//$(".draw").css({"display":"true"}).show();
+///alert("this is now getting shitty");
+$("#firstDraw").toggle();
+// var set = $("#theDraw").attr("class");
+// if(set == "more_bar"){$(".firstDraw").css({"display":"true"}).show();} 
+});
+
+$("#fantasy").click(function(){
+$(".draw").hide();
+}); 
+
+ 
+ 
+ 
 })
 </script>
 
