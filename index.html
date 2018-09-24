@@ -54,81 +54,18 @@ body{font-family:sans-serif}
 
 <body style="position:relative;overflow:hidden">
 
- 
-<!------------------------------------------first head up slide introduction ---------------------------------------------------------------------------->
-
-<div id="firstDiv" style="position:relative;height:100%;text-align:center;font-size:54px" class="animated slideInUp">
-<span style="position:relative;top:45%">
-<span style="color:#db3236">t</span><span style="color:#f4c20d">e</span><span style="color:#4885ed">c</span><span style="color:#3cba54">h</span> 
-<span style="color:purple">t</span><span style="color:#db3236">r</span><span style="color:#4885ed">a</span><span style="color:#f4c20d">v</span><span style="color:#3cba54">e</span><span style="color:#4885ed">l</span>
-</span>
-</div>
-<!------------------------------------------first head up slide ending ---------------------------------------------------------------------------->
 
 
 
-<!------------------------------------------ welcome header--------------------------------------------------------------------------------------------------->
-<div id="secondDiv" style="position:relative;height:98%;width:98%;padding:1%;background-color:;display:none;text-align:center;overflow:hidden" class="animated slideInUp">
-
-hey
-
-
-
-</div>
-
-
-
-
-
-
-<!------------------------------------------ welcome header ends--------------------------------------------------------------------------------------------------->
-
-<!---------------------------------------------thirdDiv start here -------------------------------------------------------------------------------------------------->
-<div id="headerDiv" style="position:relative;width:98%;padding:1%;display:none;text-align:center;">
-<span style="position:relative;display:float;float:left" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
-<span><span style="color:#db3236">t</span><span style="color:#f4c20d">e</span><span style="color:#4885ed">c</span><span style="color:#3cba54">h</span> 
-<span style="color:purple">t</span><span style="color:#db3236">r</span><span style="color:#4885ed">a</span><span style="color:#f4c20d">v</span><span style="color:#3cba54">e</span><span style="color:#4885ed">l</span>
-</span>
-
-<!------------------------------------------------draw button click start here------------------------------------------------------->
-<span style="position:relative;display:float;float:right" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
-<!------------------------------------------------draw button click end here------------------------------------------------------->
-
-</div>
-
-
-
+body test app
 
 
 
 <script>
 $("document").ready(function(){
-   setTimeout(function(){
- $("#firstDiv").hide();
- $("#secondDiv").css({'display':'inline-block'}).show();
- 
- },4500);
- 
-
-
- 
-window.mywidth = $(window).width();
- 
- $("#famous_next").click(function(){
- $("#secondDiv").hide();
- $("#headerDiv").css({"display":"true"}).show();
- $("#thirdDiv").css({"display":"true"}).show();
-  $("body").css({"overflow":"auto"});
-  var the_problem = $(window).width()-45;
- $(".angfuni").css({"position":"relative","width":the_problem});
- 
-
- });
-
-
- 
- 
- 
+var getHeight = $(window).height();
+alert(getHeight);
+ $("body").css({"height":getHeight});
 })
 </script>
 
