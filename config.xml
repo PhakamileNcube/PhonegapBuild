@@ -89,9 +89,6 @@
 	
 	
 	<platform name="blackberry10">
-    <rim:permissions>
-        <rim:permit> ...</rim:permit>
-    </rim:permissions>
     </platform>
 	
 	
