@@ -87,11 +87,7 @@
         <splash src="www/res/screen/ios/Default~iphone.png"             platform="ios" width="320"  height="480" />
     </platform>
 	
-	
-	<platform name="blackberry10">
-    </platform>
-	
-	
+	 
 
     <platform name="wp8">
         <icon   src="www/res/icon/wp8/ApplicationIcon.png"   platform="wp8" width="99"  height="99" />

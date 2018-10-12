@@ -7,6 +7,7 @@
 
 <script>
   // Initialize Firebase
+  
   var config = {
     apiKey: "AIzaSyDQjzw0nVa1H8OKID54qO3eicyRBTP_hRw",
     authDomain: "techtravel0774.firebaseapp.com",
@@ -17,7 +18,7 @@
   };
   firebase.initializeApp(config);
   var db = firebase.firestore();
-    
+   
 </script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
@@ -60,122 +61,446 @@ body{font-family:sans-serif}
 </span>
 </div>
 <!----------------------------------------------------header div =---------------------------------------------------------------------------------------->
-<div id="headerDiv" style="position:relative;width:98%;padding:1%;display:none;text-align:center;">
-<span style="position:relative;display:float;float:left" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
-<span><span style="color:#db3236">t</span><span style="color:#f4c20d">e</span><span style="color:#4885ed">c</span><span style="color:#3cba54">h</span> 
-<span style="color:purple">t</span><span style="color:#db3236">r</span><span style="color:#4885ed">a</span><span style="color:#f4c20d">v</span><span style="color:#3cba54">e</span><span style="color:#4885ed">l</span>
-</span>
-<span style="position:relative;display:float;float:right" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
+
+<div id="secondDiv" class="animated slideInUp" style="text-align:center;display:none"> 
+
+<div style="position:fixed;z-index:10;background-color:red;color:white;width:18px;height:18px;padding:2.7%;top:93.6%;left:85.5%" id="scroll"><i class="fa fa-arrow-up"> </i></div>
+<div style="position:fixed;height:18px;width:18%;left:77.4%;background-color:rgb(72, 133, 237);border-radius:9px;padding:0.81%;color:white;z-index:10" id="famous_next" >next</div>
+
+<div id="welcome_text">Welcome</div><br/>
+<div id="balls">
+
+<img  src="design/ball.jpg" id="the_image"/>
+</div>
+
+
+<div style="position:relative;height:207px;width:100%;overflow:hidden;background-color:rgb(72, 133, 237);color:white;padding-top:0.81%;line-height:22.5px;font-family:sans-serif">
+
+<div >Hi, welcome to Tech travel </div>
+<div style="position:relative;top:1.08px;color:aqua;font-family:cursive">
+Our travel pack include
+</div>
+
+
+<div style="position:relative;top:9px;text-align:left" id="travel_pack">
+
+<div id="number1" ><span style="position:relative;bottom:4.5px;">buses</span></div>
+<div id="number2"><span style="position:relative;bottom:4.5px;">planes</span></div>
+<div id="number3"><span style="position:relative;bottom:4.5px;">hotels</span></div>
+<div id="number4"><span style="position:relative;bottom:4.5px;">taxi</span></div>
+
+
+
+<br/>
+<div id="number5"><span style="position:relative;bottom:4.5px;">events</span></div>
+
+<div id="number6"><span style="position:relative;bottom:4.5px;">send & recieve money</span></div>
+
+<div id="number7"><span style="position:relative;bottom:4.5px;">tv</span></div>
+
+<div id="number8"><span style="position:relative;bottom:4.5px;">buy electricity</span></div>
+
+<div id="number9"><span style="position:relative;bottom:4.5px;">pay rent</span></div>
+
+
+
+<div id="number10"><span style="position:relative;bottom:4.5px;">music</span></div>
+
+ 
+<div id="number11"><span style="position:relative;bottom:4.5px;">games</span></div>
+
+<div id="number12"><span style="position:relative;bottom:4.5px;">kids</span></div>
+
+
+
+
+
+</div>
+<br/>
+<div style="color:#ff2">We are pleased to have you onboard with us</div>
+</div>
+<br/>
+<p style="color:black)">
+Get the best deals when flying with Fly Emirates, Etihad, South African Airways And Qatar
+</p>
+<div id="fly">
+
+<img  src="design/fly.jpg" 			style="position:relative;height:100%;width:100%"/>
+<img  src="design/emi_sky.png" 		style="position:relative;height:100%;width:100%"/>
+ 
+</div>
+
+
+
+
+<div style="position:relative;height:180px;width:100%;overflow:hidden;padding-top:0.81%">
+<h2 style="black">Fly in luxury mode</h2>
+<br/>
+<p style="color:black">
+Switch to business class and first class get a discount of luxury
+</p>
+</div>
+
+<div id="BusDesign">
+<img  src="bus_pics/greyhound/greyhound.jpg" style="position:relative;height:100%;width:100%"/>
+</div>
+
+
+
+
+<div style="position:relative;height:180px;width:100%;overflow:hidden;color:black;padding-top:0.81%">
+<h2>Best luxurious coaches in the world</h2> 
+<p>We only offer the best buses in the industry known with excellent services</p>
+</div>
+
+<br/>
+<div style="color:rgb(72, 133, 237);">
+<h2>Our Team</h2> <br/>
+<p style="color:black">Our team always ready to make the user experience as smooth and fun to navigate</p>
+
+</div>
+<br/>
+<div id="theTeam">
+<img  src="design/offi.jpg" style="position:relative;height:100%;width:100%"/>
+</div>
+
+
+<div id="career">
+<h2 style="color:rgb(72, 133, 237)">Join Us</h2>
+<h3>Careers</h3> 
+<div style="position:relative;text-align:left;padding-left:0.81%">
+<div style="text-align:center">Now hiring</div> 
+<p style="color:aqua">Software engineers , Receptionist (girl) , Hotline helpdesk , Human Resource Manager & Business lawyer </p>
+
+Email your C.V : <br/>
+Codexian0774@gmail.com <br/>
+Email with header of Job Post <br/>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="lastDiv">
+<div style="text-align:center"><h3>Contact Us</h3></div> 
+<div style="text-align:center;position:relative;left:1.8%">
+Codexian0774@gmail.com <br/>
++263776508306 - whatsapp <br/>
+</div>
+<div><h4>Parent Company</h4> 
+<h2> &copy; Yonic </h2>
+<h3> Founder & CEO : Phakamile Ncube </h3>
+</div>
+
+<div style="text-align:left;position:relative;left:3.6%;width:45%;display:inline-block;overflow:hidden"><h4>Subsidaries</h4> 
+ Yonic music <br/>
+ Tech travel <br/>
+ Fast Pay <br/>
+ Yonic Industries <br/>
+ Yonic Mines <br/>
+ Yonic Farm <br/>
+</div>
+<div style="text-align:left;position:relative;left:3.6%;width:45%;display:inline-block;overflow:hidden"> 
+ Yo money <br/>
+ Fast Shop <br/>
+ Yonic Online Shop<br/>
+ Yonic Retail <br/>
+ Yonic Education <br/>
+ Yonic Clothing <br/>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+<div id="headerDiv" style="position:relative;width:98%;padding:1%;display:none;text-align:center;background-color:rgb(72, 133, 237);color:white">
+<span style="position:relative;display:float;float:left;top:9%" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
+<span style="position:relative;top:9%">tech travel</span>
+<span style="position:relative;display:float;float:right;top:9%" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
  </div>
 
-<div id="secondDiv"style="position:relative;display:none;height:100%;width:100%;">
-
-<div style="position:relative;height:9%;overflow:hidden;text-align:center"> 
-<span id="welcome_head">Welcome</span><br/>
-<span style="position:relative;float:left;left:1.8%;display:true" id="who_are_we_font">Who are we?</span>
-<span style="position:relative;float:left;left:1.8%;display:none" id="about_us_font">About Us</span>
-
-</div>
-<div style="position:relative;height:75.6%;overflow:hidden;text-align:left;display:true;width:98%;left:1%"id="paragraph_font">
  
-Hi, welcome to Tech travel . We are pleased to have you onboard with us. We provide a platform for you to buy and order bus tickets to and fro the world.
-Very user friendly we are, just click on the bus you wish to book or see the specs ,choose the time and date of your travel,enter your details,e.g name and walla! you are done ,
-you can choose to pay now or later choosing from range of payment methods provided.More functions like buying electricity and ordering taxi can be found on the top right
-by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
- 
- <div style="text-align:center;height:20.7%;overflow:hidden" class="mission_statement">
- <div>"We are dedicated to creating technology with the mission to change life and create opportunities for everyone "</div>
-
- </div>
- 
-</div>
-
-
-
-<div style="position:relative;height:75.6%;overflow:hidden;text-align:left;display:none"id="paragraph_font_about">
- 
-<div style="position:relative;height:23.4%;display:block;overflow:hidden;text-align:center">
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Founder</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">Phakamile Ncube</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Company Name</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">Tech Travel</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Parent Company</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">Yonic</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Founded</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">2018</div>
-</div>
-<div style="position:relative;height:15.3%;display:block;overflow:hidden;text-align:center">
-
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Focuses</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left;">Travel, Ticket Sales & Money Transfer</div>
-</div>
-
-<div style="position:relative;height:23.4%;display:block;overflow:hidden;text-align:center">
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Yonic Focuses</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">Software engineering , Building Apps, Travelling, Industrial Designs, & Yonic Industries Group</div>
-
-</div>
-<div style="position:relative;height:14.4%;display:block;overflow:hidden;text-align:center">
-<div style="position:relative;width:98%;display:block;overflow:hidden">Contact Us If You Want To build an App or Industry</div><br/>
- 
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Phakamile Ncube </div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left"> 00263776508306</div>
-</div>
-
- <div style="position:relative;height:18%;display:block;overflow:hidden;text-align:center">
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden">Careers and jobs</div>
-<div style="position:relative;width:45%;display:inline-block;overflow:hidden;text-align:left">
-00263776508306 <br/> or </br> <span id="ema">Codexian0774@gmail.com</span></div>
-
-</div>
-
-  
-</div>
-
-
-
-
-<div style="position:relative;height:9%;overflow:hidden"> 
-<span style="position:relative;display:inline-block;left:2.7%" id="about_us_click">about us</span>
-<span style="position:relative;display:none;left:2.7%" id="who_are_we_click">who are we?</span>
-
-<span style="position:relative;display:inline-block;background-color:aqua;padding-top:1.8%;padding-bottom:1.8%;padding-left:2.7%;padding-right:2.7%;width:54%;height:36%;float:right;right:1.8%;border-radius:9px;text-align:center;color:white" id="famous_next">Next</span>
-</div>
-
-
-</div> 
  
  <div id="oi" >
 <div id="thirdDiv" style="display:none;position:relative;height:auto;overflow-y: auto">
 <div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="intercape" id="intercape">
 <img class="picture_holder" src="bus_pics\intercape\bus.jpg" id="intercape" style="position:relative;height:100%;width:100%"/>
 </div>
- <div style="position:relative;height:18%;width:100%;overflow:hidden;top:0.9%">
- <div style="position:relative;height:33.3%;width:100%;overflow:hidden;text-align:center;background-color:aqua;color:white;" class="nkunzi2">
- 
-<div style="position:relative;display:inline-block;width:25.2%;text-align:center;overflow:hidden;font-size:16.2px;float:left;left:1.8%;top:9px" name="reveal" bus="intercape" class="see_trips">
- <span style="position:relative;float:left;left:3.6%;display:true" id="intercape" class="Panminjun"><i class="fa fa-info"></i>&nbsp; see trips</span>
-  
-</div>
- 
- <div style="position:relative;display:inline-block;width:25.2%;text-align:center;overflow:hidden;font-size:16.2px;float:left;left:1.8%;top:9px;display:none" name="close" bus="intercape" class="see_trips">
- <span style="position:relative;float:left;left:3.6%;display:true;" id="intercape" class="Panminjun"  />close</span>
- </div>
- 
-<div style="position:relative;display:inline-block;width:30.6%;text-align:left;overflow:hidden;top:9px">
-<span style="position:relative;font-size:16.2px">Intercape</span>
-</div>
-
- </div>
-
- </div>
-<!----------------------------------------------------------------------ends OF INTERCAPE PRICE HOLDERS ----------------------------------------------->
-
+<div class="theOnlyClass" >
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Intercape</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
 <br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+
+
+
+
+<!----------------------------------------------------------------------ends OF INTERCAPE here ----------------------------------------------->
+
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="greyhound" id="greyhound">
+<img class="picture_holder" src="bus_pics\greyhound\greyhound.jpg" id="greyhound" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Greyhound</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+
+<!------------------------------------------------------------ end of greyhound here -------------------------------------------------------------------->
+
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="bravo" id="bravo">
+<img class="picture_holder" src="bus_pics\bravo\bravo.jpg" id="bravo" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Bravo</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+
+
+ <!------------------------------------------------------------ end of bravo here -------------------------------------------------------------------->
+
+
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="citiliner" id="citiliner">
+<img class="picture_holder" src="bus_pics\citiliner\citiliner.jpg" id="citiliner" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Citiliner</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+
+
+<!------------------------------------------------------------ end of Citiliner here -------------------------------------------------------------------->
+ 
 
  
 
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="intercity" id="intercity">
+<img class="picture_holder" src="bus_pics\intercity\intercity.jpg" id="intercity" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Intercity</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
 
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+ 
+
+<!------------------------------------------------------------ end of Intercity here -------------------------------------------------------------------->
+  
+
+
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="eagleliner" id="eagleliner">
+<img class="picture_holder" src="bus_pics\eagleliner\eagleliner.jpg" id="eagleliner" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Eagleliner</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of Eagleliner here -------------------------------------------------------------------->
+   
+  
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="mzansi" id="mzansi">
+<img class="picture_holder" src="bus_pics\mzansi\mzansi.jpg" id="mzansi" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Mzansi</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of Mzansi here -------------------------------------------------------------------->
+   
+
+
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="pathfinder" id="pathfinder">
+<img class="picture_holder" src="bus_pics\pathfinder\pathfinder.jpg" id="pathfinder" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Pathfinder</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of pathfinder here -------------------------------------------------------------------->
+   
+
+ 
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="pioneer" id="pioneer">
+<img class="picture_holder" src="bus_pics\pioneer\pioneer.jpg" id="pioneer" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Pioneer</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of pioneer here -------------------------------------------------------------------->
+     
+   
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="translux" id="translux">
+<img class="picture_holder" src="bus_pics\translux\translux.jpg" id="translux" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Translux</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of translux here -------------------------------------------------------------------->
+     
+   
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="city_to_city" id="city_to_city">
+<img class="picture_holder" src="bus_pics\city_to_city\city_to_city.jpg" id="city_to_city" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>City To City</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+<div style="position:relative;width:90%;left:4.5%"><hr/></div>
+ 
+<!------------------------------------------------------------ end of City to city here -------------------------------------------------------------------->
+     
+   
+
+   
+<div class="picture_holder_plus" style="position:relative;overflow:hidden;" name="city_link" id="city_link">
+<img class="picture_holder" src="bus_pics\city_link\city_link.jpg" id="city_link" style="position:relative;height:100%;width:100%"/>
+</div>
+<div class="theOnlyClass">
+<div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>City Link</h2></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
+<br/>
+ <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;bottom:2.7px">see prices</span>
+ </span>
+</div>
+<div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
+</div>
+
+ 
+<!------------------------------------------------------------ end of City Link here -------------------------------------------------------------------->
+     
+
+
+   
+   
+
+ 
+ 
+ 
 </div>
 
 </div>
@@ -183,49 +508,166 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
 <!------------------------------------------------thirdDiv end here--------------------------------------------------------------------------------------------->
 
 <div id="fourthDiv" style="display:none">
+
 <br/>
-<div style="position:relative;display:block;font-size:12.6px" id="From_div"> From : &nbsp; <span id="from_span"></span> </div>
-<div class="holds_from">
-<span style="background-color:#22f;" class="from_cities" id="Bulawayo">Bulawayo</span>
-<span style="background-color:#f02;" class="from_cities" id="Gwanda">Gwanda</span>
-<span style="background-color:#ff2;" class="from_cities" id="Musina">Musina</span>
-<span style="background-color:cornflowerblue;" class="from_cities" id="Durban">Durban</span>
-<span style="background-color:purple;" class="from_cities" id="Capetown">Capetown</span>
-<br/><br/>
+<div style="position:relative;height:378px;;width:97.2%;color:white;padding-left:1.3609%;padding-right:1.3609%;overflow:hidden;display:block;padding-top:1.3609%;text-align:center;" id="all_selects">
 
-<span style="background-color:yellow;" class="from_cities" id="Beitbridge">Beitbridge</span>
-<span style="background-color:#2f2;" class="from_cities" id="Pretoria">Pretoria</span>
-<span style="background-color:#22f;" class="from_cities" id="Midrand">Midrand</span>
-<span style="background-color:#ff2;" class="from_cities" id="Gweru">Gweru</span>
-<span style="background-color:#f22;" class="from_cities" id="Harare">Harare</span>
-<br/><br/>
-<span style="background-color:cornflowerblue;" class="from_cities" id="Johannesburg">Johannesburg</span>
-<span style="background-color:aqua;" class="from_cities" id="Hwange">Hwange</span>
-<span style="background-color:#2f2;" class="from_cities" id="Victoria_Falls">Victoria Falls</span>
-<span style="background-color:#22f;" class="from_cities" id="Lupane">Lupane</span>
+<div style="position:relative;display:block;font-size:12.6px;height:22.5px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" id="From_div"> From : &nbsp; <span id="from_span"></span> </div>
+
+
+<div  class="from_cities" id="Bulawayo">
+<span style="position:relative;top:5.4px">Bulawayo</span>
+</div>
+ <!--#f02 --> 
+<div class="from_cities" id="Gwanda">
+<span style="position:relative;top:5.4px">Gwanda</span></div>
+<div  class="from_cities" id="Musina">
+<span style="position:relative;top:5.4px">Musina</span></div>
+<div  class="from_cities" id="Gweru">
+<span style="position:relative;top:5.4px">Gweru</span>
+</div>
+<br/>
+
+
+
+
+
+
+<div class="from_cities" id="Durban">
+<span style="position:relative;top:5.4px">Durban</span>
+</div>
+<div class="from_cities" id="Capetown">
+<span style="position:relative;top:5.4px">Capetown</span>
+</div>
+<div class="from_cities" id="Beitbridge">
+<span style="position:relative;top:5.4px">Beitbridge</span>
 </div>
 
-<div style="position:relative;display:block;font-size:12.6px" class="to_div"> To : &nbsp; <span id="to_span"></span> </div>
-<div class="holds_to">
-<span style="background-color:#2f2;" class="to_cities" id="Bulawayo">Bulawayo</span>
-<span style="background-color:#22f;" class="to_cities" id="Gwanda">Gwanda</span>
-<span style="background-color:aqua;" class="to_cities" id="Musina">Musina</span>
-<span style="background-color:#ff2;" class="to_cities" id="Durban">Durban</span>
-<span style="background-color:#2f2;" class="to_cities" id="Capetown">Capetown</span>
-<br/><br/>
-
-<span style="background-color:yellow;" class="to_cities" id="Beitbridge">Beitbridge</span>
-<span style="background-color:#ff2;" class="to_cities" id="Pretoria">Pretoria</span>
-<span style="background-color:#f02;" class="to_cities" id="Midrand">Midrand</span>
-<span style="background-color:cornflowerblue;" class="to_cities" id="Gweru">Gweru</span>
-<span style="background-color:purple;" class="to_cities" id="Harare">Harare</span>
-<br/><br/>
-<span style="background-color:#2f2;" class="to_cities" id="Johannesburg">Johannesburg</span>
-<span style="background-color:aqua;" class="to_cities" id="Hwange">Hwange</span>
-<span style="background-color:#22f;" class="to_cities" id="Victoria_Falls">Victoria Falls</span>
-<span style="background-color:#f02;" class="to_cities" id="Lupane">Lupane</span>
+<div class="from_cities" id="Hwange">
+<span style="position:relative;top:5.4px">Hwange</span>
 </div>
 
+
+<br/>
+
+<div class="from_cities" id="Johannesburg">
+<span style="position:relative;top:5.4px">Johannesburg</span></div>
+
+<div class="from_cities" id="Lupane">
+<span style="position:relative;top:5.4px">Lupane</span>
+</div>
+
+<div class="from_cities" id="Victoria_Falls">
+<span style="position:relative;top:5.4px">Victoria Falls</span>
+</div>
+
+
+
+
+<br/>
+
+<div class="from_cities" id="Harare">
+<span style="position:relative;top:5.4px">Harare</span>
+</div>
+
+
+
+<div class="from_cities" id="Pretoria">
+<span style="position:relative;top:5.4px">Pretoria</span>
+</div>
+<div  class="from_cities" id="Midrand">
+<span style="position:relative;top:5.4px">Midrand</span>
+</div>
+
+
+
+
+
+<div style="position:relative;width:99%;left:0.45%;top:18px"><hr/></div>
+
+
+
+<!---------------------------------------------------to citteess ------------------------------->
+ <br/>
+ 
+<div style="position:relative;display:block;font-size:12.6px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" class="to_div"> To : &nbsp; <span id="to_span"></span> </div>
+
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Bulawayo">
+<span style="position:relative;top:5.4px">Bulawayo</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:72px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Gwanda">
+<span style="position:relative;top:5.4px">Gwanda</span>
+</div>
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Musina">
+<span style="position:relative;top:5.4px">Musina</span>
+</div>
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:90px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Durban">
+<span style="position:relative;top:5.4px">Durban</span>
+</div>
+
+
+<script>
+
+</script>
+
+
+
+<br/>
+<div style="background-color:#f02;position:relative;height:30.6px;width:117px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Capetown">
+<span style="position:relative;top:5.4px">Capetown</span>
+</div>
+ 
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:117px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Beitbridge">
+<span style="position:relative;top:5.4px">Beitbridge</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Pretoria">
+<span style="position:relative;top:5.4px">Pretoria</span>
+</div>
+
+<br/>
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:72px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Midrand">
+<span style="position:relative;top:5.4px">Midrand</span>
+</div>
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Gweru">
+<span style="position:relative;top:5.4px">Gweru</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Harare">
+<span style="position:relative;top:5.4px">Harare</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:135px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Johannesburg">
+<span style="position:relative;top:5.4px">Johannesburg</span>
+</div>
+
+<br/>
+
+<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Hwange">
+<span style="position:relative;top:5.4px">Hwange</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:126px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Victoria_Falls">
+<span style="position:relative;top:5.4px">Victoria Falls</span>
+</div>
+<div style="background-color:#f02;position:relative;height:30.6px;width:99px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Lupane">
+<span style="position:relative;top:5.4px">Lupane</span>
+</div>
+
+
+
+</div>
+
+
+<br/>
+
+<div style="position:relative;text-align:center" ><h2> Travelling with friends made with ease</h2></div>
+ 
+
+
+<br/>
 
 
 
@@ -265,7 +707,7 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
 <div id="SpanBoxHold">
 <span id="DatePlus" style="color:aqua"><i class="fa fa-plus"></i></span>
 </div>
-<div id="DateValue">28</div>
+<div id="DateValue"></div>
 <div class="SpanBoxHold1">
 <span id="DateMinus" style="color:aqua"><i class="fa fa-minus"></i></span>
 </div>
@@ -289,40 +731,50 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
 </div>
 
 
-<div id="fiftDiv" style="display:none;text-align:center">
+<div id="fiftDiv" style="display:none;text-align:center;overflow:auto">
 <span>please fill information below </span><br/><br/>
-<input type="text" placeholder="name"
- style="position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black" /><br/>
- <input type="text" placeholder="surname"
- style="position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black" /><br/>
-  <input type="text" placeholder="passport number"
- style="position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black" /><br/><br/>
+
+<div class="write_here"></div>
 <input type="checkbox" /> tick if you are going for medical treatment or if sick
 <br/><br/>
 <div id="netx_to_ticket" style="position:relative;height:36px;width:72%;background-color:blue;display:float;float:right;right:0.9%;color:white;border-radius:9px">
 <span style="position:relative;top:5.4px" class="spani">Next</span></div>
-
+<br/><br/>
+ 
+ 
  </div>
  
  <!--------------------------------------------------ticket page start here------------------------------------------------------------------------>
  
  <div style="display:none" id="ticket_page">
- <span style="font-family:sans-serif;color:silver">Ticket No:</span> <span>:</span><span style="position:relative;left:45%;font-family:sans-serif">123456</span><br/>
+ <br/><br/>
+ <span style="font-family:sans-serif;color:silver">Ticket No:</span> <span>:
+ <br/>
+ </span><span style="position:relative;font-family:sans-serif;float:right;right:2.7%" id="TicketNumber"></span><br/>
  
  <div style="position:relative;height:90px;width:96.3%;padding:1.8%;background-color:aqua;color:white;font-family:sans-serif;overflow:hidden;text-align:center">
- <span style="position:relative;float:left">1</span><span style="position:relative;float:left">x</span>
- <span>Adult</span><span style="position:relative;float:right">50</span><br/><br/>
+ <span style="position:relative;float:left" id="ADno" >0</span><span style="position:relative;float:left" >x</span>
+ <span>Adult</span><span style="position:relative;float:right" id="ADprice">0</span><br/><br/>
  
- <span style="position:relative;float:left">1</span><span style="position:relative;float:left">x</span>
- <span>Child</span><span style="position:relative;float:right">50</span>
+ <span style="position:relative;float:left" id="CHno" >0</span><span style="position:relative;float:left">x</span>
+ <span>Child</span><span style="position:relative;float:right" id="CHprice">0</span>
  <hr/>
- <span style="position:relative;float:left">Total</span><span style="position:relative;float:right">50</span><br/>
+ <span style="position:relative;float:left">Total</span><span style="position:relative;float:right" id="TotalPrice">0</span><br/>
  
  </div>
  <br/>
- <div style="line-height:12.6px;text-align:center;color:aqua">
- <span class="names" style="position:relative;float:left" >Phakamile Ncube</span><span>DN159761</span><br/><br/>
- <span class="names" style="position:relative;float:left">Michael Phakamile </span><span>DN155791</span><br/><br/>
+ <div style="line-height:12.6px;text-align:center;color:aqua;border:0.81px solid aqua;padding-top:1.8%;" id="hold_ticket_names">
+
+ <div style="position:relative;display:inline-block;width:30.6%;height:36px" id="test_name"></div>
+ <div style="position:relative;display:inline-block;width:30.6%;height:36px" id="test_surname"></div>
+ <div style="position:relative;display:inline-block;width:30.6%;height:36px" id="test_passport"></div>
+ </div><br/><br/>
+ <div style="position:relative;text-align:center;overflow:hidden">
+ <div style="position:relative;width:45%;display:inline-block;overflow:hidden" >from</div>
+ <div style="position:relative;width:45%;display:inline-block;overflow:hidden">to</div><br/>
+ <div style="position:relative;width:45%;display:inline-block;overflow:hidden" id="fill_from_city"></div>
+ <div style="position:relative;width:45%;display:inline-block;overflow:hidden" id="fill_to_city"></div>
+ 
  </div>
  <div id="default_div" style="position:relative;height:18%;width:100%;text-align:center;overflow:hidden">
  
@@ -345,7 +797,7 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
  </div>
  <br/>
   
-<span class="traveling_with">Travelling with</span> <span class="traveling_with">Greyhound</span><br/><br/>
+<span class="traveling_with">Travelling with</span> <span class="traveling_with" id="putBus"></span><br/><br/>
 
  
 <span style="color:silver" id="tip">you can pay at your nearest Yonic shelf at any store</span><br/><br/>
@@ -443,7 +895,7 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
 <span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-right"></i></span><span style="position:relative;top:18%;left:2.7%"> back</span>
 
 </div>
-4
+
 
 
 
@@ -457,8 +909,8 @@ by clicking this icon &nbsp; <i class='fa fa-bars' style="color:yellow"></i>
 
 <div id="zesa" style="position:relative;color:white;text-align:center;display:none">
 <div style="position:relative;top:18px;overflow:hidden">Welcome to Yonic & Zesa corner</div><br/><br/>
-<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden">check your electricity balance</div>
-<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden">pay your electricity bill</div>
+<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden" class="ck">check your electricity balance</div>
+<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden" class="ck">pay your electricity bill</div>
 <br/>
 <span style="position:relative;top:9px;overflow:hidden">Pay your electricity online</span><br/><br/>
 <input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="money to pay"/>
@@ -543,6 +995,46 @@ Tips :
 
 
 <script>
+/*
+ $(window).scroll(function() {
+   var hT = $('#travel_pack').offset().top,
+       hH = $('#travel_pack').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH)){
+       alert('H1 on the view!');
+   }
+});
+	*/
+	
+$("html, body").animate({ scrollTop: 0 }, "slow");
+	
+$("#scroll").click(function(){$("html, body").animate({ scrollTop: 0 }, "slow");
+
+});
+
+ $("html, body").animate({ scrollTop: 0 }, "slow");
+var month = 9; // January
+var d = new Date(2018, month + 1, 0);
+//alert(d.getDate()); 
+
+ 
+
+var date = new Date(),
+d = date.getDate(),
+m = date.getMonth(),
+y = date.getFullYear();
+
+
+for(i=0; i < 31; i++){
+var curdate = new Date(y, m, d+i)
+console.log(curdate.getMonth())
+}
+
+
+
+
+
 $(".see_trips").click(function(){
 var showThem = $(this).attr("name");
 var getThem = $(this).attr("bus");
@@ -585,9 +1077,7 @@ if(getPic == getBuseg)
 });
  
  
-$(".taken").click(function(){
-alert();
-}); 
+ 
 
 
 $(".chain").click(function(){
@@ -629,7 +1119,7 @@ $("#zesa").css({"display":"true"}).show();
 });
 
 $("#plane_tickets").click(function(){
-alert("plane_tickets");
+alert("plane_ticketsto be added");
 });
 
 $("#messages").click(function(){
@@ -638,7 +1128,7 @@ $("#message_inbox").css({"display":"true"}).show();
 });
 
 $("#online_banking").click(function(){
-alert("online_banking");
+alert("online_banking to be added");
 });
 
 $("#my_profile").click(function(){
@@ -647,7 +1137,7 @@ $("#profile_div").css({"display":"true"}).show();
 });
 
 $("#online_shopping").click(function(){
-alert("online_shopping");
+alert("online_shopping coming next week");
 });
 
 
@@ -675,6 +1165,26 @@ $("#about_us_font").toggle();
 
 $("document").ready(function(){
 
+
+//var d = new Date();
+//var v = d.getDay();
+//var m = d.getMonth();
+//var z = d.getFullYear();
+
+
+
+/*
+var vt = new Date().toLocaleString().split(',')[0]
+var day = new Date(vt);
+//var day = new Date('Apr 30, 2000');
+//alert(day);
+
+var nextDay = new Date(day);
+nextDay.setDate(day.getDay()+1);
+alert(nextDay); 
+
+*/
+
 var d = new Date();
 var month = new Array();
 month[0] = "Jan";
@@ -692,6 +1202,7 @@ month[11] = "Dec";
 var n = month[d.getMonth()];
 
 $("#MonthValue").html(n);
+$("#DateValue").html(d.getDate());
 
 
    setTimeout(function(){
@@ -704,115 +1215,180 @@ $("#MonthValue").html(n);
  
  
 $(".SpanBoxHold2").click(function (){
-var n = $("#MonthValue").text();
-//alert(n);
-if(n == "Jan"){
-$("#MonthValue").html("Feb");
-}
-
-if(n == "Feb"){
-$("#MonthValue").html("Mar");
-}
-
-if(n == "Mar"){
-$("#MonthValue").html("Apr");
-}
-
-if(n == "Apr"){
-$("#MonthValue").html("May");
-}
-
-if(n == "May"){
-$("#MonthValue").html("Jun");
-}
-
-if(n == "Jun"){
-$("#MonthValue").html("Jul");
-}
-
-if(n == "Jul"){
-$("#MonthValue").html("Aug");
-}
-
-if(n == "Aug"){
-$("#MonthValue").html("Sep");
-}
-
-if(n == "Sep"){
-$("#MonthValue").html("Oct");
-}
-
-if(n == "Oct"){
-$("#MonthValue").html("Nov");
-}
-
-if(n == "Nov"){
-$("#MonthValue").html("Dec");
-}
-
-if(n == "Dec"){
-$("#MonthValue").html("Jan");
-}
-
  
+var pullDate = $("#MonthValue").text();
 
+  
+switch(pullDate) {
+ case "Jan" :
+ var pullMonth = 0;
+ break;
+ case "Feb" :
+ var pullMonth = 1;
+ break;
+ case "Mar" :
+ var pullMonth = 2;
+ break;
+ case "Apr" :
+ var pullMonth = 3;
+ break;
+ case "May" :
+ var pullMonth = 4;
+ break;
+ case "Jun" :
+ var pullMonth = 5;
+ break;
+ case "Jul" :
+ var pullMonth = 6;
+ break;
+ case "Aug" :
+ var pullMonth = 7;
+ break;
+ case "Sep" :
+ var pullMonth = 8;
+ break;
+ case "Oct" :
+ var pullMonth = 9;
+ break;
+ case "Nov" :
+ var pullMonth = 10;
+ break;
+ case "Dec" :
+ var pullMonth = 11;
+ break;
+ 
+ default :
+ alert("invalid!");
+ }
+
+
+
+var date = new Date(),
+d = date.getDate(),
+m = pullMonth,
+y = date.getFullYear();
+
+
+
+
+var month = new Array();
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+//var n = month[d.getMonth()];
+
+var curdate = new Date(y, m, d+i)
+var variable = curdate.getMonth();
+
+var d = new Date(date.getFullYear(), pullMonth + 2, 0);
+var plug = d.getDate(); 
+var seeCheck = parseInt($("#DateValue").text());
+if(seeCheck > plug){$("#DateValue").html(plug);}else{
+}
+$("#MonthValue").html(month[variable]);
+
+//console.log(month[variable]);
+ 
+ 
 }); 
  
 
  
  $("#SpanBoxHold3").click(function (){
-var n = $("#MonthValue").text();
-//alert(n);
-if(n == "Jan"){
-$("#MonthValue").html("Dec");
+
+ var pullDate = $("#MonthValue").text();
+
+  
+switch(pullDate) {
+ case "Jan" :
+ var pullMonth = 0;
+ break;
+ case "Feb" :
+ var pullMonth = 1;
+ break;
+ case "Mar" :
+ var pullMonth = 2;
+ break;
+ case "Apr" :
+ var pullMonth = 3;
+ break;
+ case "May" :
+ var pullMonth = 4;
+ break;
+ case "Jun" :
+ var pullMonth = 5;
+ break;
+ case "Jul" :
+ var pullMonth = 6;
+ break;
+ case "Aug" :
+ var pullMonth = 7;
+ break;
+ case "Sep" :
+ var pullMonth = 8;
+ break;
+ case "Oct" :
+ var pullMonth = 9;
+ break;
+ case "Nov" :
+ var pullMonth = 10;
+ break;
+ case "Dec" :
+ var pullMonth = 11;
+ break;
+ 
+ default :
+ //alert("invalid!");
+ }
+
+
+
+var date = new Date(),
+d = date.getDate(),
+m = pullMonth,
+y = date.getFullYear();
+
+
+
+
+var month = new Array();
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+//var n = month[d.getMonth()];
+
+var curdate = new Date(y, m, d - i)
+var variable = curdate.getMonth();
+
+var d = new Date(date.getFullYear(), pullMonth + 2, 0);
+var plug = d.getDate(); 
+var seeCheck = parseInt($("#DateValue").text());
+if(seeCheck > plug){$("#DateValue").html(plug);}else{
 }
 
-if(n == "Dec"){
-$("#MonthValue").html("Nov");
-}
-
-if(n == "Nov"){
-$("#MonthValue").html("Oct");
-}
-
-if(n == "Oct"){
-$("#MonthValue").html("Sep");
-}
-
-if(n == "Sep"){
-$("#MonthValue").html("Aug");
-}
-
-if(n == "Aug"){
-$("#MonthValue").html("Jul");
-}
-
-if(n == "Jul"){
-$("#MonthValue").html("Jun");
-}
-
-if(n == "Jun"){
-$("#MonthValue").html("May");
-}
-
-if(n == "May"){
-$("#MonthValue").html("Apr");
-}
-
-if(n == "Apr"){
-$("#MonthValue").html("Mar");
-}
-
-if(n == "Mar"){
-$("#MonthValue").html("Feb");
-}
-
-if(n == "Feb"){
-$("#MonthValue").html("Jan");
-}
-
+$("#MonthValue").html(month[variable]);
+//console.log(month[variable]);
  
 
+ 
 });
  
  
@@ -828,7 +1404,9 @@ $("#MonthValue").html("Jan");
  $(".TimeSpan").click(function(){
  var getTime = $(this).text();
  $(this).addClass("selected").css({"background-color":"grey"});
- $(".TimeSpan").not(this).removeClass("selected").css({"background-color":"aqua"})
+ $(".TimeSpan").not(this).removeClass("selected").css({"background-color":"aqua"});
+ window.getTime = $(this).text();
+
  
  });
  
@@ -862,18 +1440,233 @@ var getVal = parseInt($("#ChildValue").text());
  });
  
  
+
  $("#SpanBoxHold").click(function(){
- var getVal = parseInt($("#DateValue").text());
- if(getVal >= "0" && getVal < "31"){
- $("#DateValue").html(getVal + 1);
+
+ 
+var pullDate = parseInt($("#DateValue").text()); 
+var used = new Date();
+var mont = $("#MonthValue").text(); // January
+
+
+    
+switch(mont) {
+ case "Jan" :
+ var pullMonth = 0;
+ break;
+ case "Feb" :
+ var pullMonth = 1;
+ break;
+ case "Mar" :
+ var pullMonth = 2;
+ break;
+ case "Apr" :
+ var pullMonth = 3;
+ break;
+ case "May" :
+ var pullMonth = 4;
+ break;
+ case "Jun" :
+ var pullMonth = 5;
+ break;
+ case "Jul" :
+ var pullMonth = 6;
+ break;
+ case "Aug" :
+ var pullMonth = 7;
+ break;
+ case "Sep" :
+ var pullMonth = 8;
+ break;
+ case "Oct" :
+ var pullMonth = 9;
+ break;
+ case "Nov" :
+ var pullMonth = 10;
+ break;
+ case "Dec" :
+ var pullMonth = 11;
+ break;
+ default :
+ ///alert("invalid!");
  }
- });
+
+
+
+
+
+
+
+var d = new Date(used.getFullYear(), pullMonth + 1, 0);
+//alert(d.getDate()); 
+
+if(pullDate < d.getDate()){
+$("#DateValue").html(pullDate + 1);
+}else{
+$("#DateValue").html(1);
+var getThisMonth = d.getMonth() + 1;
+    
+switch(getThisMonth) {
+ case 0 :
+ var pullMonth = "Jan";
+ break;
+ case 1 :
+ var pullMonth = "Feb";
+ break;
+ case 2 :
+ var pullMonth = "Mar";
+ break;
+ case 3 :
+ var pullMonth = "Apr";
+ break;
+ case 4 :
+ var pullMonth = "May";
+ break;
+ case 5 :
+ var pullMonth = "Jun";
+ break;
+ case 6 :
+ var pullMonth = "Jul";
+ break;
+ case 7 :
+ var pullMonth = "Aug";
+ break;
+ case 8 :
+ var pullMonth = "Sep";
+ break;
+ case 9 :
+ var pullMonth = "Oct";
+ break;
+ case 10 :
+ var pullMonth = "Nov";
+ break;
+ case 11 :
+ var pullMonth = "Dec";
+ break;
+ default :
+ //alert("invalid!");
+ }
+
+ $("#MonthValue").html(pullMonth);
+
+}
+ 
+ 
+});
  
   $(".SpanBoxHold1").click(function(){
- var getValue = parseInt($("#DateValue").text());
-  if(getValue > "0" && getValue <= "31"){
-  $("#DateValue").html(getValue - 1);
+ 
+ var pullDate = parseInt($("#DateValue").text()); 
+var used = new Date();
+var mont = $("#MonthValue").text(); // January
+ 
+   
+switch(mont) {
+ case "Jan" :
+ var pullMonth = 0;
+ break;
+ case "Feb" :
+ var pullMonth = 1;
+ break;
+ case "Mar" :
+ var pullMonth = 2;
+ break;
+ case "Apr" :
+ var pullMonth = 3;
+ break;
+ case "May" :
+ var pullMonth = 4;
+ break;
+ case "Jun" :
+ var pullMonth = 5;
+ break;
+ case "Jul" :
+ var pullMonth = 6;
+ break;
+ case "Aug" :
+ var pullMonth = 7;
+ break;
+ case "Sep" :
+ var pullMonth = 8;
+ break;
+ case "Oct" :
+ var pullMonth = 9;
+ break;
+ case "Nov" :
+ var pullMonth = 10;
+ break;
+ case "Dec" :
+ var pullMonth = 11;
+ break;
+ default :
+ //alert("invalid!");
  }
+
+ 
+var d = new Date(used.getFullYear(), pullMonth - 1, 0);
+var theReal = d.getDate() - 1;
+var theRealMonth = d.getMonth() + 1;
+ 
+if(pullDate > 1){
+$("#DateValue").html(pullDate - 1);
+}else{
+//$("#DateValue").html(theReal);
+
+
+switch(theRealMonth) {
+ case 0 :
+ var pullMonth = "Jan";
+ break;
+ case 1 :
+ var pullMonth = "Feb";
+ break;
+ case 2 :
+ var pullMonth = "Mar";
+ break;
+ case 3 :
+ var pullMonth = "Apr";
+ break;
+ case 4 :
+ var pullMonth = "May";
+ break;
+ case 5 :
+ var pullMonth = "Jun";
+ break;
+ case 6 :
+ var pullMonth = "Jul";
+ break;
+ case 7 :
+ var pullMonth = "Aug";
+ break;
+ case 8 :
+ var pullMonth = "Sep";
+ break;
+ case 9 :
+ var pullMonth = "Oct";
+ break;
+ case 10 :
+ var pullMonth = "Nov";
+ break;
+ case 11 :
+ var pullMonth = "Dec";
+ break;
+ default :
+ ///alert("invalid!");
+ 
+}
+
+//alert(pullMonth); 
+
+toDay = new Date();
+var myDate = new Date(toDay.getFullYear(), theRealMonth + 1);
+myDate = new Date(myDate -1);
+//alert(myDate); 
+ 
+$("#DateValue").html(myDate.getDate());
+$("#MonthValue").html(pullMonth);
+
+} 
+  
  });
  
  
@@ -883,9 +1676,10 @@ var getVal = parseInt($("#ChildValue").text());
  window.getId = $(this).attr("id");
  $(this).css({"color":"silver"}).addClass("animated flash");
  $(".from_cities").not(this).css({"color":"white"}).removeClass("animated flash");
- 
+
  if(window.getId == window.getIde){
  $("#to_span").css({"color":"red"}).html("you can't go from &nbsp; <span style='color:blue'>"+window.getId+"</span>&nbsp; to &nbsp; <span style='color:blue'>"+ window.getIde + "</span>");
+
  }else{
 $("#from_span").css({"color":"aqua"}).html(window.getId);
 $("#to_span").css({"color":"aqua"}).html(window.getIde);
@@ -899,6 +1693,7 @@ $("#to_span").css({"color":"aqua"}).html(window.getIde);
  window.getIde = $(this).attr("id");
  $(this).css({"color":"silver"}).addClass("animated flash");
  $(".to_cities").not(this).css({"color":"white"}).removeClass("animated flash");
+ 
  if(window.getId == window.getIde){
  $("#to_span").css({"color":"red"}).html("you can't go from &nbsp; <span style='color:blue'>"+window.getId+"</span>&nbsp; to &nbsp; <span style='color:blue'>"+ window.getIde + "</span>");
  }else{
@@ -916,13 +1711,6 @@ $("#to_span").css({"color":"aqua"}).html(window.getIde);
  
  });
 
- 
- $('.nkunzi').cycle({ 
-    fx:    'zoom', 
-   // sync:  false, 
-   // delay: -2000 
- 
-	});
 
 /*
  
@@ -977,18 +1765,102 @@ var getShit = $(".the_togglers").attr("id");
  var small_devMin = window.matchMedia( "(min-height:236px)" );
  var small_devMax= window.matchMedia( "(max-height: 500px)" );
  
-  $("body").css({"overflow":"hidden"});
+  $("body").css({"overflow":"auto"});
 if (small_devMin.matches && small_devMax.matches) {
+$(".Panminjun").css({"bottom":"18px"});
 
-$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"18px","color":"white","font-family":"cursive"});
-$("#who_are_we_font").css({"position":"relative","font-size":"11.7px","color":"white","font-family":"sans-serif"});
-$("#about_us_font").css({"position":"relative","font-size":"11.7px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font").css({"position":"relative","font-size":"15.3px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font_about").css({"position":"relative","font-size":"11.07px","color":"white","font-family":"sans-serif"});
-$("#about_us_click").css({"position":"relative","font-size":"11.7px","color":"silver","font-family":"sans-serif"});
-$("#who_are_we_click").css({"position":"relative","font-size":"11.7px","color":"silver","font-family":"sans-serif"});
+$(".ck").css({"font-size":"16.2px"});
+$("s#holder_of_boxes").css({"line-height":"18px","font-size":"12.6px"});
+$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"18px","color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#who_are_we_font").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_font").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font").css({"position":"relative","font-size":"15.3px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font_about").css({"position":"relative","font-size":"11.07px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_click").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#who_are_we_click").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
 $(".mission_statement").css({"position":"relative","color":"#2f2","top":"2.7%","font-size":"15.3px","font-weight":"italic"});
 $("#ema").css({"font-size":"9.9px"}); 
+
+
+
+
+$("#all_selects").css({"font-size":"12.6px","height":"290.7px"});
+$(".from_cities#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$(".from_cities#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$(".from_cities#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+
+$(".from_cities#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+$(".from_cities#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$(".from_cities#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+
+$(".from_cities#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$(".from_cities#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+
+
+$(".to_cities#Harare").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Midrand").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Gweru").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Johannesburg").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+
+$(".to_cities#Lupane").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+$(".to_cities#Victoria_Falls").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+$(".to_cities#Hwange").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+
+$(".to_cities#Capetown").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+$(".to_cities#Beitbridge").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+$(".to_cities#Pretoria").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+
+
+$(".to_cities#Durban").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Gwanda").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Musina").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+
+
+
+
+
+
+
+
+
+$("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#balls").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$("#number1").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
+$("#number2").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
+$("#number3").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number4").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number5").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number6").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"135px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number7").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"36px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number8").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"90px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number9").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"90px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number10").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number11").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number12").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#fly").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#BusDesign").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#theTeam").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#career").css({"position":"relative","height":"280.8px","font-size":"13.5px","width":"100%","overflow":"hidden","color":"black","padding-top":"0.81%","line-height":"22.5px"});
+$("#lastDiv").css({"position":"relative","height":"444.42px","font-size":"12.6px","width":"100%","overflow":"hidden","background-color":"aqua","color":"white","padding-top":"0.81%","line-height":"24.3px","border-top-left-radius":"117px"});
+$(".theOnlyClass").css({"position":"relative","font-size":"13.5px","height":"180px","width":"100%","background-color":"rgb(72, 133, 237)","border-bottom-left-radius":"180px","bottom":"27px"});
+
+
 
 
 var measured = $(window).height();
@@ -996,7 +1868,7 @@ var measured = $(window).height();
 //$("body").css({"height":measured});
 
 $("#firstDiv").css({'font-size':'36px'});
-$("#headerDiv").css({"height":"27px","font-size":"18px","color":"aqua"});
+$("#headerDiv").css({"height":"27px","font-size":"18px"});
 $(".picture_holder_plus").css({"height":"200.7px","width":"100%"});
 $(".name_holder").css({"height":"27px","width":window.mywidth -15,"font-size":"18px","padding-top":"2.7px"});
 $("#price_holder").css({"height":"36px","width":window.mywidth -15});
@@ -1015,9 +1887,10 @@ var getratio = getrat * 0.33;
 var getratios = getrate * 0.33;
 
 var reseq  = (getratio - getratios)/ 2;
+$("#firstDraw").css({"overflow":"auto"});
 $(".boxes").css({"height":getratio,"width":getratio});
 $(".boxes2").css({"height":getratios,"width":getratios,"top":"6.3px","left":reseq,"font-size":"36px"});
-$(".boxes3").css({"top":"6.3px","color":"white","font-size":"15.3px"});
+$(".boxes3").css({"top":"6.3px","color":"white","font-size":"10.8px"});
 $("#holder_of_boxes").css({"bottom":"27px"});
 
 $("#fantasy").css({"font-size":"27px","top":"93.6%"});
@@ -1086,10 +1959,9 @@ $(".nkunzi2").css({"font-size":"12.6px"});
 $(".holds_from").css({"color":"white","position":"relative","height":"15.3%","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"11.07px","font-size":"11.07px","left":"2.25%","border-bottom":"1px solid aqua"});
 $(".holds_to").css({"position":"relative","height":"15.3%","color":"white","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"11.07px","font-size":"11.07px","left":"2.25%","padding-top":"2.7px","top":"3.6px"});
 $(".to_div").css({"top":"7.2px","font-size":"10.8px"});
-$(".from_cities").css({"position":"relative","height":"9px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"}); 
-$(".to_cities").css({"position":"relative","height":"9px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"})
+
 $("#to_span").css({"font-size":"10.8px"});
-$("body").css({"overflow":"hidden"});
+$("body").css({"overflow":"auto"});
 
 
 $("#about_us_btn").click(function(){
@@ -1124,18 +1996,105 @@ $("#about_us_btn").css({"background-color":"white"}).show();
  var se_devMin = window.matchMedia( "(min-height: 505px)" );
  var se_devMax= window.matchMedia( "(max-height: 590px)" );
  
-  $("body").css({"overflow":"hidden"});
+  $("body").css({"overflow":"auto"});
 if (se_devMin.matches && se_devMax.matches) {
 
-$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"22.5px","color":"white","font-family":"cursive"});
-$("#who_are_we_font").css({"position":"relative","font-size":"11.7px","color":"white","font-family":"sans-serif"});
-$("#about_us_font").css({"position":"relative","font-size":"11.7px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font").css({"position":"relative","font-size":"17.1px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font_about").css({"position":"relative","font-size":"12.6px","color":"white","font-family":"sans-serif"});
-$("#about_us_click").css({"position":"relative","font-size":"11.7px","color":"silver","font-family":"sans-serif"});
-$("#who_are_we_click").css({"position":"relative","font-size":"11.7px","color":"silver","font-family":"sans-serif"});
+$("#firstDraw").css({"overflow":"auto"});
+$(".ck").css({"font-size":"16.2px"});
+$("#theDraw").css({"color":"white"});
+$("#go_back_id").css({"color":"white"});
+$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"22.5px","color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#who_are_we_font").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_font").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font").css({"position":"relative","font-size":"17.1px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font_about").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_click").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#who_are_we_click").css({"position":"relative","font-size":"11.7px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
 $(".mission_statement").css({"position":"relative","color":"#2f2","top":"2.7%","font-size":"18px","font-weight":"italic"});
 $("#ema").css({"font-size":"11.07px"}); 
+
+
+
+
+$("#all_selects").css({"font-size":"12.6px","height":"290.7px"});
+$(".from_cities#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$(".from_cities#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$(".from_cities#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+
+$(".from_cities#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+$(".from_cities#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$(".from_cities#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+
+$(".from_cities#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$(".from_cities#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$(".from_cities#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".from_cities#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+
+
+$(".to_cities#Harare").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Midrand").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Gweru").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+$(".to_cities#Johannesburg").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
+
+$(".to_cities#Lupane").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+$(".to_cities#Victoria_Falls").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+$(".to_cities#Hwange").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
+
+$(".to_cities#Capetown").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+$(".to_cities#Beitbridge").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+$(".to_cities#Pretoria").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
+
+
+$(".to_cities#Durban").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Gwanda").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Musina").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+
+
+
+
+
+
+
+
+
+$("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#balls").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$("#number1").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
+$("#number2").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
+$("#number3").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number4").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number5").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number6").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"135px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number7").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"36px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number8").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"90px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number9").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"90px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number10").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number11").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number12").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#fly").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#BusDesign").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#theTeam").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
+$("#career").css({"position":"relative","height":"280.8px","font-size":"13.5px","width":"100%","overflow":"hidden","color":"black","padding-top":"0.81%","line-height":"22.5px"});
+$("#lastDiv").css({"position":"relative","height":"444.42px","font-size":"12.6px","width":"100%","overflow":"hidden","background-color":"aqua","color":"white","padding-top":"0.81%","line-height":"24.3px","border-top-left-radius":"117px"});
+$(".theOnlyClass").css({"position":"relative","font-size":"13.5px","height":"180px","width":"100%","background-color":"rgb(72, 133, 237)","border-bottom-left-radius":"180px","bottom":"27px"});
+
+
+
+
 
 
    
@@ -1164,7 +2123,7 @@ var getratios = getrate * 0.33;
 var reseq  = (getratio - getratios)/ 2;
 $(".boxes").css({"height":getratio,"width":getratio});
 $(".boxes2").css({"height":getratios,"width":getratios,"top":"6.3px","left":reseq,"font-size":"36px"});
-$(".boxes3").css({"top":"6.3px","color":"white","font-size":"12.6px"});
+$(".boxes3").css({"top":"6.3px","color":"white","font-size":"10.8px"});
 $("#holder_of_boxes").css({"bottom":"27px"});
 
 $("#fantasy").css({"font-size":"27px","top":"93.6%"});
@@ -1240,10 +2199,9 @@ $(".nkunzi2").css({"font-size":"12.6px"});
 $(".holds_from").css({"color":"white","position":"relative","height":"15.3%","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"11.07px","font-size":"11.07px","left":"2.25%","border-bottom":"1px solid aqua"});
 $(".holds_to").css({"position":"relative","height":"15.3%","color":"white","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"11.07px","font-size":"11.07px","left":"2.25%","padding-top":"2.7px","top":"3.6px"});
 $(".to_div").css({"top":"7.2px","font-size":"10.8px"});
-$(".from_cities").css({"position":"relative","height":"9px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"}); 
-$(".to_cities").css({"position":"relative","height":"9px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"})
+ 
 $("#to_span").css({"font-size":"10.8px"});
-$("body").css({"overflow":"hidden"});
+$("body").css({"overflow":"auto"});
  
 
 
@@ -1279,10 +2237,10 @@ $("#about_us_btn").css({"background-color":"white"}).show();
  var hq = window.matchMedia( "(min-height: 595px)" );
  var mq = window.matchMedia( "(max-height: 667px)" );
  
- $("body").css({"overflow":"hidden"});
+ $("body").css({"overflow":"auto"});
 if (hq.matches && mq.matches) {
 
-$("#holder_of_boxes").css({"line-height":"18px","font-size":"12.6px"})
+$("#holder_of_boxes").css({"line-height":"18px","font-size":"12.6px"});
 $("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"27px","color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#who_are_we_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
 $("#about_us_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
@@ -1295,12 +2253,59 @@ $("#ema").css({"font-size":"12.6px"});
 
 
 
+
+$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+
+$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+
+$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+$("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
+$("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
+$("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number4").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number5").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number6").css({"position":"relative","left":"1.8%","height":"12.6px","width":"171px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number7").css({"position":"relative","left":"1.8%","height":"12.6px","width":"36px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number8").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number9").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number10").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number11").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number12").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#fly").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#BusDesign").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#theTeam").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#career").css({"position":"relative","height":"324px","width":"100%","overflow":"hidden","color":"black","padding-top":"0.81%","line-height":"22.5px"});
+$("#lastDiv").css({"position":"relative","height":"477px","width":"100%","overflow":"hidden","background-color":"aqua","color":"white","padding-top":"0.81%","line-height":"24.3px","border-top-left-radius":"117px"});
+$(".theOnlyClass").css({"position":"relative","height":"180px","width":"100%","background-color":"rgb(72, 133, 237)","border-bottom-left-radius":"180px","bottom":"27px"});
+
+
+
 var measured = $(window).height();
 
 //$("body").css({"height":measured});
 
 $("#firstDiv").css({'font-size':'54px'});
-$("#headerDiv").css({"height":"36px","font-size":"23.4px","color":"aqua"});
+$("#headerDiv").css({"height":"36px","font-size":"23.4px",});
 $(".picture_holder_plus").css({"height":"261px","width":"100%"});
 $(".name_holder").css({"height":"33.3px","width":window.mywidth -15,"font-size":"22.5px","padding-top":"2.7px"});
 $("#price_holder").css({"height":"45px","width":window.mywidth -15});
@@ -1378,12 +2383,11 @@ $("#NextHold").css({"position":"relative","height":"36px","width":"72%","backgro
 $("#NxtSpan").css({"position":"relative","top":"5.4px","color":"white"});
 $(".nkunzi").css({"font-size":"15.3px"});
 $(".nkunzi2").css({"font-size":"15.3px"});
-$(".from_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"}); 
-$(".to_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"})
+ 
 $(".holds_from").css({"color":"white","position":"relative","height":"14.4%","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","border-bottom":"1px solid aqua"});
 $(".holds_to").css({"position":"relative","height":"14.4%","color":"white","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","padding-top":"2.7px","top":"9px"});
 $(".to_div").css({"top":"7.2px"});
-$("body").css({"overflow":"hidden"});
+$("body").css({"overflow":"auto"});
 
 
 
@@ -1395,18 +2399,69 @@ $("body").css({"overflow":"hidden"});
  var hq_plus_min = window.matchMedia( "(min-height: 720px)" );
  var mq_plus_max = window.matchMedia( "(max-height: 800px)" );
  
- $("body").css({"overflow":"hidden"});
+ $("body").css({"overflow":"auto"});
 if (hq_plus_min.matches && mq_plus_max.matches) {
 
-$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"27px","color":"white","font-family":"cursive"});
-$("#who_are_we_font").css({"position":"relative","font-size":"12.6px","color":"white","font-family":"sans-serif"});
-$("#about_us_font").css({"position":"relative","font-size":"12.6px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font").css({"position":"relative","font-size":"22.5px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font_about").css({"position":"relative","font-size":"15.3px","color":"white","font-family":"sans-serif"});
-$("#about_us_click").css({"position":"relative","font-size":"12.6px","color":"silver","font-family":"sans-serif"});
-$("#who_are_we_click").css({"position":"relative","font-size":"12.6px","color":"silver","font-family":"sans-serif"});
+$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"27px","color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#who_are_we_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font").css({"position":"relative","font-size":"22.5px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font_about").css({"position":"relative","font-size":"15.3px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_click").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#who_are_we_click").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
 $(".mission_statement").css({"position":"relative","color":"#2f2","top":"2.7%","font-size":"23.4px","font-weight":"italic"});
 $("#ema").css({"font-size":"12.6px"}); 
+
+
+
+
+$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+
+$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+
+$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+$("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
+$("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
+$("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number4").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number5").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number6").css({"position":"relative","left":"1.8%","height":"12.6px","width":"171px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number7").css({"position":"relative","left":"1.8%","height":"12.6px","width":"36px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number8").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number9").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number10").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number11").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number12").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#fly").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#BusDesign").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#theTeam").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#career").css({"position":"relative","height":"324px","width":"100%","overflow":"hidden","color":"black","padding-top":"0.81%","line-height":"22.5px"});
+$("#lastDiv").css({"position":"relative","height":"477px","width":"100%","overflow":"hidden","background-color":"aqua","color":"white","padding-top":"0.81%","line-height":"24.3px","border-top-left-radius":"117px"});
+$(".theOnlyClass").css({"position":"relative","height":"180px","width":"100%","background-color":"rgb(72, 133, 237)","border-bottom-left-radius":"180px","bottom":"27px"});
+
+
+
+
 
 
    
@@ -1415,7 +2470,7 @@ $("#ema").css({"font-size":"12.6px"});
 //$("body").css({"height":measured});
 
 $("#firstDiv").css({'font-size':'63px'});
-$("#headerDiv").css({"height":"45px","font-size":"27px","color":"aqua"});
+$("#headerDiv").css({"height":"45px","font-size":"27px"});
 $(".picture_holder_plus").css({"height":"270px","width":"100%"});
 $(".name_holder").css({"height":"36px","width":window.mywidth -15,"font-size":"22.5px","padding-top":"2.7px"});
 $("#price_holder").css({"height":"45px","width":window.mywidth -15});
@@ -1436,7 +2491,7 @@ var getratios = getrate * 0.33;
 var reseq  = (getratio - getratios)/ 2;
 $(".boxes").css({"height":getratio,"width":getratio});
 $(".boxes2").css({"height":getratios,"width":getratios,"top":"6.3px","left":reseq,"font-size":"45px"});
-$(".boxes3").css({"top":"9px","color":"white"});
+$(".boxes3").css({"top":"9px","color":"white","font-size":"12.6px"});
 
 $("#fantasy").css({"font-size":"27px","top":"90%"});
 $("#span1").css({"top":getratio});
@@ -1492,12 +2547,11 @@ $("#NxtSpan").css({"position":"relative","top":"9px","color":"white"});
 $(".spani").css({"top":"9px"});
 $(".nkunzi").css({"font-size":"16.2px"});
 $(".nkunzi2").css({"font-size":"16.2px"});
-$(".from_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"}); 
-$(".to_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"})
+ 
 $(".holds_from").css({"color":"white","position":"relative","height":"14.4%","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","border-bottom":"1px solid aqua"});
 $(".holds_to").css({"position":"relative","height":"14.4%","color":"white","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","padding-top":"2.7px","top":"9px"});
 $(".to_div").css({"top":"7.2px"});
-$("body").css({"overflow":"hidden"}); 
+$("body").css({"overflow":"auto"}); 
 
 
 
@@ -1535,18 +2589,67 @@ $("#about_us_btn").css({"background-color":"white"}).show();
  var eight_min = window.matchMedia( "(min-height: 801px)" );
  var eight_max = window.matchMedia( "(max-height: 1200px)" );
  
- $("body").css({"overflow":"hidden"});
+ $("body").css({"overflow":"auto"});
 if (eight_min.matches && eight_max.matches) {
 
-$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"27px","color":"white","font-family":"cursive"});
-$("#who_are_we_font").css({"position":"relative","font-size":"12.6px","color":"white","font-family":"sans-serif"});
-$("#about_us_font").css({"position":"relative","font-size":"12.6px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font").css({"position":"relative","font-size":"22.5px","color":"white","font-family":"sans-serif"});
-$("#paragraph_font_about").css({"position":"relative","font-size":"15.3px","color":"white","font-family":"sans-serif"});
-$("#about_us_click").css({"position":"relative","font-size":"12.6px","color":"silver","font-family":"sans-serif"});
-$("#who_are_we_click").css({"position":"relative","font-size":"12.6px","color":"silver","font-family":"sans-serif"});
+$("#welcome_head").css({"position":"relative","top":"1.8%","font-size":"27px","color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#who_are_we_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_font").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font").css({"position":"relative","font-size":"22.5px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#paragraph_font_about").css({"position":"relative","font-size":"15.3px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#about_us_click").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
+$("#who_are_we_click").css({"position":"relative","font-size":"12.6px","color":"rgb(72, 133, 237)","font-family":"sans-serif"});
 $(".mission_statement").css({"position":"relative","color":"#2f2","top":"2.7%","font-size":"23.4px","font-weight":"italic"});
 $("#ema").css({"font-size":"12.6px"}); 
+
+
+$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+
+$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+
+
+$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
+
+
+$("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
+$("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
+$("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
+$("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number4").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number5").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number6").css({"position":"relative","left":"1.8%","height":"12.6px","width":"171px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number7").css({"position":"relative","left":"1.8%","height":"12.6px","width":"36px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number8").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
+$("#number9").css({"position":"relative","left":"1.8%","height":"12.6px","width":"126px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"purple","border-radius":"4.5px"});
+$("#number10").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"aqua","border-radius":"4.5px"});
+$("#number11").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#number12").css({"position":"relative","left":"1.8%","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#2f2","border-radius":"4.5px"});
+$("#fly").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#BusDesign").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#theTeam").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
+$("#career").css({"position":"relative","height":"324px","width":"100%","overflow":"hidden","color":"black","padding-top":"0.81%","line-height":"22.5px"});
+$("#lastDiv").css({"position":"relative","height":"477px","width":"100%","overflow":"hidden","background-color":"aqua","color":"white","padding-top":"0.81%","line-height":"24.3px","border-top-left-radius":"117px"});
+$(".theOnlyClass").css({"position":"relative","height":"180px","width":"100%","background-color":"rgb(72, 133, 237)","border-bottom-left-radius":"180px","bottom":"27px"});
+
+
+
+
 
    
    var measured = $(window).height();
@@ -1554,7 +2657,7 @@ $("#ema").css({"font-size":"12.6px"});
 //$("body").css({"height":measured});
 
 $("#firstDiv").css({'font-size':'63px'});
-$("#headerDiv").css({"height":"45px","font-size":"27px","color":"aqua"});
+$("#headerDiv").css({"height":"45px","font-size":"27px"});
 $(".picture_holder_plus").css({"height":"270px","width":"100%"});
 $(".name_holder").css({"height":"36px","width":window.mywidth -15,"font-size":"22.5px","padding-top":"2.7px"});
 $("#price_holder").css({"height":"45px","width":window.mywidth -15});
@@ -1575,7 +2678,7 @@ var getratios = getrate * 0.33;
 var reseq  = (getratio - getratios)/ 2;
 $(".boxes").css({"height":getratio,"width":getratio});
 $(".boxes2").css({"height":getratios,"width":getratios,"top":"6.3px","left":reseq,"font-size":"45px"});
-$(".boxes3").css({"top":"9px","color":"white"});
+$(".boxes3").css({"top":"9px","color":"white","font-size":"12.6px"});
 
 $("#fantasy").css({"font-size":"27px","top":"90%"});
 $("#span1").css({"top":getratio});
@@ -1630,12 +2733,11 @@ $("#NxtSpan").css({"position":"relative","top":"9px","color":"white"});
 $(".spani").css({"top":"9px"});
 $(".nkunzi").css({"font-size":"15.3px"});
 $(".nkunzi2").css({"font-size":"15.3px"});
-$(".from_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"}); 
-$(".to_cities").css({"position":"relative","height":"14.4px","width":"27px","border-radius":"9px","padding-left":"4.5px","top":"7.2px","padding-right":"4.5px","padding-top":"2.7px","padding-bottom":"2.7px"})
+
 $(".holds_from").css({"color":"white","position":"relative","height":"14.4%","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","border-bottom":"1px solid aqua"});
 $(".holds_to").css({"position":"relative","height":"14.4%","color":"white","width":"95.4%","display":"inline-block","overflow":"hidden","text-align":"left","line-height":"14.4px","font-size":"14.4px","left":"2.25%","padding-top":"2.7px","top":"9px"});
 $(".to_div").css({"top":"7.2px"});
-$("body").css({"overflow":"hidden"}); 
+$("body").css({"overflow":"auto"}); 
 
 
 
@@ -1697,6 +2799,7 @@ $("#about_us_btn").css({"background-color":"white"}).show();
  $("#fourthDiv").css({"display":"true"}).show();
  $("#go_back_id").removeClass("2").addClass("1");
  $("#theDraw").removeClass("2").addClass("1");
+ $(".write_here").empty();
  }
 
  if(set == "go_back 3"){
@@ -1714,8 +2817,181 @@ $("#fiftDiv").hide();
  $("#go_back_id").removeClass("2").addClass("3");
  $("#theDraw").removeClass("2").addClass("3");
 
+
+var getTim = $(".name_tv");
+for(var i = 0; i < getTim.length; i++){
+    var input_name = $(getTim[i]).val();
+///alert(input_name);
+$("#test_name").append(input_name + "<br/><br/>");
+ 
+ }
  
 
+var getTom = $(".surname_tv");
+for(var i = 0; i < getTom.length; i++){
+    var input_surname = $(getTom[i]).val();
+ $("#test_surname").append(input_surname + "<br/><br/>");
+ 
+ 
+}
+ 
+
+var getTum = $(".passport_tv");
+for(var i = 0; i < getTum.length; i++){
+ var input_passport = $(getTum[i]).val();
+ $("#test_passport").append(input_passport + "<br/><br/>");
+
+	}
+
+
+
+ 
+$("#ADno").html(window.adultNo);
+$("#CHno").html(window.ChildNo);
+ 
+
+ if(isNaN(window.adultNo)){
+var AdultFirebasePrice = 0;
+ }else{
+var AdultFirebasePrice = parseInt(window.adultNo * 60);
+ } 
+ 
+ 
+ if(isNaN(window.ChildNo)){
+var ChildFirebasePrice = 0;
+//alert("its is nan");
+ }else{
+var ChildFirebasePrice = parseInt(window.ChildNo * 25);
+ }
+ 
+
+$("#ADprice").html(AdultFirebasePrice);
+
+$("#CHprice").html(ChildFirebasePrice);
+
+ 
+
+var getTotal = parseInt(AdultFirebasePrice) + parseInt(ChildFirebasePrice);
+
+$("#TotalPrice").html(getTotal);
+ 
+ 
+$("#putBus").html(window.getBusName); 
+
+var et = new Date();
+
+var mon = window.getMonth;
+var da  = window.getDate;
+var ye  = et.getFullYear();
+
+var day = new Date(""+mon+""+da+","+ye+"");
+//alert(day); // Apr 30 2000
+
+var nextDay = new Date(day);
+nextDay.setDate(day.getDate()+1);
+//alert(nextDay); // May 01 2000
+
+$("#default_departs").html(window.getDate);
+$("#default_month_departs").html(window.getMonth); 
+$("#time_of_departs").html(window.getTime);
+$("#fill_from_city").html(window.getId); 
+$("#fill_to_city").html(window.getIde);
+
+ 
+var thor = day.getDate()+1;
+var thory = day.getDate()+2;
+
+var days = new Date(""+mon+""+thor+","+ye+"");
+var thorin = Number(days.getMonth());
+ 
+//alert(thorin); 
+
+//if(thorin == 9){alert("isNaN")}else{alert("isnOT")}
+
+    
+switch(thorin) {
+ case 0 :
+ var pullMonth = "Jan";
+ break;
+ case 1 :
+ var pullMonth = "Feb";
+ break;
+ case 2 :
+ var pullMonth = "Mar";
+ break;
+ case 3 :
+ var pullMonth = "Apr";
+ break;
+ case 4 :
+ var pullMonth = "May";
+ break;
+ case 5 :
+ var pullMonth = "Jun";
+ break;
+ case 6 :
+ var pullMonth = "Jul";
+ break;
+ case 7 :
+ var pullMonth = "Aug";
+ break;
+ case 8 :
+ var pullMonth = "Sep";
+ break;
+ case 9 :
+ var pullMonth = "Oct";
+ break;
+ case 10 :
+ var pullMonth = "Nov";
+ break;
+ case 11 :
+ var pullMonth = "Dec";
+ break;
+ default :
+ alert("invalid!");
+ }
+
+
+//alert(pullMonth);
+
+
+if(window.getId == "Bulawayo" && window.getIde == "Johannesburg" || window.getIde == "Pretoria" || window.getIde == "Midrand" ){
+$("#default_arrives").html(thor);
+$("#default_month_arrives").html(pullMonth);
+}
+
+if(window.getId == "Harare" && window.getIde == "Johannesburg" || window.getIde == "Pretoria" || window.getIde == "Midrand" ){
+$("#default_arrives").html(thor);
+$("#default_month_arrives").html(pullMonth);
+}
+
+if(window.getId == "Bulawayo" && window.getIde == "Capetown" || window.getIde == "Durban" ){
+$("#default_arrives").html(thory);
+$("#default_month_arrives").html(pullMonth);
+}
+
+ 
+
+if(window.getId == "Bulawayo" || window.getId == "Harare" || window.getId == "Gwanda" || window.getId == "Musina" || window.getId == "Beitbridge" || window.getId == "Gweru" || window.getId == "Hwange" || window.getId == "Victoria_Falls" || window.getId == "Lupane" &&  window.getIde == "Bulawayo" || window.getIde == "Harare" || window.getIde == "Gwanda" || window.getIde == "Musina" || window.getIde == "Beitbridge" || window.getIde == "Gweru" || window.getIde == "Hwange" || window.getIde == "Victoria_Falls" || window.getIde == "Lupane" ){
+
+ $("#default_arrives").html(day.getDate());
+$("#default_month_arrives").html(pullMonth); 
+}
+
+$("#time_of_arrival").html("auto"); 
+  
+var n = nextDay.getMonth();
+
+
+$("#putBus").html(window.getBusName); 
+ 
+  var random =  Math.floor(100000 + Math.random() * 900000011);
+
+$("#TicketNumber").html(random);  
+ 
+ 
+ 
+ 
+ 
  });
  
  $("#NextHold").click(function(){
@@ -1724,8 +3000,64 @@ $("#fiftDiv").hide();
  $("#fiftDiv").css({"display":"true"}).show();
  $("#go_back_id").removeClass("1").addClass("2");
  $("#theDraw").removeClass("1").addClass("2");
+$("body").css({"overflow":"auto"}); 
+  window.getAdult = parseInt($("#AdultValue").text());
+  window.getChild = parseInt($("#ChildValue").text());
+////WINDOW.getTime
+  window.getDate = parseInt($("#DateValue").text());
+  window.getMonth = $("#MonthValue").text();
+ /// alert(window.getMonth); 
+  
+
+ /* 
+ var getAttr = $("#go_back_id").attr("class");
+alert(getAttr);
+ if(getAttr == "go_back 2"){
+alert("yes one");
+} 
+  */
+  
+  /*
+var tr = $('#AdultValue').bind("DOMSubtreeModified",function(){
+return true;
+});
+*/
+
+  var destr = window.getAdult;
+  for(i = 0; i < destr; i++ ){
+  var addt = i + 1;
+  $(".write_here").append("No : " + addt + " Adult <br/><input type='text' class='name_tv' placeholder='name' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><input type='text' class='surname_tv' placeholder='surname' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><input type='text' class='passport_tv' placeholder='passport number' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><br/>")
+window.adultNo = addt;  
+  }
 
   
+  
+  
+  var destr2 = window.getChild;
+  for(i = 0; i < destr2; i++){
+  var chi = i + 1;
+  $(".write_here").append("No : " + chi + " Child <br/><input type='text' class='name_tv'  placeholder='name' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><input type='text' class='surname_tv'  placeholder='surname' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><input type='text' class='passport_tv'  placeholder='passport number' style='position:relative;width:70%;height:45px;background:none;border-top:0px solid black;border-left:0px solid black;border-right:0px solid black;border-bottom:1px solid black' /><br/><br/>")
+  window.ChildNo = chi;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
  });
  
 window.mywidth = $(window).width();
@@ -1747,8 +3079,8 @@ window.mywidth = $(window).width();
  $("#headerDiv").css({"border-bottom":"0px solid black"});
  $("#go_back_id").addClass("1");
  $("#theDraw").addClass("1");
-  $("body").css({"overflow":"hidden"});
- var getBusName = $(this).attr("name");
+  $("body").css({"overflow":"auto"});
+ window.getBusName = $(this).attr("id");
 //alert(getBusName);
 //var the_problem = $(window).width()-45;
  $(".angfuni").css({"position":"relative","width":"100"});
