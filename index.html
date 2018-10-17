@@ -70,7 +70,14 @@ body{font-family:sans-serif}
 <div id="welcome_text">Welcome</div><br/>
 <div id="balls">
 
-<img  src="design/ball.jpg" id="the_image" onclick = "crazy()";/>
+<img  src="design/ball.jpg" 		class="the_image" 							id="1"/>
+ 
+
+
+
+
+
+
 </div>
 
 
@@ -514,72 +521,26 @@ Codexian0774@gmail.com <br/>
 
 <div style="position:relative;display:block;font-size:12.6px;height:22.5px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" id="From_div"> From : &nbsp; <span id="from_span"></span> </div>
 
+<div style="position:relative;height:8.1%;width:99%;background-color:red;overflow:auto;padding:0.45%;text-align:center">
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px">Bulawayo</div>
 
-<div  class="from_cities" id="Bulawayo">
-<span style="position:relative;top:5.4px">Bulawayo</span>
-</div>
- <!--#f02 --> 
-<div class="from_cities" id="Gwanda">
-<span style="position:relative;top:5.4px">Gwanda</span></div>
-<div  class="from_cities" id="Musina">
-<span style="position:relative;top:5.4px">Musina</span></div>
-<div  class="from_cities" id="Gweru">
-<span style="position:relative;top:5.4px">Gweru</span>
-</div>
-<br/>
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px">Gwanda</div>
 
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px">Musina</div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px">Gweru</div>
 
 
-
-
-
-<div class="from_cities" id="Durban">
-<span style="position:relative;top:5.4px">Durban</span>
-</div>
-<div class="from_cities" id="Capetown">
-<span style="position:relative;top:5.4px">Capetown</span>
-</div>
-<div class="from_cities" id="Beitbridge">
-<span style="position:relative;top:5.4px">Beitbridge</span>
 </div>
 
-<div class="from_cities" id="Hwange">
-<span style="position:relative;top:5.4px">Hwange</span>
+<div style="position:relative;height:5.4%;width:99.9%;background-color:yellow;overflow:hidden;padding-top:1.08%">
+<span style="position:relative;float:left;left:0.9%"><i class="fa fa-arrow-alt-circle-left"></i></span>
+<span style="position:relative;float:right;right:0.9%"><i class="fa fa-arrow-alt-circle-right"></i></span>
 </div>
-
-
-<br/>
-
-<div class="from_cities" id="Johannesburg">
-<span style="position:relative;top:5.4px">Johannesburg</span></div>
-
-<div class="from_cities" id="Lupane">
-<span style="position:relative;top:5.4px">Lupane</span>
-</div>
-
-<div class="from_cities" id="Victoria_Falls">
-<span style="position:relative;top:5.4px">Victoria Falls</span>
-</div>
-
-
-
-
-<br/>
-
-<div class="from_cities" id="Harare">
-<span style="position:relative;top:5.4px">Harare</span>
-</div>
-
-
-
-<div class="from_cities" id="Pretoria">
-<span style="position:relative;top:5.4px">Pretoria</span>
-</div>
-<div  class="from_cities" id="Midrand">
-<span style="position:relative;top:5.4px">Midrand</span>
-</div>
-
-
 
 
 
@@ -996,9 +957,41 @@ Tips :
 
 <script>
  
+ 
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-function crazy () {
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
+        console.log('Received Event: ' + id);
+    }
+};
+ 
+ 
+ $("#fly").click(function(){
 cordova.plugins.barcodeScanner.scan(
       function (result) {
           alert("We got a barcode\n" +
@@ -1022,10 +1015,12 @@ cordova.plugins.barcodeScanner.scan(
           disableAnimations : true, // iOS
           disableSuccessBeep: false // iOS and Android
       }
-   );
+   ); 
 
+ 
+ });
 
-}
+ 
 
 
 /*
@@ -1873,7 +1868,7 @@ $(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","h
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
-$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$(".the_image").css({"position":"relative","height":"100%","width":"100%"});
 $("#number1").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
 $("#number2").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
 $("#number3").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
@@ -2105,7 +2100,7 @@ $(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","h
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"200.7px","width":"100%","overflow":"hidden"});
-$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$(".the_image").css({"position":"relative","height":"100%","width":"100%"});
 $("#number1").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
 $("#number2").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
 $("#number3").css({"position":"relative","left":"1.8%","font-size":"12.6px","height":"12.6px","width":"45px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
@@ -2287,31 +2282,31 @@ $("#ema").css({"font-size":"12.6px"});
 
 
 
-$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
+$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
 
-$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
 
-$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
+$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
 
 
-$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
+
+
+$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
+$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
 
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
-$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$(".the_image").css({"position":"relative","height":"100%","width":"100%"});
 $("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
 $("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
 $("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
@@ -2472,7 +2467,7 @@ $("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
-$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$(".the_image").css({"position":"relative","height":"100%","width":"100%"});
 $("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
 $("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
 $("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
@@ -2660,7 +2655,7 @@ $("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
-$("#the_image").css({"position":"relative","height":"100%","width":"100%"});
+$(".the_image").css({"position":"relative","height":"100%","width":"100%"});
 $("#number1").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px solid #2f2","padding-left":"1.8%","padding-right":"1.8%","background-color":"#2f2","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","border-radius":"4.5px"});
 $("#number2").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#22f","border-radius":"4.5px"});
 $("#number3").css({"position":"relative","left":"1.8%","height":"12.6px","width":"63px","border":"0px","padding-left":"1.8%","padding-right":"1.8%","padding-top":"1.26%","padding-bottom":"1.26%","display":"inline-block","text-align":"center","background-color":"#db3236","border-radius":"4.5px"});
