@@ -66,12 +66,18 @@ body{font-family:sans-serif}
 <body>
 
 
-<div id="firstDiv" style="position:relative;height:100%;text-align:center;font-size:54px" class="animated slideInUp">
+<div id="firstDiv" style="position:relative;text-align:center;font-size:54px;" class="animated slideInUp">
 <span style="position:relative;top:45%">
 <span style="color:#db3236">t</span><span style="color:#f4c20d">e</span><span style="color:#4885ed">c</span><span style="color:#3cba54">h</span> 
 <span style="color:purple">t</span><span style="color:#db3236">r</span><span style="color:#4885ed">a</span><span style="color:#f4c20d">v</span><span style="color:#3cba54">e</span><span style="color:#4885ed">l</span>
 </span>
 </div>
+<script>
+var fool = $(window).height() - 72;
+$("#firstDiv").css({"height":fool});
+</script>
+
+
 <!----------------------------------------------------header div =---------------------------------------------------------------------------------------->
 
 <div id="secondDiv" class="animated slideInUp" style="text-align:center;display:none"> 
@@ -142,7 +148,7 @@ Our travel pack include
 <p style="color:black)">
 Get the best deals when flying with Fly Emirates, Etihad, South African Airways And Qatar
 </p>
-<div id="fly">
+<div id="fly" onclick="app.takePicture();">
 
 <img  src="design/fly.jpg" 			style="position:relative;height:100%;width:100%"/>
 <img  src="design/emi_sky.png" 		style="position:relative;height:100%;width:100%"/>
@@ -267,12 +273,13 @@ Codexian0774@gmail.com <br/>
 </div>
 <div class="theOnlyClass" >
 <div style="position:relative;width:72%;left:13.5px;color:white;text-align:center;"><h2>Intercape</h2></div>
-<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>1234</h4></span></div>
+<div style="position:relative;background-color:rgb(72, 133, 237);width:23.4%;display:inline-block;overflow:hidden;height:45%;border-top-left-radius:45px;border-bottom-left-radius:45px;text-align:center"><h1 style="color:red"><i class="fa fa-heart"></i></h1><span style="position:relative;bottom:18px;color:white"><h4>154</h4></span></div>
 <div style="position:relative;display:inline-block;overflow:hidden;height:45%;width:72%;text-align:left;color:white">If you know the definition of luxury this should be your choice <br/>
 <br/>
- <span style="background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
+ <span style="position:relative;display:inline-block;background-color:#ff2;padding-left:4.5%;padding-right:4.5%;padding-top:2.7px;border-bottom:2.7px;border-radius:7.2px;color:red">
  <span style="position:relative;bottom:2.7px">see prices</span>
  </span>
+  <span style="position:relative;display:inline-block;float:right"><i class="fa fa-facebook-f"></i></span>
 </div>
 <div style="text-align:right;padding-right:2.7%;color:yellow">bon voyage</div>
 </div>
@@ -529,106 +536,414 @@ Codexian0774@gmail.com <br/>
 <div id="fourthDiv" style="display:none">
 
 <br/>
-<div style="position:relative;height:378px;;width:97.2%;color:white;padding-left:1.3609%;padding-right:1.3609%;overflow:hidden;display:block;padding-top:1.3609%;text-align:center;" id="all_selects">
+<div style="position:relative;width:97.2%;color:white;padding-left:1.3609%;padding-right:1.3609%;overflow:hidden;display:block;padding-top:1.3609%;text-align:center;" id="all_selects">
 
 <div style="position:relative;display:block;font-size:12.6px;height:22.5px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" id="From_div"> From : &nbsp; <span id="from_span"></span> </div>
 
-<div style="position:relative;height:8.1%;width:99%;background-color:red;overflow:auto;padding:0.45%;text-align:center">
-<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
-padding-left:9px;padding-right:9px">Bulawayo</div>
+<div style="position:relative;height:30.618px;width:99%;overflow:auto;padding:0.45%;text-align:center" class="cont">
+<div class="shuffle_1" id="trap" style="position:relative;height:100%">
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Bulawayo" >
+<span style="position:relative;top:5.4px">Bulawayo</span></div>
 
-<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
-padding-left:9px;padding-right:9px">Gwanda</div>
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Gwanda" >
+<span style="position:relative;top:5.4px">Gwanda</span></div>
 
-<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
-padding-left:9px;padding-right:9px">Musina</div>
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Musina">
+<span style="position:relative;top:5.4px">Musina</span></div>
 
-<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
-padding-left:9px;padding-right:9px">Gweru</div>
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Gweru">
+<span style="position:relative;top:5.4px">Gweru</span></div>
+</div>
+<!-----------------------------------secondd raw------------------------------------------------->
+
+<div style="display:none;position:relative;height:100%" class="shuffle_2" id="trap">
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Durban">
+<span style="position:relative;top:5.4px">Durban</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Capetown">
+<span style="position:relative;top:5.4px">Capetown</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Beitbridge">
+<span style="position:relative;top:5.4px">Beitbridge</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Pretoria">
+<span style="position:relative;top:5.4px">Pretoria</span></div>
+
+</div>
+
+<div style="display:none;position:relative;height:100%" class="shuffle_3" id="trap">
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Midrand">
+<span style="position:relative;top:5.4px">Midrand</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Harare">
+<span style="position:relative;top:5.4px">Harare</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Johannesburg">
+<span style="position:relative;top:5.4px">Johannesburg</span></div>
 
 
 </div>
 
-<div style="position:relative;height:5.4%;width:99.9%;background-color:yellow;overflow:hidden;padding-top:1.08%">
-<span style="position:relative;float:left;left:0.9%"><i class="fa fa-arrow-alt-circle-left"></i></span>
-<span style="position:relative;float:right;right:0.9%"><i class="fa fa-arrow-alt-circle-right"></i></span>
-</div>
+<div style="display:none;position:relative;height:100%" class="shuffle_4" id="trap">
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Victoria_Falls">
+<span style="position:relative;top:5.4px">Victoria Falls</span></div>
 
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Lupane">
+<span style="position:relative;top:5.4px">Lupane</span></div>
 
-
-<div style="position:relative;width:99%;left:0.45%;top:18px"><hr/></div>
-
-
-
-<!---------------------------------------------------to citteess ------------------------------->
- <br/>
  
-<div style="position:relative;display:block;font-size:12.6px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" class="to_div"> To : &nbsp; <span id="to_span"></span> </div>
+<div style="position:relative;height:90%;display:inline-block;background-color:rgb(34, 255, 34);display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Hwange">
+<span style="position:relative;top:5.4px">Hwange</span></div>
+ 
 
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Bulawayo">
-<span style="position:relative;top:5.4px">Bulawayo</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:72px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Gwanda">
-<span style="position:relative;top:5.4px">Gwanda</span>
 </div>
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Musina">
-<span style="position:relative;top:5.4px">Musina</span>
+
+
+
+
 </div>
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:90px;display:inline-block;text-align:center;border-radius:9px;top:14.4px" class="to_cities" id="Durban">
-<span style="position:relative;top:5.4px">Durban</span>
+<div style="position:relative;height:8.1%;width:99.9%;overflow:hidden;padding-top:1.08%;text-align:center">
+<span id="left_from" class="1" style="position:relative;float:left;font-size:27px;left:0.9%;color:yellow"><i class="fa fa-arrow-alt-circle-left"></i></span>
+<span style="color:aqua">see other trips</span>
+<span id="right_from"  class="1" style="position:relative;float:right;right:0.9%;font-size:27px;color:yellow"><i class="fa fa-arrow-alt-circle-right"></i></span>
 </div>
 
 
 <script>
+$("#left_from").click(function(){
+var Nana = parseInt($(this).attr("class"));
+var Nana2 = parseInt($("#right_from").attr("class"));
+ 
+if( (Nana > 1)){
+
+var getAddedClass = Nana - 1;
+$("#right_from").removeClass(""+Nana2+"").addClass(""+getAddedClass+"");
+$("#left_from").removeClass(""+Nana+"").addClass(""+getAddedClass+"");
+ 
+}
+
+if((Nana == 1 )){
+ 
+var getAddedClass = 4;
+$("#right_from").removeClass(""+Nana2+"").addClass("4");
+$("#left_from").removeClass(""+Nana+"").addClass("4");
+ 
+}
+
+
+
+
+switch(getAddedClass){
+case 1:
+ 
+$("#trap.shuffle_1").css({"display":"true"}).show();
+$("#trap.shuffle_2").hide();
+break;
+case 4:
+ 
+$("#trap.shuffle_4").css({"display":"true"}).show();
+$("#trap.shuffle_1").hide();
+break;
+case 3:
+ 
+$("#trap.shuffle_3").css({"display":"true"}).show();
+$("#trap.shuffle_4").hide();
+break;
+case 2:
+ 
+$("#trap.shuffle_2").css({"display":"true"}).show();
+$("#trap.shuffle_3").hide();
+break;
+}
+
+
+
+
+
+
+})
+
+
+$("#right_from").click(function(){
+var Nana2 = parseInt($("#left_from").attr("class"));
+var Nana = parseInt($(this).attr("class"));
+if((Nana < 4)){
+
+var getAddedClass = Nana + 1;
+$("#right_from").removeClass(""+Nana+"").addClass(""+getAddedClass+"");
+$("#left_from").removeClass(""+Nana2+"").addClass(""+getAddedClass+"");
+ 
+}
+
+
+if((Nana == 4)){
+
+ var getAddedClass = 1;
+$("#right_from").removeClass(""+Nana2+"").addClass("1");
+$("#left_from").removeClass(""+Nana+"").addClass("1");
+ 
+}
+
+
+switch(getAddedClass){
+case 1:
+ 
+$("#trap.shuffle_1").css({"display":"true"}).show();
+$("#trap.shuffle_4").hide();
+break;
+case 2:
+ 
+$("#trap.shuffle_2").css({"display":"true"}).show();
+$("#trap.shuffle_1").hide();
+break;
+case 3:
+ 
+$("#trap.shuffle_3").css({"display":"true"}).show();
+$("#trap.shuffle_2").hide();
+break;
+case 4:
+ 
+$("#trap.shuffle_4").css({"display":"true"}).show();
+$("#trap.shuffle_3").hide();
+break;
+}
+
+
+
+//$(this).addClass("shuffle_2");
+})
+
+</script>
+
+<div style="position:relative;width:99%;left:0.45%;top:7.2px;"><hr/></div>
+
+
+
+<!---------------------------------------------------to citteess ------------------------------->
+
+
+<div style="position:relative;display:block;font-size:12.6px;height:22.5px;padding-top:9px;color:rgb(72, 133, 237);text-align:left" id="to_div"> To : &nbsp; <span id="to_span"></span> </div>
+
+ 
+<div style="position:relative;height:30.618px;width:99%;overflow:auto;padding:0.45%;text-align:center" class="cont">
+<div class="shuffle_1" id="trap2" style="position:relative;height:100%">
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Bulawayo">
+<span style="position:relative;top:5.4px">Bulawayo</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Gwanda">
+<span style="position:relative;top:5.4px">Gwanda</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Musina">
+<span style="position:relative;top:5.4px">Musina</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Gweru">
+<span style="position:relative;top:5.4px">Gweru</span></div>
+</div>
+<!-----------------------------------secondd raw------------------------------------------------->
+
+<div style="display:none;position:relative;height:100%" class="shuffle_2" id="trap2">
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Durban">
+<span style="position:relative;top:5.4px">Durban</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Capetown">
+<span style="position:relative;top:5.4px">Capetown</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Beitbridge">
+<span style="position:relative;top:5.4px">Beitbridge</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Pretoria">
+<span style="position:relative;top:5.4px">Pretoria</span></div>
+
+</div>
+
+<div style="display:none;position:relative;height:100%" class="shuffle_3" id="trap2">
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Midrand">
+<span style="position:relative;top:5.4px">Midrand</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Harare">
+<span style="position:relative;top:5.4px">Harare</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Johannesburg">
+<span style="position:relative;top:5.4px">Johannesburg</span></div>
+
+
+</div>
+
+<div style="display:none;position:relative;height:100%" class="shuffle_4" id="trap2">
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Victoria_Falls">
+<span style="position:relative;top:5.4px">Victoria Falls</span></div>
+
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Lupane">
+<span style="position:relative;top:5.4px">Lupane</span></div>
+
+ 
+<div style="position:relative;height:90%;display:inline-block;background-color:aqua;display:inline-block;top:4.95%;bottom:4.95%;
+padding-left:9px;padding-right:9px;border-radius:9px" class="to_cities" id="Hwange">
+<span style="position:relative;top:5.4px">Hwange</span></div>
+ 
+
+
+</div>
+
+
+
+
+
+</div>
+
+<div style="position:relative;height:8.1%;width:99.9%;overflow:hidden;padding-top:1.08%;text-align:center">
+<span id="left_to" class="1" style="position:relative;float:left;font-size:27px;left:0.9%;color:rgb(34, 255, 34)"><i class="fa fa-arrow-alt-circle-left"></i></span>
+<span style="color:aqua">see other trips</span>
+<span id="right_to"  class="1" style="position:relative;float:right;right:0.9%;font-size:27px;color:rgb(34, 255, 34)"><i class="fa fa-arrow-alt-circle-right"></i></span>
+</div>
+
+
+<script>
+$("#left_to").click(function(){
+var Nana = parseInt($(this).attr("class"));
+var Nana2 = parseInt($("#right_to").attr("class"));
+ 
+if( (Nana > 1)){
+
+var getAddedClass = Nana - 1;
+$("#right_to").removeClass(""+Nana2+"").addClass(""+getAddedClass+"");
+$("#left_to").removeClass(""+Nana+"").addClass(""+getAddedClass+"");
+ 
+}
+
+if((Nana == 1 )){
+ 
+var getAddedClass = 4;
+$("#right_to").removeClass(""+Nana2+"").addClass("4");
+$("#left_to").removeClass(""+Nana+"").addClass("4");
+ 
+}
+
+
+
+
+switch(getAddedClass){
+case 1:
+ 
+$("#trap2.shuffle_1").css({"display":"true"}).show();
+$("#trap2.shuffle_2").hide();
+break;
+case 4:
+ 
+$("#trap2.shuffle_4").css({"display":"true"}).show();
+$("#trap2.shuffle_1").hide();
+break;
+case 3:
+ 
+$("#trap2.shuffle_3").css({"display":"true"}).show();
+$("#trap2.shuffle_4").hide();
+break;
+case 2:
+ 
+$("#trap2.shuffle_2").css({"display":"true"}).show();
+$("#trap2.shuffle_3").hide();
+break;
+}
+
+
+
+
+
+
+})
+
+
+$("#right_to").click(function(){
+var Nana2 = parseInt($("#left_to").attr("class"));
+var Nana = parseInt($(this).attr("class"));
+if((Nana < 4)){
+
+var getAddedClass = Nana + 1;
+$("#right_to").removeClass(""+Nana+"").addClass(""+getAddedClass+"");
+$("#left_to").removeClass(""+Nana2+"").addClass(""+getAddedClass+"");
+ 
+}
+
+
+if((Nana == 4)){
+
+ var getAddedClass = 1;
+$("#right_to").removeClass(""+Nana2+"").addClass("1");
+$("#left_to").removeClass(""+Nana+"").addClass("1");
+ 
+}
+
+
+switch(getAddedClass){
+case 1:
+ 
+$("#trap2.shuffle_1").css({"display":"true"}).show();
+$("#trap2.shuffle_4").hide();
+break;
+case 2:
+ 
+$("#trap2.shuffle_2").css({"display":"true"}).show();
+$("#trap2.shuffle_1").hide();
+break;
+case 3:
+ 
+$("#trap2.shuffle_3").css({"display":"true"}).show();
+$("#trap2.shuffle_2").hide();
+break;
+case 4:
+ 
+$("#trap2.shuffle_4").css({"display":"true"}).show();
+$("#trap2.shuffle_3").hide();
+break;
+}
+
+
+
+//$(this).addClass("shuffle_2");
+})
 
 </script>
 
 
 
-<br/>
-<div style="background-color:#f02;position:relative;height:30.6px;width:117px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Capetown">
-<span style="position:relative;top:5.4px">Capetown</span>
-</div>
- 
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:117px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Beitbridge">
-<span style="position:relative;top:5.4px">Beitbridge</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:18px" class="to_cities" id="Pretoria">
-<span style="position:relative;top:5.4px">Pretoria</span>
-</div>
 
-<br/>
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:72px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Midrand">
-<span style="position:relative;top:5.4px">Midrand</span>
-</div>
 
-<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Gweru">
-<span style="position:relative;top:5.4px">Gweru</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:63px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Harare">
-<span style="position:relative;top:5.4px">Harare</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:135px;display:inline-block;text-align:center;border-radius:9px;top:22.5px" class="to_cities" id="Johannesburg">
-<span style="position:relative;top:5.4px">Johannesburg</span>
-</div>
-
-<br/>
-
-<div style="background-color:#f02;position:relative;height:30.6px;width:100.8px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Hwange">
-<span style="position:relative;top:5.4px">Hwange</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:126px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Victoria_Falls">
-<span style="position:relative;top:5.4px">Victoria Falls</span>
-</div>
-<div style="background-color:#f02;position:relative;height:30.6px;width:99px;display:inline-block;text-align:center;border-radius:9px;top:27px" class="to_cities" id="Lupane">
-<span style="position:relative;top:5.4px">Lupane</span>
-</div>
-
+<script>
+var getU = 378 * 8.1/100;
+$(".cont").css({"height":getU});
+</script>
 
 
 </div>
@@ -722,9 +1037,9 @@ padding-left:9px;padding-right:9px">Gweru</div>
  <div style="display:none" id="ticket_page">
  <br/><br/>
  <span style="font-family:sans-serif;color:silver">Ticket No:</span> <span>:
- <br/>
- </span><span style="position:relative;font-family:sans-serif;float:right;right:2.7%" id="TicketNumber"></span><br/>
- 
+
+ </span><span style="position:relative;font-family:sans-serif;float:right;right:2.7%;overflow:hidden" id="TicketNumber"></span><br/>
+  <br/>
  <div style="position:relative;height:90px;width:96.3%;padding:1.8%;background-color:aqua;color:white;font-family:sans-serif;overflow:hidden;text-align:center">
  <span style="position:relative;float:left" id="ADno" >0</span><span style="position:relative;float:left" >x</span>
  <span>Adult</span><span style="position:relative;float:right" id="ADprice">0</span><br/><br/>
@@ -970,7 +1285,7 @@ Tips :
   
   
   
-    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
@@ -1222,7 +1537,7 @@ $("#DateValue").html(d.getDate());
  $("#firstDiv").hide();
  $("#secondDiv").css({'display':'inline-block'}).show();
  
- },4500);
+ },3600);
  
 
  
@@ -1798,48 +2113,6 @@ $("#ema").css({"font-size":"9.9px"});
 
 
 $("#all_selects").css({"font-size":"12.6px","height":"290.7px"});
-$(".from_cities#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$(".from_cities#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$(".from_cities#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-
-$(".from_cities#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-$(".from_cities#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$(".from_cities#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$(".from_cities#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-
-
-$(".from_cities#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
-
-
-
-
-$(".to_cities#Harare").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Midrand").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Gweru").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Johannesburg").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-
-$(".to_cities#Lupane").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-$(".to_cities#Victoria_Falls").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-$(".to_cities#Hwange").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-
-$(".to_cities#Capetown").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-$(".to_cities#Beitbridge").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-$(".to_cities#Pretoria").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-
-
-$(".to_cities#Durban").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Gwanda").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Musina").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
 
 
 
@@ -2030,55 +2303,6 @@ $("#ema").css({"font-size":"11.07px"});
 
 
 $("#all_selects").css({"font-size":"12.6px","height":"290.7px"});
-$(".from_cities#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$(".from_cities#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$(".from_cities#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-
-$(".from_cities#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-$(".from_cities#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$(".from_cities#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$(".from_cities#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$(".from_cities#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-
-
-$(".from_cities#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".from_cities#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
-
-
-
-
-$(".to_cities#Harare").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Midrand").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Gweru").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-$(".to_cities#Johannesburg").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"18px"});
-
-$(".to_cities#Lupane").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-$(".to_cities#Victoria_Falls").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-$(".to_cities#Hwange").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px","top":"22.5px"});
-
-$(".to_cities#Capetown").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-$(".to_cities#Beitbridge").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-$(".to_cities#Pretoria").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"16.2px"});
-
-
-$(".to_cities#Durban").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Gwanda").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Musina").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"54px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$(".to_cities#Bulawayo").css({"background-color":"#f02","position":"relative","height":"22.5px","width":"63px","display":"inline-block","text-align":"center","border-radius":"9px"});
-
-
-
-
-
-
-
 
 
 
@@ -2267,27 +2491,6 @@ $("#ema").css({"font-size":"12.6px"});
 
 
 
-$("#Harare").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-
-$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$("#Durban").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-
-
-$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Musina").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"22.5px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
-
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
@@ -2427,27 +2630,6 @@ $("#ema").css({"font-size":"12.6px"});
 
 
 
-
-$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-
-$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-
-
-$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
 
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
@@ -2615,28 +2797,7 @@ $("#who_are_we_click").css({"position":"relative","font-size":"12.6px","color":"
 $(".mission_statement").css({"position":"relative","color":"#2f2","top":"2.7%","font-size":"23.4px","font-weight":"italic"});
 $("#ema").css({"font-size":"12.6px"}); 
 
-
-$("#Harare").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Pretoria").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"126px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-$("#Midrand").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"9px"});
-
-$("#Johannesburg").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"112.5px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-$("#Lupane").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"81px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-$("#Victoria_Falls").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"135px","display":"inline-block","text-align":"center","border-radius":"9px","top":"6.3px"});
-
-
-$("#Durban").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Hwange").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"72px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Capetown").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-$("#Beitbridge").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px","top":"4.5px"});
-
-
-$("#Gwanda").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Musina").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Gweru").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"80.1px","display":"inline-block","text-align":"center","border-radius":"9px"});
-$("#Bulawayo").css({"background-color":"#2f2","position":"relative","height":"30.6px","width":"90px","display":"inline-block","text-align":"center","border-radius":"9px"});
-
+ 
 
 $("#welcome_text").css({"color":"rgb(72, 133, 237)","font-family":"cursive"});
 $("#balls").css({"position":"relative","height":"240.3px","width":"100%","overflow":"hidden"});
@@ -2897,31 +3058,26 @@ var mon = window.getMonth;
 var da  = window.getDate;
 var ye  = et.getFullYear();
 
+//alert(mon);
+//alert(da);
+
 var day = new Date(""+mon+""+da+","+ye+"");
 //alert(day); // Apr 30 2000
 
 var nextDay = new Date(day);
 nextDay.setDate(day.getDate()+1);
-//alert(nextDay); // May 01 2000
+//alert(nextDay.getDate()); // May 01 2000
 
 $("#default_departs").html(window.getDate);
 $("#default_month_departs").html(window.getMonth); 
 $("#time_of_departs").html(window.getTime);
 $("#fill_from_city").html(window.getId); 
 $("#fill_to_city").html(window.getIde);
-
  
-var thor = day.getDate()+1;
-var thory = day.getDate()+2;
-
-var days = new Date(""+mon+""+thor+","+ye+"");
-var thorin = Number(days.getMonth());
  
-//alert(thorin); 
-
-//if(thorin == 9){alert("isNaN")}else{alert("isnOT")}
-
-    
+var thorin = parseInt(nextDay.getMonth());
+ 
+ 
 switch(thorin) {
  case 0 :
  var pullMonth = "Jan";
@@ -2963,32 +3119,13 @@ switch(thorin) {
  alert("invalid!");
  }
 
-
-//alert(pullMonth);
-
-
-if(window.getId == "Bulawayo" && window.getIde == "Johannesburg" || window.getIde == "Pretoria" || window.getIde == "Midrand" ){
-$("#default_arrives").html(thor);
+ 
 $("#default_month_arrives").html(pullMonth);
-}
-
-if(window.getId == "Harare" && window.getIde == "Johannesburg" || window.getIde == "Pretoria" || window.getIde == "Midrand" ){
-$("#default_arrives").html(thor);
-$("#default_month_arrives").html(pullMonth);
-}
-
-if(window.getId == "Bulawayo" && window.getIde == "Capetown" || window.getIde == "Durban" ){
-$("#default_arrives").html(thory);
-$("#default_month_arrives").html(pullMonth);
-}
+$("#default_arrives").html(nextDay.getDate());
 
  
 
-if(window.getId == "Bulawayo" || window.getId == "Harare" || window.getId == "Gwanda" || window.getId == "Musina" || window.getId == "Beitbridge" || window.getId == "Gweru" || window.getId == "Hwange" || window.getId == "Victoria_Falls" || window.getId == "Lupane" &&  window.getIde == "Bulawayo" || window.getIde == "Harare" || window.getIde == "Gwanda" || window.getIde == "Musina" || window.getIde == "Beitbridge" || window.getIde == "Gweru" || window.getIde == "Hwange" || window.getIde == "Victoria_Falls" || window.getIde == "Lupane" ){
 
- $("#default_arrives").html(day.getDate());
-$("#default_month_arrives").html(pullMonth); 
-}
 
 $("#time_of_arrival").html("auto"); 
   

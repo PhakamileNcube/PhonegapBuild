@@ -21,14 +21,17 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
+	<preference name="loadUrlTimeoutValue" value="700000" />
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
+    <preference name="phonegap-version" value="3.0.0" /> 
 
+    <gap:plugin name="org.apache.cordova.core.camera" />
     <!-- Plugins -->
     <!-- Core plugins -->
     <!--<plugin name="phonegap-plugin-barcodescanner"      	  source="npm"  />-->
-    <plugin name="phonegap-plugin-barcodescanner" />
+    <plugin name="cordova-plugin-barcodescanner"	  source="npm"/>
 	<plugin name="cordova-plugin-battery-status"      source="npm" spec="~1.2.4" />
     <plugin name="cordova-plugin-camera"              source="npm" spec="~2.4.1" />
     <plugin name="cordova-plugin-media-capture"       source="npm" spec="~1.4.3" />
