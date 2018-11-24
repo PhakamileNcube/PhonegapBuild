@@ -96,7 +96,7 @@ $("#firstDiv").css({"height":fool});
 
  </div>
 <script>
-var yonce = $(window).width()
+var yonce = $(window).width() - 12.6;
 $("body").css({"width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 </script>
@@ -1225,7 +1225,7 @@ padding-left:9px;padding-right:9px;border-radius:9px" class="from_cities" id="Hw
 
 </div>
 
-<div style="position:relative;height:8.1%;width:99.9%;overflow:hidden;padding-top:1.08%;text-align:center">
+<div style="position:relative;height:8.1%;width:99.9%;overflow:hidden;padding-top:1.08%;text-align:center" class='gate'>
 <span id="left_from" class="1" style="position:relative;float:left;font-size:27px;left:0.9%;color:rgb(34, 255, 34)"><i class="fa fa-arrow-alt-circle-left"></i></span>
 <span style="color:rgb(72, 133, 237)">see other trips</span>
 <span id="right_from"  class="1" style="position:relative;float:right;right:0.9%;font-size:27px;color:rgb(34, 255, 34)"><i class="fa fa-arrow-alt-circle-right"></i></span>
@@ -2312,7 +2312,7 @@ $(".PayNowYS").hide(540);
 $(".havePaid1").click(function(){
 $("#Noko1").hide(540);
 $(".payConfirm1").css({"display":"true"}).show();
-alert($(".PayUsingYSPass").text());
+ 
 });		
 
 
@@ -3555,13 +3555,14 @@ $("#ticket_page").css({"text-align":"center"});
 $(".qom").css({"width":"93.6%"});
 $("#netx_to_ticket").css({"height":"27px"});
 $(".tobu").css({"height":"12.6%"});
-$("#left_to").css({"font-size":"18px"}); 
-$("#right_to").css({"font-size":"18px"}); 
 $(".to_cities").css({"font-size":"10.8px"});
-$("#left_from").css({"font-size":"18px"}); 
-$("#right_from").css({"font-size":"18px"}); 
+$("#left_to").css({"font-size":"24.3px"}); 
+$("#right_to").css({"font-size":"24.3px"}); 
+$("#left_from").css({"font-size":"24.3px"}); 
+$("#right_from").css({"font-size":"24.3px"}); 
 $(".from_cities").css({"font-size":"10.8px"});
 $(".From_div").css({"font-size":"10.8px"}); 
+$(".gate").css({"height":"12.6%"});
 
  
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
@@ -3779,14 +3780,14 @@ $("#ticket_page").css({"text-align":"center"});
 $(".qom").css({"width":"93.6%"});
 $("#netx_to_ticket").css({"height":"27px"});
 $(".tobu").css({"height":"12.6%"});
-$("#left_to").css({"font-size":"18px"}); 
-$("#right_to").css({"font-size":"18px"}); 
+$("#left_to").css({"font-size":"24.3px"}); 
+$("#right_to").css({"font-size":"24.3px"}); 
 $(".to_cities").css({"font-size":"10.8px"});
-$("#left_from").css({"font-size":"18px"}); 
-$("#right_from").css({"font-size":"18px"}); 
+$("#left_from").css({"font-size":"24.3px"}); 
+$("#right_from").css({"font-size":"24.3px"}); 
 $(".from_cities").css({"font-size":"10.8px"});
 $(".From_div").css({"font-size":"10.8px"}); 
-
+$(".gate").css({"height":"12.6%"});
  
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
