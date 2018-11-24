@@ -62,7 +62,18 @@
 }
 body{font-family:sans-serif}
  
+body.modal-open {
+    // block scroll for mobile;
+    // causes underlying page to jump to top;
+    // prevents scrolling on all screens
+    overflow-x: hidden;
+    position: fixed;
+}
 
+html, body {
+  overflow-x:hidden 
+} 
+ 
 </style>
 	
 	
@@ -88,13 +99,18 @@ $("#firstDiv").css({"height":fool});
 <!----------------------------------------------------header div =---------------------------------------------------------------------------------------->
 
 
-<div id="headerDiv" class='HD animated slideInRight' style="position:relative;width:90%;padding-left:1.35%;padding-right:1.35%;display:true;text-align:center;background-color:rgb(72, 133, 237);color:white;display:none">
+<div id="headerDiv" class='HD animated slideInRight' style="position:relative;width:96.3%;padding-left:1.35%;padding-right:1.35%;display:true;text-align:center;background-color:rgb(72, 133, 237);color:white;display:none">
 
 <span style="position:relative;display:float;float:left;top:9%" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;top:9%">tech travel</span>
 <span style="position:relative;display:float;float:right;top:9%;right:1.8%" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
 
  </div>
+ <script>
+ 
+
+ 
+ </script>
   
  <div id="oi" >
 
@@ -3520,7 +3536,7 @@ var getShit = $(".the_togglers").attr("id");
   
 if (small_devMin.matches && small_devMax.matches) {
 var yonce = $(window).width() - 12.6;
-$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("body").css({"position":"relative","overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
 $(".Panminjun").css({"bottom":"18px"});
