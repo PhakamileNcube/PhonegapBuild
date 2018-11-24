@@ -6,10 +6,10 @@
         id        = "com.yonic.studyapp"
         version   = "1.0.0">
 
-    <name>School Application</name>
+    <name>Tech Travel</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+       This is an app designed by Yonic to book buses without going to town for booking
     </description>
 
     <author >
