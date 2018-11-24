@@ -95,11 +95,6 @@ $("#firstDiv").css({"height":fool});
 <span style="position:relative;display:float;float:right;top:9%;right:1.8%" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
 
  </div>
-<script>
-var yonce = $(window).width() - 12.6;
-$("body").css({"width":yonce,"overflow-x":"hidden"});
-$("#oi").css({"overflow":"auto"});
-</script>
   
  <div id="oi" >
 
@@ -2219,9 +2214,9 @@ $(".PayNowFP").css({"display":"true"}).show();
 <div style="position:relative;height:45px;width:81%;left:9%;background-color:rgb(34, 255, 34);text-align:center" id="PayUsingYS">
 <span style="position:relative;top:11.7px">550 Rands/ 55 US$</span>
 </div>
-<br/><br/>
+<br/>
 <input type="password" style="position:relative;height:45px;width:81%;background:none;border-radius:9px;text-align:center" class='PayUsingYSPass' placeholder="password"/>
-<br/><br/>
+<br/>
 <div style="position:relative;height:45px;width:81%;left:9%;background-color:rgb(34, 255, 34);text-align:center;border-radius" class="havePaid1" id="PayUsingYS">
 <span style="position:relative;top:11.7px">Pay</span>
 </div>
@@ -2963,24 +2958,6 @@ $("#about_us_font").toggle();
 $("document").ready(function(){
 
 
-//var d = new Date();
-//var v = d.getDay();
-//var m = d.getMonth();
-//var z = d.getFullYear();
-
-
-
-/*
-var vt = new Date().toLocaleString().split(',')[0]
-var day = new Date(vt);
-//var day = new Date('Apr 30, 2000');
-//alert(day);
-
-var nextDay = new Date(day);
-nextDay.setDate(day.getDay()+1);
-alert(nextDay); 
-
-*/
 
 var d = new Date();
 var month = new Array();
@@ -3542,8 +3519,11 @@ var getShit = $(".the_togglers").attr("id");
 
   
 if (small_devMin.matches && small_devMax.matches) {
-$(".Panminjun").css({"bottom":"18px"});
+var yonce = $(window).width() - 12.6;
+$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("#oi").css({"overflow":"auto"});
 
+$(".Panminjun").css({"bottom":"18px"});
 $(".havePaid1").css({"height":"36px"});
 $(".PayUsingYSPass").css({"height":"36px"});
 $("#PayUsingYS").css({"height":"36px"});
@@ -3766,6 +3746,9 @@ $("#to_span").css({"font-size":"10.8px"});
  var se_devMax= window.matchMedia( "(max-height: 590px)" );
  
 if (se_devMin.matches && se_devMax.matches) {
+var yonce = $(window).width() - 12.6;
+$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("#oi").css({"overflow":"auto"});
 
 $(".Panminjun").css({"bottom":"18px"});
 
@@ -3989,9 +3972,10 @@ $("#to_span").css({"font-size":"10.8px"});
  var mq = window.matchMedia( "(max-height: 667px)" );
  
 if (hq.matches && mq.matches) {
- 
- // $("body").css({"overflow-y":"auto"});
- 
+var yonce = $(window).width() - 12.6;
+$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("#oi").css({"overflow":"auto"});
+
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
 $(".disc3").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden","text-align":"center"});
@@ -4179,7 +4163,10 @@ $(".to_div").css({"top":"7.2px"});
  var mq_plus_max = window.matchMedia( "(max-height: 800px)" );
  
 if (hq_plus_min.matches && mq_plus_max.matches) {
- 
+ var yonce = $(window).width() - 12.6;
+$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("#oi").css({"overflow":"auto"});
+
   
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
@@ -4368,6 +4355,9 @@ $(".to_div").css({"top":"7.2px"});
  var eight_max = window.matchMedia( "(max-height: 1200px)" );
  
 if (eight_min.matches && eight_max.matches) {
+var yonce = $(window).width() - 12.6;
+$("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
+$("#oi").css({"overflow":"auto"});
  
    
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
