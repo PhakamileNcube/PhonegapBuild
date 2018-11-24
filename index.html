@@ -63,10 +63,7 @@
 body{font-family:sans-serif}
  
 body.modal-open {
-    // block scroll for mobile;
-    // causes underlying page to jump to top;
-    // prevents scrolling on all screens
-    overflow-x: hidden;
+overflow-x: hidden;
     position: fixed;
 }
 
@@ -99,7 +96,7 @@ $("#firstDiv").css({"height":fool});
 <!----------------------------------------------------header div =---------------------------------------------------------------------------------------->
 
 
-<div id="headerDiv" class='HD animated slideInRight' style="position:relative;width:96.3%;padding-left:1.35%;padding-right:1.35%;display:true;text-align:center;background-color:rgb(72, 133, 237);color:white;display:none">
+<div id="headerDiv" class='HD animated slideInRight' style="position:relative;width:97.02%;padding-left:1.35%;padding-right:1.35%;display:true;text-align:center;background-color:rgb(72, 133, 237);color:white;display:none">
 
 <span style="position:relative;display:float;float:left;top:9%" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;top:9%">tech travel</span>
@@ -1682,7 +1679,7 @@ $("#pearlThusi").css({"width":newWidth,"left":left});
 
 var choose_height = $(window).height() * 0.9;
 $("#heightAka").css({"height":choose_height});
-var setBoxes = $(window).width() * 0.153;
+var setBoxes = $(window).width() * 0.135;
 
 
 function fuck (){
@@ -1742,11 +1739,11 @@ $("#heightAka").append("<div style='position:relative;display:inline-block;width
 
 
 if(setAlph == "A" || setAlph == "E"){
-$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:99.9%;color:rgb(72, 133, 237)'>" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white'><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white'>window</div></div>");
+$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:90%;color:rgb(72, 133, 237)' class='numberSeat' >" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white;font-size:63%' class='user_icon' ><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white;font-size:63%' class='seatLocation'>window</div></div>");
 }else if(setAlph == "B" || setAlph == "C"){
-$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:99.9%;color:rgb(72, 133, 237)'>" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white'><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white'>edge</div></div>");
+$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:90%;color:rgb(72, 133, 237)' class='numberSeat' >" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white;font-size:63%' class='user_icon' ><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white;font-size:63%' class='seatLocation'>edge</div></div>");
 }else{
-$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:99.9%;color:rgb(72, 133, 237)'>" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white'><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white'>center</div></div>");
+$("#heightAka").append("<div style='position:relative;height:"+ setBoxes +"px ;width:"+ setBoxes +"px;display:inline-block;background-color:rgb(34, 255, 34);margin-top:3.6px;margin-right:2.7px' onclick = seatNo('"+v+"','"+setAlph+"') id='"+v + setAlph+"'> <div style='position:relative;height:45%;width:99.9%;overflow:hidden;text-align:center;font-size:90%;color:rgb(72, 133, 237)' class='numberSeat' >" + v + setAlph +" </div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;color:white;font-size:63%' class='user_icon' ><i class='fa fa-user'></i></div><div style='position:relative;height:27.95%;width:99.9%;overflow:hidden;font-size:81%;color:white;font-size:63%' class='seatLocation'>center</div></div>");
 }
 
 
@@ -3539,8 +3536,9 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"relative","overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
+ 
 $(".Panminjun").css({"bottom":"18px"});
-$(".havePaid1").css({"height":"36px"});
+$(".havePaid1").css({"height":"36px","top":"9px"});
 $(".PayUsingYSPass").css({"height":"36px"});
 $("#PayUsingYS").css({"height":"36px"});
 $(".zamar").css({"top":"14.4%","font-size":"12.6px"});
@@ -3766,9 +3764,10 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
+ 
 $(".Panminjun").css({"bottom":"18px"});
 
-$(".havePaid1").css({"height":"36px"});
+$(".havePaid1").css({"height":"36px","top":"9px"});
 $(".PayUsingYSPass").css({"height":"36px"});
 $("#PayUsingYS").css({"height":"36px"});
 $(".zamar").css({"top":"14.4%","font-size":"12.6px"});
