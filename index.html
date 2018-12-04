@@ -41,6 +41,8 @@
 <link rel="stylesheet" href="font\web-fonts-with-css\css\fontawesome-all.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jqmobile.js"></script>
+<script type="text/javascript" src="js/connection.js"></script>
+<script type="text/javascript" src="js/network.js"></script>
 <script type="text/javascript" src="cycle.js"></script>
 <link rel="stylesheet"  href="css/animate.css"/>
 <style>#firstDiv{-webkit-animation-duration: 4.5s;-webkit-animation-delay: 0s;}
@@ -100,14 +102,10 @@ $("#firstDiv").css({"height":fool});
 
 <span style="position:relative;display:float;float:left;top:9%" class="go_back" id="go_back_id"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;top:9%">tech travel</span>
-<span style="position:relative;display:float;float:right;top:9%;right:1.8%" id="theDraw" class="more_bar"><i class="fa fa-bars"></i></span>
+<span style="position:relative;display:float;float:right;top:9%;right:1.8%" id="theDraw" class="more_bar"><i class="fa fa-envelope"></i></span>
 
  </div>
- <script>
- 
 
- 
- </script>
   
  <div id="oi" >
 
@@ -989,7 +987,11 @@ var getVeil = $(this).attr("id");
 $("#"+getVeil+".picture_holder").toggle();
 $("#"+getVeil+".goesOn").html("<br/>");
 $("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center' class='these_height "+getVeil+"' id='1'><div class='disc1'><div class='disc2'>Bulawayo <br/>Johannesburg</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess' name='"+getVeil+"' id='1'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='1'><i class='fa fa-arrow-right'></i></span></div></div>");
-$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='2'><div class='disc1'><div class='disc2'>Byo <br/>Johannesburg</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess'  name='"+getVeil+"' id='2'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='2'><i class='fa fa-arrow-right'></i></span></div></div>");
+$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='2'><div class='disc1'><div class='disc2'>Bulawayo <br/> Midrand</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess'  name='"+getVeil+"' id='2'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='2'><i class='fa fa-arrow-right'></i></span></div></div>");
+$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='3'><div class='disc1'><div class='disc2'>Bulawayo <br/>Pretoria</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess'  name='"+getVeil+"' id='3'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='3'><i class='fa fa-arrow-right'></i></span></div></div>");
+$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='4'><div class='disc1'><div class='disc2'>Harare <br/>Johannesburg</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess' name='"+getVeil+"' id='4'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='4'><i class='fa fa-arrow-right'></i></span></div></div>");
+$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='5'><div class='disc1'><div class='disc2'>Harare <br/> Midrand</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess'  name='"+getVeil+"' id='5'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='5'><i class='fa fa-arrow-right'></i></span></div></div>");
+$("#"+getVeil+".goesOn").css({"display":"true"}).show().append(" <div style='position:relative;width:95.4%;left:2.25%;background-color:rgb(72, 133, 237);border-radius:9px;text-align:center;display:none' class='these_height "+getVeil+"' id='6'><div class='disc1'><div class='disc2'>Harare <br/>Pretoria</div><div class='disc3'>55 $<br/>550 R</div></div><div class='disc4'>Zimbabwe</div><div class='disc5'><i class='fas fa-bus'></i></div><div class='disc6'>South Africa</div><div class='disc7'>coach for 450 Rands / 45 $</div><div class='disc8'>2:00 pm</div><div class='disc9'><span class='disc10'> <i class='fa fa-arrow-right'></i></span></div><div class='disc11'>05:30 am</div><div class='disc12'>2:00 pm</div><div class='disc13'><span class='disc14'> <i class='fa fa-arrow-left'></i></span></div><div class='disc15'>05:30 am</div><div class='skippeddisc'>luxury coach for 550 Rands / 55 $</div><div class='disc16'>4:00 pm</div><div class='disc17'><span class='disc18'> <i class='fa fa-arrow-left'></i></span></div><div class='disc19'>07:30 am</div><div class='disc20'>08:00 am</div><div class='disc21'><span class='disc22'> <i class='fa fa-arrow-right'></i></span></div><div class='disc23'>10:00 pm</div><br/> <div class='disc24' class='giveItHeight'> <span class='disc25 getLess'  name='"+getVeil+"' id='6'> <i class='fa fa-arrow-left'></i></span><div class='disc26 ' id='"+getVeil+"' onclick = 'bus("+'"'+getVeil+'"'+")' > <span class='span_inside'> book </span></div><span class='disc27 getMore'  name='"+getVeil+"' id='6'><i class='fa fa-arrow-right'></i></span></div></div>");
 
 
 var giveHeight = $(window).height() * 0.306;
@@ -1660,13 +1662,7 @@ $(".cont2").css({"height":getU});
 </div>
 <div style="position:absolute;;height:auto;max-height:2700px;z-index:1;display:true;top:27%;overflow:auto" id="pearlThusi">
 
-
-
- 
 </div>
-
-
-
 
 <div id="heightAka" style="position:relative;height:99%;width:90%;left:4.5%;text-align:center">
 
@@ -1930,228 +1926,13 @@ $("#"+num+".assignSeat").addClass("selected");
 
  
  
-<div style="position:fixed;height:100%;width:90%;left:10%;background-color:#4885ed;z-index:10;top:0px;display:none" id="firstDraw"  class="ftr animated slideInRight">
-
-<div style="display:true" id="all_draw">
-
-<div style="position:relative;" id="deco_pic">
-<img src="background _pics/d.jpg" style="position:relative;height:99%;width:100%"/>
-</div>
-<div style="position:relative;text-align:center;font-weight:bold;border-radius:18px" id="tech_tra_deco">
-<k style="color:#db3236">t</k><k style="color:#f4c20d">e</k><k style="color:aqua">c</k><k style="color:#3cba54">h</k> 
-<k style="color:purple">t</k><k style="color:#db3236">r</k><k style="color:blue">a</k><k style="color:#f4c20d">v</k><k style="color:#3cba54">e</k><k style="color:aqua">l</k>
-</div>
-<div style="position:relative;border-bottom:1px solid aqua;color:white" id="account_holder">
-<span id="acb">&nbsp; Account Balance </span> <span id="comma">:</span> <span style="position:relative;display:float;float:right;right:9px"><y>$</y> <r>0</r></span>
-</div>
+<div style="position:fixed;height:100%;width:90%;left:10%;background-color:#4885ed;z-index:10;top:0px;display:none;overflow:auto" id="firstDraw"  class="ftr animated slideInRight">
 <br/>
-
-<div style="position:relative;text-align:center" id="holder_of_boxes" >
-
-<!------------------------------------------------div 1---------------------------------------------------------------------->
-
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="buy_electricity">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:#db3236">
-<i class="fa fa-bolt italics"></i>
-</div>
-<div style="position:relative;display:block;overflow:hidden" class="boxes3" >buy electricity</div>
-</div>
-
-<!---------------------div 2 --------------------------------------------->
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="plane_tickets">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:#4885ed">
-<i class="fa fa-fighter-jet italics"></i>
-</div>
-<div style="position:relative;display:block" class="boxes3">plane tickets</div>
-</div>
-
-<!-----------------------------div 3 ----------------------------------------------------->
-
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="messages">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:#f4c20d">
-<i class="fa fa-comment-alt italics"></i>
-</div>
-<div style="position:relative;display:block" class="boxes3">messages</div>
-</div>
-
-<!-------------------------------------------------------div 4 --------------------------------------->
-
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="online_banking">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:#3cba54">
-<i class="fa fa-credit-card italics"></i>
-</div>
-<div style="position:relative;display:block" class="boxes3">online banking</div>
-</div>
-
-<!-----------------------------------------------div 5 ----------------------------------------------------------->
-
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="online_shopping">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:purple">
-<i class="fa fa-shopping-bag italics"></i>
-</div>
-<div style="position:relative;display:block" class="boxes3">online shopping</div>
-</div>
-
-<!-------------------------------div 6-------------------------------------------------------------------------------------------->
-
-<div class="boxes" style="position:relative;background-color:aqua;display:inline-block;overflow:hidden;text-align:center" id="my_profile">
-
-<div class="boxes2" style="position:relative;display:block;overflow:hidden;color:silver">
-<i class="fa fa-users italics" c></i>
-</div>
-<div style="position:relative;display:block" class="boxes3">my profile</div>
-</div>
-
-<br/>
-
-<div style="position:relative;color:white;width:54%;background-color:#ff2 ;height:36px;border-radius:9px;float:left;top:63px;left:2.7%" class="open_my_eyes">
-
-<span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-right"></i></span><span style="position:relative;top:18%;left:2.7%"> back</span>
+<span style="position:relative;left:2.7%" class='blessed'><i class='fa fa-arrow-left'></i></span> <br/>
+<div style='text-align:center;color:white'><span  style='position:relative;top:1.8px'>Inbox messages</span></div>
+<div id="angel" style="position:relative;overflow:auto">
 
 </div>
-
-
-
-
-
-
-
- 
-</div>
-
-</div>
-
-<div id="zesa" style="position:relative;color:white;text-align:center;display:none">
-<div style="position:relative;top:18px;overflow:hidden">Welcome to Yonic & Zesa corner</div><br/><br/>
-<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden" class="ck">check your electricity balance</div>
-<div  style="position:relative;height:12.6%;width:45%;display:inline-block;background-color:aqua;font-size:22.5px;overflow:hidden" class="ck">pay your electricity bill</div>
-<br/>
-<span style="position:relative;top:9px;overflow:hidden">Pay your electricity online</span><br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="money to pay"/>
-
-<br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="Account Number"/>
-<br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="password"/>
-<br/><br/><br/>
-<div style="position:relative;height:36px;width:81%;background-color:blue;border-radius:9px;left:9%">
-<span style="position:relative;top:18%">pay</span>
-</div>
-<br/><br/>
-Tips :
-<br/><br/>
-<div style="text-align:left;font-size:12.6px;width:99%;left:1%">
-&#8230; First set Up your profile <br/><br/>
-&#8230; Make sure you deposited money into your account <br/><br/>
-&#8230; Your Invoice and receipt are stored in your inbox <br/><br/>
-</div>
-
-<div style="position:relative;color:white;width:54%;background-color:#ff2 ;height:36px;border-radius:9px;float:left;top:18px;left:2.7%" class="chain" >
-
-<span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-right"></i></span><span style="position:relative;top:18%;left:2.7%"> back</span>
-
-</div>
-
-</div>
-
-<div id="message_inbox" style="position:relative;color:white;text-align:left;display:none;">
-<div style="text-align:center"><span  style="position:relative;top:1.8px">Inbox messages</span></div>
-<div>
-<div id="noHeight" style="position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:1.8px">
-<h3 style="position:relative;top:9px;left:4.5px">From : Tech Travel</h3>
-</div>
-
-<div id="noHeight2" style="position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:4.5px">
-<div style="position:relative;top:4.5px;padding:3.6px">Your ticket has been successfully purchased <br/><br/>
-<span style="position:relative;display:float;float:left;left:9px">Ticket Number</span> 
- <span style="position:relative;display:float;float:right;right:9px">1234567890</span>
-</div><br/><br/>
-<div style="position:relative;text-align:center;top:1.8px;padding:2.25px">
-<span style="position:relative;display:float;float:left">Name</span>
-<span style="position:relative;">Surname</span>
-<span style="position:relative;display:float;float:right">Surname</span><br/><br/>
-
-<span style="position:relative;display:float;float:left" id="fill_up_name">Phakamile</span>
-<span id="fill_up_surname">Ncube</span>
-<span style="position:relative;display:float;float:right" id="fill_up_passport">DN159761</span>
-
-</div>
-
-<div><br/><br/>
-<span style="position:relative;display:float;float:left;left:9px">Derpature Date</span>
-<span style="position:relative;display:float;float:right;right:9px">Departure Place</span><br/><br/>
-<span style="position:relative;display:float;float:left;left:9px">3/11/18 &nbsp; 4:00pm</span>
-<span style="position:relative;display:float;float:right;right:9px">Bulawayo</span>
-
-<br/><br/>
-
-<span style="position:relative;display:float;float:left;left:9px">Arrival Date</span>
-<span style="position:relative;display:float;float:right;right:9px">Arrival Place</span><br/><br/>
-<span style="position:relative;display:float;float:left;left:9px">4/11/18 &nbsp; 5:30am</span>
-<span style="position:relative;display:float;float:right;right:9px">Joburg Park Station</span>
-
-<br/><br/>
-<span style="position:relative;left:9px">Bus Name</span> &nbsp; &nbsp; <span>Intercape</span>
-
-</div>
-
-
-
-</div>
-
-<script>
-var setHeight = 0.0669 * $(window).height();
-$("#noHeight").css({"height":setHeight});
-var setHeight2 = 0.54 * $(window).height();
-$("#noHeight2").css({"height":setHeight2});
-
-</script>
-
-
-
-</div>
-
-
-<div style="position:relative;color:white;width:54%;background-color:#ff2 ;height:36px;border-radius:9px;float:left;top:18px;left:2.7%;text-align" class="chain_message">
-
-<span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-right"></i></span><span style="position:relative;top:18%;left:2.7%"> back</span>
-
-</div>
-
-</div>
-
-<div id="profile_div" style="position:relative;color:white;text-align:left;display:none;text-align:center">
-<br/>
-<span>set your profile</span>
-<br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="Name"/>
-<br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="Surname"/>
-<br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="Age"/>
-<br/><br/>
-<input style="position:relative;height:36px;width:72%;top:9px;border:0px" placeholder="Passport No:"/>
-<br/><br/>
-
-<div style="position:relative;color:white;width:54%;background-color:#ff2 ;height:36px;border-radius:9px;float:left;top:18px;left:22.5%;text-align" >
-
-<span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-right"></i></span><span style="position:relative;top:18%;left:2.7%"> set </span>
-
-</div>
-
-<div style="position:relative;color:white;width:54%;background-color:#ff2 ;height:36px;border-radius:9px;float:left;top:45px;text-align" id="getOut">
-
-<span style="position:relative;top:18%"><i class="fa fa-arrow-alt-circle-left"></i></span><span style="position:relative;top:18%;left:2.7%"> back </span>
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -2165,7 +1946,7 @@ $("#noHeight2").css({"height":setHeight2});
 <div style="position:relative;height:45px;width:81%;left:9%;background-color:rgb(34, 255, 34);border-radius:18px;text-align:center;top:25.2%" id="PayUsingYS">
 <span style="position:relative;top:11.7px">Pay Now at Yonic Shelf</span>
 </div>
-<BR/>
+<br/>
 <div style="position:relative;text-align:left;font-size:14.4px;color:silver;top:27%;left:3.6%" class='zamar'>Find your nearest shop </div><br/>
 
  
@@ -2230,7 +2011,7 @@ $(".PayNowFP").css({"display":"true"}).show();
 <br/>
 <input type="password" style="position:relative;height:45px;width:81%;background:none;border-radius:9px;text-align:center" class='PayUsingYSPass' placeholder="password"/>
 <br/>
-<div style="position:relative;height:45px;width:81%;left:9%;background-color:rgb(34, 255, 34);text-align:center;border-radius" class="havePaid1" id="PayUsingYS">
+<div style="position:relative;height:45px;width:81%;left:9%;background-color:rgb(34, 255, 34);text-align:center;border-radius;top:18px" class="havePaid1" id="PayUsingYS">
 <span style="position:relative;top:11.7px">Pay</span>
 </div>
 </div>
@@ -2238,6 +2019,11 @@ $(".PayNowFP").css({"display":"true"}).show();
 <div style="display:none;text-align:center" class="payConfirm1"><br/><br/> You have succesfully paid <br/><br/> 
 <i class="fa fa-check"></i>
 </div><br/>
+
+<div style="display:none;text-align:center" class="payConfirm2"><br/><br/> Wrong Password try again <br/><br/> 
+<i class="fas fa-exclamation-triangle"></i>
+</div><br/>
+
 <div style="position:relative;text-align:center;" class="clickbacke"><span style="color:rgb(34, 255, 34)">back</span></div>
 
 
@@ -2257,6 +2043,104 @@ $(".PayNowFP").css({"display":"true"}).show();
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+		
+		
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
+
+checkConnection();		
+		
+
+function randomString(length)
+{
+    var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var i;
+    var result = "";
+    var isOpera = Object.prototype.toString.call(window.opera) == '[object Opera]';
+    if(window.crypto && window.crypto.getRandomValues)
+    {
+        values = new Uint32Array(length);
+        window.crypto.getRandomValues(values);
+        for(i=0; i<length; i++)
+        {
+            result += charset[values[i] % charset.length];
+        }
+        return result;
+    }
+    else if(isOpera)//Opera's Math.random is secure, see http://lists.w3.org/Archives/Public/public-webcrypto/2013Jan/0063.html
+    {
+        for(i=0; i<length; i++)
+        {
+            result += charset[Math.floor(Math.random()*charset.length)];
+        }
+        return result;
+    }
+    else throw new Error("Your browser sucks and can't generate secure random numbers");
+}
+
+//alert(randomString(10))		
+		
+		
+setTimeout(function(){
+
+var setY = localStorage.getItem("intercape");
+var setX = localStorage.getItem("greyhound");
+
+$("#angel").html("");
+$("#angel").append(setY);
+$("#angel").append(setX + "<br/>");
+
+	
+var setHeight = 0.0669 * $(window).height();
+$(".noHeight").css({"height":setHeight});
+var setHeight2 = 0.54 * $(window).height();
+$(".noHeight2").css({"height":setHeight2});
+
+ 
+},3000)		
+//localStorage.removeItem("intercape");
+//localStorage.removeItem("greyhound");
+		
+console.log(localStorage);
+		
+$(".blessed").click(function(){
+
+$("#firstDraw").hide(630);
+});
+		
+		/*
+ db.collection("encrypt").add({
+    code : "774cdT34",
+	store : "Pumula"
+  })
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+	alert("Document written with ID: ", docRef.id);
+
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+	alert("error");
+});		
+		
+*/		
+
+
+
+
 
 		
 /* --------------------------------------------working wherestatement firebase -----------------------		
@@ -2313,14 +2197,86 @@ var TheBusName = "intercape";
  		
 $(".clickbacke").click(function (){
 $("#choose_payment").css({"display":"true"}).show();
+$("#Noko1").css({"display":"true"}).show();
+$(".PayUsingYSPass").val("");
 $(".PayNowYS").hide(540);
+$(".payConfirm1").hide(630);
+$(".payConfirm2").hide(630);
 });		
  	
 
 $(".havePaid1").click(function(){
+var codex = $(".PayUsingYSPass").val();
+ 
+var citiesRef = db.collection("encrypt");
+
+var query = citiesRef.where("code", "==", ""+codex+"").get().then((querySnapshot) => {
+   querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    var object = doc.data();
+ 
+ if(object.code == codex ){
+ 
 $("#Noko1").hide(540);
 $(".payConfirm1").css({"display":"true"}).show();
+var TikNumber = $("#TicketNumber").text();
+var BusName = $("#putBus").text();
+var Time_of_arrival = $("#time_of_arrival").text();
+var Date_of_arrival = $("#default_arrives").text();
+var Month_of_arrival = $("#default_month_arrives").text();
+var Time_of_departs = $("#time_of_departs").text();
+var Date_of_departs = $("#default_departs").text();
+var Month_of_departs = $("#default_month_departs").text();
+var From_city = $("#fill_from_city").text();
+var To_city = $("#fill_to_city").text();
+
+	
+	
+var stroke = "/";
+$("#firstDraw").append("<div style='color:white' class='cholo' id='"+BusName+"'><div class='noHeight' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:1.8px'><h3 style='position:relative;top:9px;left:4.5px'>From : Tech Travel</h3></div><div class='noHeight2' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:4.5px'><div style='position:relative;top:4.5px;padding:3.6px'>Your ticket has been successfully purchased <br/><br/><span style='position:relative;display:float;float:left;left:9px'>Ticket Number</span> <span style='position:relative;display:float;float:right;right:9px' class='ticket_broke'>"+TikNumber+"</span></div><br/><br/><div style='position:relative;text-align:center;top:1.8px;padding:2.25px'><span style='position:relative;display:float;float:left' class='ouName'>Name</span><span style='position:relative;' class='ouSurname'>Surname</span><span style='position:relative;display:float;float:right' class='ouPassport'>Passport</span><br/><br/><span style='position:relative;display:inline-block;float:left' id='fill_up_name' class='"+BusName+"'></span><span id='fill_up_surname' class='"+BusName+"' style='display:inline-block'></span><span style='position:relative;display:inline-block;float:right' id='fill_up_passport' class='"+BusName+"'></span></div><div><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Derpature Date</span><span style='position:relative;display:float;float:right;right:9px'>Departure Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px' > <span class='ouDate&Month'>"+Date_of_departs+ stroke + Month_of_departs +"</span> &nbsp; <span class='ouTime'>"+Time_of_departs+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+From_city+"</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Arrival Date</span><span style='position:relative;display:float;float:right;right:9px'>Arrival Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'> <span class='ouDate&MonthArrive'>"+Date_of_arrival + stroke + Month_of_arrival+"</span> &nbsp; <span class='ouTimeArrive'>"+Time_of_arrival+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+To_city+"</span><br/><br/><span style='position:relative;left:9px'>Bus Name</span> &nbsp; &nbsp; <span class='ouBusName'>"+BusName+"</span></div></div></div><br/>");
+
+	
+var setHeight = 0.0669 * $(window).height();
+$(".noHeight").css({"height":setHeight});
+var setHeight2 = 0.54 * $(window).height();
+$(".noHeight2").css({"height":setHeight2});
+
+
+var sortNames = $(".name_tv");
+ for(var i = 0; i < sortNames.length; i++){
+    var input_name = $(sortNames[i]).val();
+$("#fill_up_name."+BusName+"").append(input_name + "<br/>");
+}
+
+var getTom = $(".surname_tv");
+for(var i = 0; i < getTom.length; i++){
+    var input_surname = $(getTom[i]).val();
+$("#fill_up_surname."+BusName+"").append(input_surname + "<br/>");
+ }
  
+var getTum = $(".passport_tv");
+for(var i = 0; i < getTum.length; i++){
+ var input_passport = $(getTum[i]).val();
+$("#fill_up_passport."+BusName+"").append(input_passport + "<br/>");
+ }
+
+var stry = $("div#"+BusName+".cholo").html(); 
+var stringd = '<div style="color:white" class="cholo" id="'+BusName+'">' + stry + '</div>';
+localStorage.setItem(""+BusName+"",stringd);
+
+console.log(localStorage);
+ 
+ 
+ }else{
+ 
+$("#Noko1").hide(540);
+$(".payConfirm2").css({"display":"true"}).show();
+ } 
+ })
+ }) 
+
+
+	
 });		
 
 
@@ -2369,6 +2325,11 @@ $("#choose_payment").css({"display":"true"}).show();
 $("#go_back_id").removeClass("4").addClass("5"); 
 
 
+
+
+
+
+/*
 var getTim = $(".NameTicket");
 var result=[];
 var names=[];
@@ -2790,7 +2751,7 @@ var TheArriveDate = $("#default_arrives").text();
 });
  
  
-
+*/
  
 ///db.collection("routes").get().then((querySnapshot) => {
  ///   querySnapshot.forEach((doc) => {
@@ -2891,15 +2852,11 @@ $("#all_draw").css({"display":"true"}).show();
 });
 
 
-$(".chain_message").click(function(){
-$("#message_inbox").hide(540);
-$("#all_draw").css({"display":"true"}).show();
-});
-
-
+ 
 $(".open_my_eyes").click(function(){
 
 $("#firstDraw").hide(540);
+
 });
 
 $("#about_us_click").click(function (){
@@ -3536,7 +3493,8 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"relative","overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
- 
+$(".blessed").css({"font-size":"14.4px"});
+$("#message_inbox").css({"font-size":"11.7px"}); 
 $(".Panminjun").css({"bottom":"18px"});
 $(".havePaid1").css({"height":"36px","top":"9px"});
 $(".PayUsingYSPass").css({"height":"36px"});
@@ -3764,9 +3722,9 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
- 
+ $(".blessed").css({"font-size":"14.4px"});
 $(".Panminjun").css({"bottom":"18px"});
-
+$("#message_inbox").css({"font-size":"11.7px"}); 
 $(".havePaid1").css({"height":"36px","top":"9px"});
 $(".PayUsingYSPass").css({"height":"36px"});
 $("#PayUsingYS").css({"height":"36px"});
@@ -3991,6 +3949,7 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
+$(".blessed").css({"font-size":"18px"});
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
 $(".disc3").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden","text-align":"center"});
@@ -4182,7 +4141,7 @@ if (hq_plus_min.matches && mq_plus_max.matches) {
 $("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
 
-  
+$(".blessed").css({"font-size":"18px"});  
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
 $(".disc3").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden","text-align":"center"});
@@ -4374,7 +4333,8 @@ var yonce = $(window).width() - 12.6;
 $("body").css({"position":"absolute","width":yonce,"overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
  
-   
+ 
+$(".blessed").css({"font-size":"18px"}); 
 $(".disc1").css({"position":"relative","height":"18.9%","width":"99.9%","overflow":"hidden"});
 $(".disc2").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden"});
 $(".disc3").css({"position":"relative","height":"99.9%","width":"47.25%","display":"inline-block","overflow":"hidden","text-align":"center"});
@@ -4963,23 +4923,17 @@ $(".more_bar").click(function(){
 //$(".draw").css({"display":"true"}).show();
 ///alert("this is now getting shitty");
 $("#firstDraw").toggle();
+
+ 
 // var set = $("#theDraw").attr("class");
 // if(set == "more_bar"){$(".firstDraw").css({"display":"true"}).show();} 
 });
-
-$("#fantasy").click(function(){
-$(".draw").hide(540);
-}); 
-
- 
- 
- 
 })
 		
 
+ 
 
-
-
+ 
  </script>
 </body>
 
