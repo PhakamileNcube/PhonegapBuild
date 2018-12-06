@@ -1916,7 +1916,7 @@ $("#"+num+".assignSeat").addClass("selected");
 
  
 <span style="color:rgb(34, 255, 34)" id="tip">you can pay at your nearest Yonic shelf at any store</span><br/><br/>
-<div style="position:relative;height:36px;width:72%;left:24.3%;background-color:blue;border-radius:9px;text-align:center" id="OrderTicket">
+<div style="position:relative;height:36px;width:72%;left:24.3%;background-color:blue;border-radius:9px;text-align:center" onclick="orderTik ()" id="OrderTicket">
 <span style="position:relative;top:5.4px;color:white" >Order</span>
 </div>
  
@@ -2098,10 +2098,28 @@ setTimeout(function(){
 
 var setY = localStorage.getItem("intercape");
 var setX = localStorage.getItem("greyhound");
+var x = localStorage.length;
+
+if(x == 0){
+
+}else{
 
 $("#angel").html("");
+
+if(setY == null){
+
+}else{
 $("#angel").append(setY);
+}
+
+if(setX == null){
+
+}else{
 $("#angel").append(setX + "<br/>");
+}
+
+
+
 
 	
 var setHeight = 0.0669 * $(window).height();
@@ -2110,6 +2128,10 @@ var setHeight2 = 0.54 * $(window).height();
 $(".noHeight2").css({"height":setHeight2});
 
  
+
+}
+
+
 },3000)		
 //localStorage.removeItem("intercape");
 //localStorage.removeItem("greyhound");
@@ -2233,7 +2255,11 @@ var To_city = $("#fill_to_city").text();
 	
 	
 var stroke = "/";
-$("#firstDraw").append("<div style='color:white' class='cholo' id='"+BusName+"'><div class='noHeight' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:1.8px'><h3 style='position:relative;top:9px;left:4.5px'>From : Tech Travel</h3></div><div class='noHeight2' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:4.5px'><div style='position:relative;top:4.5px;padding:3.6px'>Your ticket has been successfully purchased <br/><br/><span style='position:relative;display:float;float:left;left:9px'>Ticket Number</span> <span style='position:relative;display:float;float:right;right:9px' class='ticket_broke'>"+TikNumber+"</span></div><br/><br/><div style='position:relative;text-align:center;top:1.8px;padding:2.25px'><span style='position:relative;display:float;float:left' class='ouName'>Name</span><span style='position:relative;' class='ouSurname'>Surname</span><span style='position:relative;display:float;float:right' class='ouPassport'>Passport</span><br/><br/><span style='position:relative;display:inline-block;float:left' id='fill_up_name' class='"+BusName+"'></span><span id='fill_up_surname' class='"+BusName+"' style='display:inline-block'></span><span style='position:relative;display:inline-block;float:right' id='fill_up_passport' class='"+BusName+"'></span></div><div><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Derpature Date</span><span style='position:relative;display:float;float:right;right:9px'>Departure Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px' > <span class='ouDate&Month'>"+Date_of_departs+ stroke + Month_of_departs +"</span> &nbsp; <span class='ouTime'>"+Time_of_departs+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+From_city+"</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Arrival Date</span><span style='position:relative;display:float;float:right;right:9px'>Arrival Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'> <span class='ouDate&MonthArrive'>"+Date_of_arrival + stroke + Month_of_arrival+"</span> &nbsp; <span class='ouTimeArrive'>"+Time_of_arrival+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+To_city+"</span><br/><br/><span style='position:relative;left:9px'>Bus Name</span> &nbsp; &nbsp; <span class='ouBusName'>"+BusName+"</span></div></div></div><br/>");
+localStorage.removeItem(""+BusName+"");
+$("#angel").html("");
+
+
+$("#firstDraw").append("<div style='color:white;display:none' class='cholo' id='"+BusName+"' ><div class='noHeight' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:1.8px'><h3 style='position:relative;top:9px;left:4.5px'>From : Tech Travel</h3></div><div class='noHeight2' style='position:relative;height:45px;width:95.4%;left:2.25%;background-color:aqua;border-radius:9px;top:4.5px'><div style='position:relative;top:4.5px;padding:3.6px'>Your ticket has been successfully purchased <br/><br/><span style='position:relative;display:float;float:left;left:9px'>Ticket Number</span> <span style='position:relative;display:float;float:right;right:9px' class='ticket_broke'>"+TikNumber+"</span></div><br/><br/><div style='position:relative;text-align:center;top:1.8px;padding:2.25px'><span style='position:relative;display:float;float:left' class='ouName'>Name</span><span style='position:relative;' class='ouSurname'>Surname</span><span style='position:relative;display:float;float:right' class='ouPassport'>Passport</span><br/><br/><span style='position:relative;display:inline-block;float:left' id='fill_up_name' class='"+BusName+"'></span><span id='fill_up_surname' class='"+BusName+"' style='display:inline-block'></span><span style='position:relative;display:inline-block;float:right' id='fill_up_passport' class='"+BusName+"'></span></div><div><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Derpature Date</span><span style='position:relative;display:float;float:right;right:9px'>Departure Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px' > <span class='ouDate&Month'>"+Date_of_departs+ stroke + Month_of_departs +"</span> &nbsp; <span class='ouTime'>"+Time_of_departs+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+From_city+"</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'>Arrival Date</span><span style='position:relative;display:float;float:right;right:9px'>Arrival Place</span><br/><br/><span style='position:relative;display:float;float:left;left:9px'> <span class='ouDate&MonthArrive'>"+Date_of_arrival + stroke + Month_of_arrival+"</span> &nbsp; <span class='ouTimeArrive'>"+Time_of_arrival+"</span></span><span style='position:relative;display:float;float:right;right:9px' class='ouPlaceDeparts'>"+To_city+"</span><br/><br/><span style='position:relative;left:9px'>Bus Name</span> &nbsp; &nbsp; <span class='ouBusName'>"+BusName+"</span></div></div></div><br/>");
 
 	
 var setHeight = 0.0669 * $(window).height();
@@ -2261,10 +2287,41 @@ $("#fill_up_passport."+BusName+"").append(input_passport + "<br/>");
  }
 
 var stry = $("div#"+BusName+".cholo").html(); 
-var stringd = '<div style="color:white" class="cholo" id="'+BusName+'">' + stry + '</div>';
+var stringd = '<div style="color:white;display:true" class="cholo" id="'+BusName+'">' + stry + '</div>';
+
 localStorage.setItem(""+BusName+"",stringd);
 
+var setY = localStorage.getItem("intercape");
+var setX = localStorage.getItem("greyhound");
+var x = localStorage.length;
+$("#angel").html("");
+
+if(setY == null){
+$("#angel").append("");
+}else{
+$("#angel").append(setY);
+}
+
+
+if(setX == null){
+$("#angel").append("");
+}else{
+$("#angel").append(setX + "<br/>");
+}
+
+
+
 console.log(localStorage);
+
+	
+var setHeight = 0.0669 * $(window).height();
+$(".noHeight").css({"height":setHeight});
+var setHeight2 = 0.54 * $(window).height();
+$(".noHeight2").css({"height":setHeight2});
+
+
+//console.log(localStorage);
+
  
  
  }else{
@@ -2318,8 +2375,10 @@ alert(ourVar);
 })
 
 */
-	
-$("#OrderTicket").click(function(){
+
+function orderTik (){
+
+ 
 $("#ticket_page").hide(540);
 $("#choose_payment").css({"display":"true"}).show();
 $("#go_back_id").removeClass("4").addClass("5"); 
@@ -2763,7 +2822,12 @@ var TheArriveDate = $("#default_arrives").text();
 
 
 
-});		
+
+}
+	
+
+
+		
 		
 		
 		
