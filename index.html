@@ -41,8 +41,8 @@
 <link rel="stylesheet" href="font\web-fonts-with-css\css\fontawesome-all.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jqmobile.js"></script>
-<!--<script type="text/javascript" src="js/connection.js"></script>
-<script type="text/javascript" src="js/network.js"></script> -->
+<script type="text/javascript" src="js/connection.js"></script>
+<script type="text/javascript" src="js/network.js"></script> 
 <script type="text/javascript" src="cycle.js"></script>
 <link rel="stylesheet"  href="css/animate.css"/>
 <style>#firstDiv{-webkit-animation-duration: 4.5s;-webkit-animation-delay: 0s;}
@@ -2047,7 +2047,7 @@ $(".PayNowFP").css({"display":"true"}).show();
 
 
 		
-/*		
+ 	
 function checkConnection() {
     var networkState = navigator.connection.type;
 
@@ -2066,7 +2066,7 @@ function checkConnection() {
 
 checkConnection();		
 		
-
+/*
 function randomString(length)
 {
     var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -2126,6 +2126,23 @@ $(".noHeight").css({"height":setHeight});
 var setHeight2 = 0.54 * $(window).height();
 $(".noHeight2").css({"height":setHeight2});
 
+}
+
+ var small_devMin = window.matchMedia( "(min-height:236px)" );
+ var small_devMax= window.matchMedia( "(max-height: 500px)" );
+ 
+if (small_devMin.matches && small_devMax.matches) {
+$(".cholo").css({"font-size":"11.7px"});
+$("#angel").css({"font-size":"11.7px"});
+}
+
+
+ var se_devMin = window.matchMedia( "(min-height: 505px)" );
+ var se_devMax= window.matchMedia( "(max-height: 590px)" );
+ 
+if (se_devMin.matches && se_devMax.matches) {
+$(".cholo").css({"font-size":"11.7px"});
+$("#angel").css({"font-size":"11.7px"});
 }
 
 
@@ -2221,15 +2238,17 @@ $(".PayUsingYSPass").val("");
 $(".PayNowYS").hide(540);
 $(".payConfirm1").hide(630);
 $(".payConfirm2").hide(630);
+$(".havePaid1").html("<span style='position:relative;top:11.7px'>pay<span>");
 });		
  	
 
 $(".havePaid1").click(function(){
+$(this).html("<span style='position:relative;top:11.7px'>processing<span>");
 var codex = $(".PayUsingYSPass").val();
  
 var citiesRef = db.collection("encrypt");
 
-var query = citiesRef.where("code", "==", ""+codex+"").get().then((querySnapshot) => {
+var query = citiesRef.where("store", "==", "riggle").get().then((querySnapshot) => {
    querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
     var object = doc.data();
@@ -2335,9 +2354,22 @@ var setHeight2 = 0.54 * $(window).height();
 $(".noHeight2").css({"height":setHeight2});
 
 
-//console.log(localStorage);
-
+ var small_devMin = window.matchMedia( "(min-height:236px)" );
+ var small_devMax= window.matchMedia( "(max-height: 500px)" );
  
+if (small_devMin.matches && small_devMax.matches) {
+$(".cholo").css({"font-size":"11.7px"});
+$("#angel").css({"font-size":"11.7px"});
+}
+
+
+ var se_devMin = window.matchMedia( "(min-height: 505px)" );
+ var se_devMax= window.matchMedia( "(max-height: 590px)" );
+ 
+if (se_devMin.matches && se_devMax.matches) {
+$(".cholo").css({"font-size":"11.7px"});
+$("#angel").css({"font-size":"11.7px"});
+} 
  
  }else{
  
@@ -3126,6 +3158,7 @@ var getShit = $(".the_togglers").attr("id");
 
   
 if (small_devMin.matches && small_devMax.matches) {
+$(".cholo").css({"font-size":"9px"});
 var yonce = $(window).width() - 12.6;
 $("body").css({"position":"relative","overflow-x":"hidden"});
 $("#oi").css({"overflow":"auto"});
