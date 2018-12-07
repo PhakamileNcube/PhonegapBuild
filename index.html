@@ -2043,6 +2043,9 @@ $(".PayNowFP").css({"display":"true"}).show();
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+ 
+
+
 		
 /*		
 function checkConnection() {
@@ -2118,16 +2121,10 @@ if(setX == null){
 $("#angel").append(setX + "<br/>");
 }
 
-
-
-
-	
 var setHeight = 0.0669 * $(window).height();
 $(".noHeight").css({"height":setHeight});
 var setHeight2 = 0.54 * $(window).height();
 $(".noHeight2").css({"height":setHeight2});
-
- 
 
 }
 
@@ -2294,6 +2291,24 @@ localStorage.setItem(""+BusName+"",stringd);
 var setY = localStorage.getItem("intercape");
 var setX = localStorage.getItem("greyhound");
 var x = localStorage.length;
+
+db.collection(""+BusName+"").add({
+    TicketNumber : TikNumber,
+	Datas: stringd,
+	store : object.code,
+	checked : false
+	 
+  })
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+	
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+	 
+});		
+	
+
 $("#angel").html("");
 
 if(setY == null){
