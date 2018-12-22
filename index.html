@@ -113,16 +113,12 @@ append, body {
 
 <script>
 
- 
- $(document).bind('pageinit', function(){
- 
- });
- alert("javascript active");
- 
- function hku(){
- alert("js responding");
- }
- 
+$(document).ready(function() {
+  $('body').on('click touchstart', function() {
+    alert("js test");
+  });
+});
+ /*
 Array.prototype.unique = function() {
     var a = this.concat();
     for(var i=0; i<a.length; ++i) {
@@ -134,6 +130,8 @@ Array.prototype.unique = function() {
 
     return a;
 };
+
+*/
 
 //var array1 = ["Vijendra","Singh"];
 //var array2 = ["Singh", "Shakya"];
