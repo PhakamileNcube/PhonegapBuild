@@ -69,8 +69,8 @@ append, body {
 
 <body>
 
-<div class='firstDiv'>
-<div style="position:relative;height:154px;width:94.5%;left:2.7%;background-color:rgb(72, 133, 237);text-align:center;top:18px;font-size:30.6px;color:white" class='check_book_request'>
+<div class='firstDiv'><!-- class='check_book_request' -->
+<div style="position:relative;height:154px;width:94.5%;left:2.7%;background-color:rgb(72, 133, 237);text-align:center;top:18px;font-size:30.6px;color:white"  onclick="hku()">
 <span style="position:relative;top:36%;"><i class="fas fa-address-card"></i> check bookings</span>
 </div>
 <br/>
@@ -114,6 +114,14 @@ append, body {
 <script>
 
  
+ $(document).bind('pageinit', function(){
+ 
+ });
+ alert("javascript active");
+ 
+ function hku(){
+ alert("js responding");
+ }
  
 Array.prototype.unique = function() {
     var a = this.concat();
