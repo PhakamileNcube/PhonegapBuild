@@ -10,30 +10,7 @@
     <title>Hello World</title>
 	
 	
-	
-<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
 
-<!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>-->
-
-<script>
-  // Initialize Firebase
-  
-  var config = {
-    apiKey: "AIzaSyDQjzw0nVa1H8OKID54qO3eicyRBTP_hRw",
-    authDomain: "techtravel0774.firebaseapp.com",
-    databaseURL: "https://techtravel0774.firebaseio.com",
-    projectId: "techtravel0774",
-    storageBucket: "",
-    messagingSenderId: "425394525968"
-  };
-  firebase.initializeApp(config);
-  var db = firebase.firestore();
-   
-</script>
-<script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
-<script src="https://www.gstatic.com/firebasejs/ui/3.2.0/firebase-ui-auth__en.js"></script>
-<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.2.0/firebase-ui-auth.css" />
 
 <link rel="stylesheet" href="font\web-fonts-with-css\css\fontawesome-all.css">
 <script type="text/javascript" src="js/jquery.js"></script>
@@ -57,6 +34,32 @@ html, body {
   overflow-x:hidden 
 } 
  
+.headRush{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.imageRush{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.topicRush{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.click{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.science{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.art{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.business{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.finance{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}  
+.engineering{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}  
+.medicine{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.physics{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.languages{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.biology{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.mathematics{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.law{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.chemistry{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.accounting{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.economics{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+.it{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.tourism{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.scholarship{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.contactUs{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;}
+.apply{-webkit-animation-duration: 2.7s;-webkit-animation-delay: 0s;} 
+ 
+ 
+ 
 </style>
 	
 	
@@ -65,7 +68,7 @@ html, body {
 </head>
 <body>
 
-<div style="position:relative;height:6.03%;width:99.9%;background-color:cornflowerblue;text-align:center">
+<div style="position:relative;height:7.02%;width:99.9%;background-color:cornflowerblue;text-align:center" class='headRush animated rotateInDownLeft'>
 <span style="position:relative;top:9%;font-size:25.2px;color:white">Codex Student</span>
 <span style="position:relative;top:15.3%;right:0.9%;display:float;float:right;font-size:22.5px">
 <span style="color:white"><i class="fab fa-facebook"></i></span> &nbsp;
@@ -74,7 +77,7 @@ html, body {
 
 <div id="firstPage" style="display:true">
 
-<div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('3.jpg');background-size:cover">
+<div style="position:relative;height:36%;width:99.9%;top:0.18%;text-align:center;background-image:url('3.jpg');background-size:cover" class='imageRush animated slideInRight'>
 
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
 <span style="position:relative;top:12.6%;font-size:24.3px">Study In China</span>
@@ -82,8 +85,8 @@ html, body {
 
 </div>
 
-<div style="position:relative;height:5.04%;width:99.9%;top:0.9%;text-align:center;">
-<span style="position:relative;font-size:18px;top:9%;color:cornflowerblue">See Available Faculties</span>
+<div style="position:relative;height:5.04%;width:99.9%;top:0.9%;text-align:center;" class='topicRush animated slideInLeft'>
+<span style="position:relative;font-size:18px;top:9%;color:cornflowerblue" >See Available Faculties</span>
 </div>
 <div style="position:relative;height:33.3%;width:99.9%;top:0.9%;color:white"><br/>
 <span style="position:relative;background-color:#ff2;padding-left:2.7%;padding-right:2.7%;padding-bottom:1.8%;padding-top:1.8%;left:1.8%;display:inline-block;overflow:hidden;border-radius:14.4px"  class="click" id="science">Sciences</span>
@@ -105,18 +108,18 @@ html, body {
 
 
 </div>
-<div style="position:relative;height:7.2%;width:99.9%;top:0.9%;text-align:center;border-bottom:1px solid silver" class="click" id="apply">
+<div style="position:relative;height:7.2%;width:99.9%;top:0.9%;text-align:center;border-bottom:1px solid silver" class="click animated flipInX" id="apply">
 <span style="position:relative;background-color:cornflowerblue;padding-left:2.7%;padding-right:2.7%;padding-bottom:1.8%;padding-top:1.8%;left:1.8%;display:inline-block;overflow:hidden;color:white">See How To Apply With Us?</span>
 
 </div>
 <div style="position:relative;height:14.4%;width:99.9%;top:0.9%;text-align:center">
 <br/>
-<span style="position:relative;color:#2f2" class="click" id="scholarships">Scholarships</span> <span style="color:cornflowerblue">|</span> 
-<span style="position:relative;color:#2f2" class="click" id="contactUs" >Contact Us</span>
+<span style="position:relative;color:#2f2" class="click animated flipInX" id="scholarships">Scholarships</span> <span style="color:cornflowerblue">|</span> 
+<span style="position:relative;color:#2f2" class="click animated flipInX" id="contactUs" >Contact Us</span>
 </div>
 </div>
 
-<div id="secondPage" class='science' style="display:none">
+<div id="secondPage" class='science animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('faculty/science.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -130,7 +133,7 @@ html, body {
 <div style="position:relative;height:27%;width:99.9%;overflow:hidden;color:white;text-align:center">
 <span style="font-size:36px;color:#2f2" class='header'> Medicine</span> 
 </div>
-<div style="position:relative;height:18%;width:99.9%;background-color:#2f2;color:white;overflow:hidden;text-align:center">
+<div style="position:relative;height:20.07%;padding-bottom:0.9%;width:99.9%;background-color:#2f2;color:white;overflow:hidden;text-align:center">
 <span class='duration' id="science" >duration  : 6 years </span><br/>
 <span class='cost' id="science">cost : 3000 - 4000 USD $</span><br/>
 <span class='accomodation' id="science">accomodition : 500 - 1500 USD $ per year</span>
@@ -149,14 +152,16 @@ Medical practice is generally defined as being the science and practice of the d
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;;overflow:hidden;color:#2f2;text-align:center">
+ 
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="science" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='scienceLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='scienceRight' class="1"><i class="fa fa-arrow-right"></i></span>
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="science" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+
 
 
 </div>
@@ -195,7 +200,7 @@ Medical practice is generally defined as being the science and practice of the d
 <div style="position:relative;height:43.2%;width:98.1%;color:#ff2;overflow:hidden;padding:0.9%">
 <span>
 The goal of the Musical Applications of Technology (MAT) Minor is to provide instruction in practical and creative applications of technology for music
- purposes. This program will help prepare students for production-oriented opportunities in the creative arts.</span>
+ purposes. </span>
 </div>
 
 </div> 
@@ -213,8 +218,7 @@ The goal of the Musical Applications of Technology (MAT) Minor is to provide ins
 <div style="position:relative;height:43.2%;width:98.1%;color:#22f;overflow:hidden;padding:0.9%">
 <span>
 Geology is a sub-field of environmental studies and earth sciences that analyses the history and physical structure of the earth, 
-its constitutive materials and the processes shaping it. Geology studies the chemical and physical properties of earth materials including minerals, 
-natural gases and water.
+its constitutive materials and the processes shaping it. 
 </span>
 </div>
 
@@ -254,7 +258,7 @@ researchers can get clues to the origins and mechanics of our own home planet. <
 <span>
 ESS embraces chemistry, physics, biology, mathematics and applied sciences in transcending disciplinary boundaries to
  treat the Earth as an integrated system and seeks a deeper understanding of the physical, chemical, biological and human interactions 
- that determine the past, current and future states of the Earth. </span>
+  </span>
 </div>
 
 </div>
@@ -367,7 +371,7 @@ Human nutrition, process by which substances in food are transformed into body t
 
 
 
-<div id="secondPage" class='art' style="display:none">
+<div id="secondPage" class='art animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('art.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -398,14 +402,15 @@ The study of all aspects of film making and of the creation of still images on p
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='artLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='artRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="art" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="art" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+
 
 
 </div>
@@ -443,7 +448,7 @@ The study of all aspects of film making and of the creation of still images on p
 <div style="position:relative;height:43.2%;width:98.1%;color:#ff2;overflow:hidden;padding:0.9%">
 <span>
 Creating animations that are synthesized on the computer is the focus of this course. Computer generated lighting and backgrounds are used with original characters developed by students. 
-Computer animation production techniques are used to create a short animation project
+
 </span>
 </div>
 
@@ -480,8 +485,7 @@ Digital media designers use integrated media to communicate messages, informatio
 <div style="position:relative;height:43.2%;width:98.1%;color:#f22;overflow:hidden;padding:0.9%">
 <span>
 Broadcasting and Hosting program students should master the basic theory and basic knowledge of radio, TV journalism and communication science and 
-broadcasting, receive the basic training in voice, broadcasting voicing, language expression,
- program hosting art, news gathering
+broadcasting
  </span>
 </div>
 
@@ -515,7 +519,7 @@ to follow other practices that are aligned with the making of art</span>
 
 
 
-<div id="secondPage" class='business' style="display:none">
+<div id="secondPage" class='business animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('business.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -547,14 +551,15 @@ The BBM degree is designed to teach students the skills necessary to perform lea
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='businessLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='businessRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="business" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="business" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -590,8 +595,7 @@ The BBM degree is designed to teach students the skills necessary to perform lea
 </div>
 <div style="position:relative;height:43.2%;width:98.1%;color:#ff2;overflow:hidden;padding:0.9%">
 <span>
-electronic commerce is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. These business transactions occur either as business-to-business (B2B),
- business-to-consumer (B2C), consumer-to-consumer or consumer-to-busines</span>
+electronic commerce is the buying and selling of goods and services, or the transmitting of funds or data, over an electronic network, primarily the internet. </span>
 </div>
 
 </div> 
@@ -676,7 +680,7 @@ It is designed to maximize employee performance in service of an employer's stra
  
 </div>
 
-<div id="secondPage" class='finance' style="display:none">
+<div id="secondPage" class='finance animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('finance.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -709,13 +713,14 @@ global financial system, balance of payments, and exchange rates
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='financeLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='financeRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="finance" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="finance" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 
 </div>
@@ -774,7 +779,7 @@ obtain in order to fund the company's assets as well as maximizing the value of 
 <span>
 The Banking and Finance BA combines the study of modern economics with banking and finance. You will be introduced to a
  broad range of economic subjects including banking, financial intermediation, asset and
- liability management, financial decision making, financial markets and institutions, and accounting</span>
+ liability management and financial decision making</span>
 </div>
 
 </div>
@@ -806,7 +811,7 @@ that make use of information taken from financial statements and other reports <
 
 
 
-<div id="secondPage" class='engineering' style="display:none">
+<div id="secondPage" class='engineering animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('engineering.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -831,7 +836,7 @@ that make use of information taken from financial statements and other reports <
 <span class='medicineSpecs'>
 Power Engineering deals with the generation, transmission, distribution and utilization of electricity as well as the design of a range of
  related devices. These include transformers, electric generators, electric motors and power electronics. 
-Power engineers may also work on systems that do not connect to the grid
+
 </span>
 </div>
 
@@ -841,14 +846,14 @@ Power engineers may also work on systems that do not connect to the grid
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='engineeringLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='engineeringRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="engineering" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="engineering" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
 
 </div>
 
@@ -867,7 +872,7 @@ Power engineers may also work on systems that do not connect to the grid
 <span>
 Power Engineering deals with the generation, transmission, distribution and utilization of electricity as well as the design of a range of
  related devices. These include transformers, electric generators, electric motors and power electronics. 
-Power engineers may also work on systems that do not connect to the grid
+
  </span>
 </div>
 
@@ -905,7 +910,7 @@ Electronic engineering is an electrical engineering discipline which utilizes no
 <span>
 A communications engineer is responsible for the research, design, development and production of communications equipment/systems. 
 Communications engineering encompasses modes of communication such as satellites, radio, 
-internet and broadband technologies and wireless telephone services</span>
+internet and broadband technologies </span>
 </div>
 
 </div>
@@ -999,8 +1004,7 @@ Mechanical engineering is the discipline that applies engineering, physics, engi
 <div style="position:relative;height:43.2%;width:98.1%;color:#EE82EE;overflow:hidden;padding:0.9%">
 <span>
 Chemical engineering is a multi-disciplinary branch of engineering that combines natural and experimental sciences 
-(such as chemistry and physics), along with life sciences (such as biology, microbiology and biochemistry) plus mathematics and economics 
-to design, develop, produce, transform, transport, operate etc </span>
+(such as chemistry and physics), along with life sciences (such as biology, microbiology and biochemistry) plus mathematics and economics</span>
 </div>
 
 </div>
@@ -1030,7 +1034,7 @@ They develop new drilling tools and techniques, and find new ways to extract rem
  
 </div>
 
-<div id="secondPage" class='medicine' style="display:none">
+<div id="secondPage" class='medicine animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('science.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1065,14 +1069,15 @@ Medical practice is generally defined as being the science and practice of the d
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='medicineLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='medicineRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="medicine" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="medicine" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -1159,7 +1164,7 @@ The nervous system is a complex, sophisticated system that regulates and coordin
  
 </div>
 
-<div id="secondPage" class='physics' style="display:none">
+<div id="secondPage" class='physics animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('physics.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1194,14 +1199,15 @@ research to develop new technologies or solve engineering problems.
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='physicsLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='physicsRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="physics" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="physics" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -1304,7 +1310,7 @@ The study of matter, energy, and the interaction between them”, but what that 
 </div>
 
 
-<div id="secondPage" class='languages' style="display:none">
+<div id="secondPage" class='languages animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('languages.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1339,14 +1345,15 @@ Increased interest in China from those outside has led to a corresponding intere
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='languagesLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='languagesRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="languages" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="languages" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -1413,7 +1420,7 @@ English Language Studies (ELS) considers the history and present status of the E
 </div>
 
 
-<div id="secondPage" class='biology' style="display:none">
+<div id="secondPage" class='biology animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('biology.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1446,14 +1453,15 @@ Applied biology, as the title suggests, takes the science of biology and applies
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='biologyLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='biologyRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="biology" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="biology" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 
 </div>
@@ -1540,7 +1548,7 @@ From ecology to molecular biology, the science of biology studies them all. Biol
 
 
 
-<div id="secondPage" class='mathematics' style="display:none">
+<div id="secondPage" class='mathematics animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('mathematics.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1575,14 +1583,15 @@ computer science, and industry. Thus, applied mathematics
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='mathematicsLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='mathematicsRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="mathematics" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="mathematics" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 
 </div>
@@ -1654,7 +1663,7 @@ Discrete mathematics is the study of mathematical structures that are fundamenta
 </div>
 
 
-<div id="secondPage" class='law' style="display:none">
+<div id="secondPage" class='law animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('law.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1689,13 +1698,14 @@ The Program of Study in Business Law prepares law students for a variety of prac
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='lawLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='lawRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="law" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="law" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 
 </div>
@@ -1766,7 +1776,7 @@ of Master of Laws in Banking and Financial Law</span>
 </div>
 
 
-<div id="secondPage" class='chemistry' style="display:none">
+<div id="secondPage" class='chemistry animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('chemistry.png');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1800,14 +1810,15 @@ Applied chemistry is the application of the principles and theories of chemistry
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='chemistryLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='chemistryRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="chemistry" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="chemistry" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -1863,7 +1874,7 @@ properties. Matter is essentially anything in the world that takes up space and 
 </div>
 <div style="position:relative;height:43.2%;width:98.1%;color:#22f;overflow:hidden;padding:0.9%">
 <span>
-Biochemistry is the study of the chemical substances and vital processes occurring in living organisms. Biochemists focus heavily on the role, function, and structure of biomolecules. The study of the chemistry behind biological processes and the synthesis of biologically active molecules are examples of biochemistry
+Biochemistry is the study of the chemical substances and vital processes occurring in living organisms. Biochemists focus heavily on the role, function, and structure of biomolecules. 
 </span>
 </div>
 
@@ -1899,7 +1910,7 @@ Analytical chemistry studies and uses instruments and methods used to separate, 
 
  
 
-<div id="secondPage" class='accounting' style="display:none">
+<div id="secondPage" class='accounting animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('accounting.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -1923,7 +1934,7 @@ Analytical chemistry studies and uses instruments and methods used to separate, 
 <div style="position:relative;height:43.2%;width:98.1%;color:#2f2;overflow:hidden;padding:0.9%">
 <span class='medicineSpecs'>
 Accounting is often considered to be one of the most intense college majors there is. Students are required to take very rigorous courses in 
-a number of different subjects. In addition, the core coursework required in accounting can be daunting and takes much studying and preparation.
+a number of different subjects. 
  
 </span>
 </div>
@@ -1934,14 +1945,15 @@ a number of different subjects. In addition, the core coursework required in acc
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='accountingLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='accountingRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="accounting" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="accounting" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 
 </div>
@@ -1993,7 +2005,7 @@ financial management, financial reporting, financial markets, investment and ris
 </div>
 
 
-<div id="secondPage" class='economics' style="display:none">
+<div id="secondPage" class='economics animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('economics.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -2028,14 +2040,15 @@ that goods are scarce and that society must use its resources efficiently.
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='economicsLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='economicsRight' class="1"><i class="fa fa-arrow-right"></i></span>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="economics" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
+
 </div>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="economics" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
-</div>
+ 
 
 </div>
 
@@ -2090,7 +2103,7 @@ globalisation, health, development, and the environment.
  
 </div>
 
-<div id="secondPage" class='it' style="display:none">
+<div id="secondPage" class='it animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('it.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -2126,14 +2139,14 @@ can be processed by computers.
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='itLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='itRight' class="1"><i class="fa fa-arrow-right"></i></span>
-</div>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="it" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="it" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
 </div>
+ 
 
 </div>
 
@@ -2220,7 +2233,7 @@ prepares students for network security certification.  </span>
  
 </div>
 
-<div id="secondPage" class='tourism' style="display:none">
+<div id="secondPage" class='tourism animated slideInUp' style="display:none">
 
 <div style="position:relative;height:36%;width:99.9%;background-color:blue;top:0.18%;text-align:center;background-image:url('tourism.jpg');background-size:cover">
 <div style="position:absolute;height:18%;width:81%;background-color:#22f;z-index:10;left:9.45%;top:72%;text-align:center;opacity:0.63;color:#2f2;border-top-left-radius:144%">
@@ -2253,15 +2266,14 @@ programs in this field cover topics that include hotel management, hospitality s
  
 </div>
 
-<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2">
+<div style="position:relative;height:11.7%;width:99.9%;overflow:hidden;color:#2f2;text-align:center">
 <span style="position:relative;display:float;float:left;font-size:22.5px;top:7.2px;left:7.2px" id='tourismLeft' class="1"><i class="fa fa-arrow-left"></i></span>
 <span style="position:relative;display:float;float:right;font-size:22.5px;top:7.2px;right:7.2px" id='tourismRight' class="1"><i class="fa fa-arrow-right"></i></span>
-</div>
+<span style="position:relative;height:9%;width:18%;background-color:red;color:white;top:27%;padding:1.8%" id="tourism" class="backBtn">
+ Back <i class="fa fa-arrow-left"></i> </span>
 
-<div style="position:relative;height:9%;width:18%;background-color:red;color:white;top:1.8%;text-align:center" id="tourism" class="backBtn">
-<span style="position:relative;top:18%"> Back <i class="fa fa-arrow-left"></i> </span>
 </div>
-
+ 
 </div>
 
 
@@ -2312,7 +2324,7 @@ supervise employees and monitor the services that guests expect and enjoy.
 </div>
 
 
-<div id="secondPage" class="scholarships" style="display:none">
+<div id="secondPage" class="scholarships animated slideInUp" style="display:none">
 <span style="color:#2f2;font-weight:bold"> How to get scholarship with CodexStudent? </span> <br/><br/>
 
 They are three type of scholarships , the governmental,provincial and university scholarship.
@@ -2337,7 +2349,7 @@ scholarship,This process always works and its guranteed for well perfoming stude
 
 </div>
 
-<div id="secondPage" class="contactUs" style="display:none">
+<div id="secondPage" class="contactUs animated slideInUp" style="display:none">
 <br/>
 <span style="color:#2f2;font-weight:bold">Contact Us </span><br/><br/>
 
@@ -2350,10 +2362,9 @@ WhatsApp : 00263776508306<br/><br/>
 
 </div>
 
-<div id="secondPage" class="apply" style="display:none">
+<div id="secondPage" class="apply animated slideInUp" style="display:none">
 <br/>
-Applying to study in China with us is very easy and stress free,we handle everything for you from begginning to the end.
-<br/><br/>
+Applying to study in China with us is very easy and stress free, we handle everything for you from beginning to the end.<br/><br/>
 <span style="color:#2f2;font-weight:bold;">Requirements :</span> <br/><br/>
 Scanned Copies of <br/><br/>
 
@@ -2391,18 +2402,19 @@ Welcome to China <br/><br/>
 
 <span style="color:#2f2;font-weight:bold;">Challenges in funding ?</span> <br/><br/>
 
-CodexStudent can assist students with a poor financial balance by drafting contracts between university and the students sponsor on the payment options that are
-fit for their financial dilemna .e.g If your tuition is 3000 $ USD pper year,no need to pay full fee at once,you can pay halft of it and the other in 
-installments,we encourage the parents to honor the agreements if signed by thee school and if payment is not made in time,please alert beforehand
+Codex Student can assist students with a poor financial balance by drafting contracts between university and the students sponsor on the payment options that are
+Fit for their financial dilemma .e.g. If your tuition is 3000 $ USD per year, no need to pay full fee at once, you can pay half of it and the other in 
+installments, we encourage the parents to honor the agreements if signed by thee school and if payment is not made in time, please alert beforehand
 <br/><br/>
 <span style="color:#2f2;font-weight:bold;">Are they scholarships available ?</span> <br/><br/>
-Yes indeed they are scholarships available,please check our scholarship section for more details <br/>
+Yes indeed they are scholarships available; please check our scholarship section for more details<br/>
 
 <br/><br/>
 <span style="color:#2f2;font-weight:bold;">Don't have enough subjects for my course? ?</span> <br/><br/>
-Codexstudent helps students without enough subjects in their O level and A level to apply,the university will allow those students to do prerequsites courses in
-the first semester to get hold of the basics of their course e.g when a student doesn't havemathematics but wants to study engineering,the student will learn pre-mathematics 
-before starting his or her degree course 
+Codex student helps students without enough subjects in their O level and A level to apply; the university will allow those students to do prerequisites courses in
+The first semester to get hold of the basics of their course e.g. when a student doesn't have mathematics but wants to study engineering, the student will learn pre-mathematics 
+Before starting his or her degree course
+ 
  <br/>
 
 
