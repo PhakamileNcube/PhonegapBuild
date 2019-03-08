@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.yonic.studyapp"
-        version   = "1.0.0">
+        id        = "com.yonic.tvstation"
+        version   = "1.0.1">
 
-    <name>Gas 5</name>
+    <name>Tech Travel</name>
 
     <description>
-       This is an app designed by Yonic to hire actors and models for Gas 5 production
+       This is an app designed by Yonic to book buses without going to town for booking
     </description>
 
     <author >
